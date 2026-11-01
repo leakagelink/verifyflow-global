@@ -42,7 +42,7 @@ export function Topbar() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-20 flex h-14 items-center gap-2 border-b bg-background/85 px-3 backdrop-blur md:px-4">
+    <header className="sticky top-0 z-20 flex h-14 items-center gap-2 border-b bg-background/70 px-3 backdrop-blur-xl md:px-4">
       <SidebarTrigger />
       <button onClick={() => setOpen(true)}
         className="flex h-8 w-full max-w-xs items-center gap-2 rounded-md border bg-card px-2.5 text-sm text-muted-foreground transition-colors hover:border-ring/40">
