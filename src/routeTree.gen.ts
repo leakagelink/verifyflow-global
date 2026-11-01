@@ -10,33 +10,276 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AppRouteImport } from './routes/app'
+import { Route as AppIndexRouteImport } from './routes/app.index'
+import { Route as AppAdminRouteImport } from './routes/app.admin'
+import { Route as AppApiKeysRouteImport } from './routes/app.api-keys'
+import { Route as AppApiLogsRouteImport } from './routes/app.api-logs'
+import { Route as AppDocsRouteImport } from './routes/app.docs'
+import { Route as AppInvoicesRouteImport } from './routes/app.invoices'
+import { Route as AppMarketplaceRouteImport } from './routes/app.marketplace'
+import { Route as AppNumbersRouteImport } from './routes/app.numbers'
+import { Route as AppReferralsRouteImport } from './routes/app.referrals'
+import { Route as AppRentalsRouteImport } from './routes/app.rentals'
+import { Route as AppReportsRouteImport } from './routes/app.reports'
+import { Route as AppSecurityRouteImport } from './routes/app.security'
+import { Route as AppSettingsRouteImport } from './routes/app.settings'
+import { Route as AppSmsRouteImport } from './routes/app.sms'
+import { Route as AppTeamRouteImport } from './routes/app.team'
+import { Route as AppUsageRouteImport } from './routes/app.usage'
+import { Route as AppWalletRouteImport } from './routes/app.wallet'
+import { Route as AppWebhooksRouteImport } from './routes/app.webhooks'
+import { Route as AppWhatsappRouteImport } from './routes/app.whatsapp'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AppRoute = AppRouteImport.update({
+  id: '/app',
+  path: '/app',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AppIndexRoute = AppIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppAdminRoute = AppAdminRouteImport.update({
+  id: '/admin',
+  path: '/admin',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppApiKeysRoute = AppApiKeysRouteImport.update({
+  id: '/api-keys',
+  path: '/api-keys',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppApiLogsRoute = AppApiLogsRouteImport.update({
+  id: '/api-logs',
+  path: '/api-logs',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppDocsRoute = AppDocsRouteImport.update({
+  id: '/docs',
+  path: '/docs',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppInvoicesRoute = AppInvoicesRouteImport.update({
+  id: '/invoices',
+  path: '/invoices',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppMarketplaceRoute = AppMarketplaceRouteImport.update({
+  id: '/marketplace',
+  path: '/marketplace',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppNumbersRoute = AppNumbersRouteImport.update({
+  id: '/numbers',
+  path: '/numbers',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppReferralsRoute = AppReferralsRouteImport.update({
+  id: '/referrals',
+  path: '/referrals',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppRentalsRoute = AppRentalsRouteImport.update({
+  id: '/rentals',
+  path: '/rentals',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppReportsRoute = AppReportsRouteImport.update({
+  id: '/reports',
+  path: '/reports',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppSecurityRoute = AppSecurityRouteImport.update({
+  id: '/security',
+  path: '/security',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppSettingsRoute = AppSettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppSmsRoute = AppSmsRouteImport.update({
+  id: '/sms',
+  path: '/sms',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppTeamRoute = AppTeamRouteImport.update({
+  id: '/team',
+  path: '/team',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppUsageRoute = AppUsageRouteImport.update({
+  id: '/usage',
+  path: '/usage',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppWalletRoute = AppWalletRouteImport.update({
+  id: '/wallet',
+  path: '/wallet',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppWebhooksRoute = AppWebhooksRouteImport.update({
+  id: '/webhooks',
+  path: '/webhooks',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppWhatsappRoute = AppWhatsappRouteImport.update({
+  id: '/whatsapp',
+  path: '/whatsapp',
+  getParentRoute: () => AppRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/app': typeof AppRouteWithChildren
+  '/app/admin': typeof AppAdminRoute
+  '/app/api-keys': typeof AppApiKeysRoute
+  '/app/api-logs': typeof AppApiLogsRoute
+  '/app/docs': typeof AppDocsRoute
+  '/app/invoices': typeof AppInvoicesRoute
+  '/app/marketplace': typeof AppMarketplaceRoute
+  '/app/numbers': typeof AppNumbersRoute
+  '/app/referrals': typeof AppReferralsRoute
+  '/app/rentals': typeof AppRentalsRoute
+  '/app/reports': typeof AppReportsRoute
+  '/app/security': typeof AppSecurityRoute
+  '/app/settings': typeof AppSettingsRoute
+  '/app/sms': typeof AppSmsRoute
+  '/app/team': typeof AppTeamRoute
+  '/app/usage': typeof AppUsageRoute
+  '/app/wallet': typeof AppWalletRoute
+  '/app/webhooks': typeof AppWebhooksRoute
+  '/app/whatsapp': typeof AppWhatsappRoute
+  '/app/': typeof AppIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/app/admin': typeof AppAdminRoute
+  '/app/api-keys': typeof AppApiKeysRoute
+  '/app/api-logs': typeof AppApiLogsRoute
+  '/app/docs': typeof AppDocsRoute
+  '/app/invoices': typeof AppInvoicesRoute
+  '/app/marketplace': typeof AppMarketplaceRoute
+  '/app/numbers': typeof AppNumbersRoute
+  '/app/referrals': typeof AppReferralsRoute
+  '/app/rentals': typeof AppRentalsRoute
+  '/app/reports': typeof AppReportsRoute
+  '/app/security': typeof AppSecurityRoute
+  '/app/settings': typeof AppSettingsRoute
+  '/app/sms': typeof AppSmsRoute
+  '/app/team': typeof AppTeamRoute
+  '/app/usage': typeof AppUsageRoute
+  '/app/wallet': typeof AppWalletRoute
+  '/app/webhooks': typeof AppWebhooksRoute
+  '/app/whatsapp': typeof AppWhatsappRoute
+  '/app': typeof AppIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/app': typeof AppRouteWithChildren
+  '/app/admin': typeof AppAdminRoute
+  '/app/api-keys': typeof AppApiKeysRoute
+  '/app/api-logs': typeof AppApiLogsRoute
+  '/app/docs': typeof AppDocsRoute
+  '/app/invoices': typeof AppInvoicesRoute
+  '/app/marketplace': typeof AppMarketplaceRoute
+  '/app/numbers': typeof AppNumbersRoute
+  '/app/referrals': typeof AppReferralsRoute
+  '/app/rentals': typeof AppRentalsRoute
+  '/app/reports': typeof AppReportsRoute
+  '/app/security': typeof AppSecurityRoute
+  '/app/settings': typeof AppSettingsRoute
+  '/app/sms': typeof AppSmsRoute
+  '/app/team': typeof AppTeamRoute
+  '/app/usage': typeof AppUsageRoute
+  '/app/wallet': typeof AppWalletRoute
+  '/app/webhooks': typeof AppWebhooksRoute
+  '/app/whatsapp': typeof AppWhatsappRoute
+  '/app/': typeof AppIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/app'
+    | '/app/admin'
+    | '/app/api-keys'
+    | '/app/api-logs'
+    | '/app/docs'
+    | '/app/invoices'
+    | '/app/marketplace'
+    | '/app/numbers'
+    | '/app/referrals'
+    | '/app/rentals'
+    | '/app/reports'
+    | '/app/security'
+    | '/app/settings'
+    | '/app/sms'
+    | '/app/team'
+    | '/app/usage'
+    | '/app/wallet'
+    | '/app/webhooks'
+    | '/app/whatsapp'
+    | '/app/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/app/admin'
+    | '/app/api-keys'
+    | '/app/api-logs'
+    | '/app/docs'
+    | '/app/invoices'
+    | '/app/marketplace'
+    | '/app/numbers'
+    | '/app/referrals'
+    | '/app/rentals'
+    | '/app/reports'
+    | '/app/security'
+    | '/app/settings'
+    | '/app/sms'
+    | '/app/team'
+    | '/app/usage'
+    | '/app/wallet'
+    | '/app/webhooks'
+    | '/app/whatsapp'
+    | '/app'
+  id:
+    | '__root__'
+    | '/'
+    | '/app'
+    | '/app/admin'
+    | '/app/api-keys'
+    | '/app/api-logs'
+    | '/app/docs'
+    | '/app/invoices'
+    | '/app/marketplace'
+    | '/app/numbers'
+    | '/app/referrals'
+    | '/app/rentals'
+    | '/app/reports'
+    | '/app/security'
+    | '/app/settings'
+    | '/app/sms'
+    | '/app/team'
+    | '/app/usage'
+    | '/app/wallet'
+    | '/app/webhooks'
+    | '/app/whatsapp'
+    | '/app/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AppRoute: typeof AppRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +291,198 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/app': {
+      id: '/app'
+      path: '/app'
+      fullPath: '/app'
+      preLoaderRoute: typeof AppRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/app/': {
+      id: '/app/'
+      path: '/'
+      fullPath: '/app/'
+      preLoaderRoute: typeof AppIndexRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/admin': {
+      id: '/app/admin'
+      path: '/admin'
+      fullPath: '/app/admin'
+      preLoaderRoute: typeof AppAdminRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/api-keys': {
+      id: '/app/api-keys'
+      path: '/api-keys'
+      fullPath: '/app/api-keys'
+      preLoaderRoute: typeof AppApiKeysRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/api-logs': {
+      id: '/app/api-logs'
+      path: '/api-logs'
+      fullPath: '/app/api-logs'
+      preLoaderRoute: typeof AppApiLogsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/docs': {
+      id: '/app/docs'
+      path: '/docs'
+      fullPath: '/app/docs'
+      preLoaderRoute: typeof AppDocsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/invoices': {
+      id: '/app/invoices'
+      path: '/invoices'
+      fullPath: '/app/invoices'
+      preLoaderRoute: typeof AppInvoicesRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/marketplace': {
+      id: '/app/marketplace'
+      path: '/marketplace'
+      fullPath: '/app/marketplace'
+      preLoaderRoute: typeof AppMarketplaceRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/numbers': {
+      id: '/app/numbers'
+      path: '/numbers'
+      fullPath: '/app/numbers'
+      preLoaderRoute: typeof AppNumbersRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/referrals': {
+      id: '/app/referrals'
+      path: '/referrals'
+      fullPath: '/app/referrals'
+      preLoaderRoute: typeof AppReferralsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/rentals': {
+      id: '/app/rentals'
+      path: '/rentals'
+      fullPath: '/app/rentals'
+      preLoaderRoute: typeof AppRentalsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/reports': {
+      id: '/app/reports'
+      path: '/reports'
+      fullPath: '/app/reports'
+      preLoaderRoute: typeof AppReportsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/security': {
+      id: '/app/security'
+      path: '/security'
+      fullPath: '/app/security'
+      preLoaderRoute: typeof AppSecurityRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/settings': {
+      id: '/app/settings'
+      path: '/settings'
+      fullPath: '/app/settings'
+      preLoaderRoute: typeof AppSettingsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/sms': {
+      id: '/app/sms'
+      path: '/sms'
+      fullPath: '/app/sms'
+      preLoaderRoute: typeof AppSmsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/team': {
+      id: '/app/team'
+      path: '/team'
+      fullPath: '/app/team'
+      preLoaderRoute: typeof AppTeamRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/usage': {
+      id: '/app/usage'
+      path: '/usage'
+      fullPath: '/app/usage'
+      preLoaderRoute: typeof AppUsageRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/wallet': {
+      id: '/app/wallet'
+      path: '/wallet'
+      fullPath: '/app/wallet'
+      preLoaderRoute: typeof AppWalletRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/webhooks': {
+      id: '/app/webhooks'
+      path: '/webhooks'
+      fullPath: '/app/webhooks'
+      preLoaderRoute: typeof AppWebhooksRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/whatsapp': {
+      id: '/app/whatsapp'
+      path: '/whatsapp'
+      fullPath: '/app/whatsapp'
+      preLoaderRoute: typeof AppWhatsappRouteImport
+      parentRoute: typeof AppRoute
+    }
   }
 }
 
+interface AppRouteChildren {
+  AppAdminRoute: typeof AppAdminRoute
+  AppApiKeysRoute: typeof AppApiKeysRoute
+  AppApiLogsRoute: typeof AppApiLogsRoute
+  AppDocsRoute: typeof AppDocsRoute
+  AppInvoicesRoute: typeof AppInvoicesRoute
+  AppMarketplaceRoute: typeof AppMarketplaceRoute
+  AppNumbersRoute: typeof AppNumbersRoute
+  AppReferralsRoute: typeof AppReferralsRoute
+  AppRentalsRoute: typeof AppRentalsRoute
+  AppReportsRoute: typeof AppReportsRoute
+  AppSecurityRoute: typeof AppSecurityRoute
+  AppSettingsRoute: typeof AppSettingsRoute
+  AppSmsRoute: typeof AppSmsRoute
+  AppTeamRoute: typeof AppTeamRoute
+  AppUsageRoute: typeof AppUsageRoute
+  AppWalletRoute: typeof AppWalletRoute
+  AppWebhooksRoute: typeof AppWebhooksRoute
+  AppWhatsappRoute: typeof AppWhatsappRoute
+  AppIndexRoute: typeof AppIndexRoute
+}
+
+const AppRouteChildren: AppRouteChildren = {
+  AppAdminRoute: AppAdminRoute,
+  AppApiKeysRoute: AppApiKeysRoute,
+  AppApiLogsRoute: AppApiLogsRoute,
+  AppDocsRoute: AppDocsRoute,
+  AppInvoicesRoute: AppInvoicesRoute,
+  AppMarketplaceRoute: AppMarketplaceRoute,
+  AppNumbersRoute: AppNumbersRoute,
+  AppReferralsRoute: AppReferralsRoute,
+  AppRentalsRoute: AppRentalsRoute,
+  AppReportsRoute: AppReportsRoute,
+  AppSecurityRoute: AppSecurityRoute,
+  AppSettingsRoute: AppSettingsRoute,
+  AppSmsRoute: AppSmsRoute,
+  AppTeamRoute: AppTeamRoute,
+  AppUsageRoute: AppUsageRoute,
+  AppWalletRoute: AppWalletRoute,
+  AppWebhooksRoute: AppWebhooksRoute,
+  AppWhatsappRoute: AppWhatsappRoute,
+  AppIndexRoute: AppIndexRoute,
+}
+
+const AppRouteWithChildren = AppRoute._addFileChildren(AppRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AppRoute: AppRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
