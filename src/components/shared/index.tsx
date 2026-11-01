@@ -6,12 +6,18 @@ import type { Status } from "@/services/mock-data";
 
 export function PageHeader({ title, description, actions }: { title: string; description?: string; actions?: ReactNode }) {
   return (
-    <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-      <div>
-        <h1 className="text-xl font-semibold tracking-tight sm:text-2xl">{title}</h1>
-        {description && <p className="mt-1 text-sm text-muted-foreground">{description}</p>}
+    <div className="relative mb-6 overflow-hidden rounded-2xl bg-gradient-primary p-5 text-primary-foreground shadow-glow sm:p-7">
+      <div aria-hidden className="grid-pattern pointer-events-none absolute inset-0 [mask-image:linear-gradient(to_left,black,transparent_70%)]" />
+      <div aria-hidden className="pointer-events-none absolute -right-10 -top-16 size-56 rounded-full border-[18px] border-primary-foreground/10 animate-spin-slow" />
+      <div aria-hidden className="animate-float pointer-events-none absolute right-24 top-6 hidden size-14 rounded-2xl bg-primary-foreground/15 backdrop-blur icon-3d sm:block" />
+      <div aria-hidden className="animate-float pointer-events-none absolute bottom-4 right-48 hidden size-8 rounded-full bg-primary-foreground/20 [animation-delay:-3s] md:block" />
+      <div className="relative flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <div className="min-w-0">
+          <h1 className="text-2xl font-semibold tracking-tight sm:text-3xl">{title}</h1>
+          {description && <p className="mt-1.5 max-w-2xl text-sm text-primary-foreground/80">{description}</p>}
+        </div>
+        {actions && <div className="flex shrink-0 flex-wrap items-center gap-2 text-foreground">{actions}</div>}
       </div>
-      {actions && <div className="flex flex-wrap items-center gap-2">{actions}</div>}
     </div>
   );
 }
@@ -20,12 +26,12 @@ export function Panel({ title, description, actions, children, className, bodyCl
   title?: ReactNode; description?: string; actions?: ReactNode; children: ReactNode; className?: string; bodyClassName?: string;
 }) {
   return (
-    <section className={cn("card-3d rounded-xl border text-card-foreground", className)}>
+    <section className={cn("card-3d rounded-2xl border text-card-foreground", className)}>
       {(title || actions) && (
         <header className="flex items-center justify-between gap-3 border-b px-4 py-3">
-          <div>
-            {title && <h2 className="text-sm font-medium">{title}</h2>}
-            {description && <p className="text-xs text-muted-foreground">{description}</p>}
+          <div className="min-w-0">
+            {title && <h2 className="flex items-center gap-2 text-sm font-semibold"><span className="h-4 w-1 shrink-0 rounded-full bg-gradient-primary" />{title}</h2>}
+            {description && <p className="pl-3 text-xs text-muted-foreground">{description}</p>}
           </div>
           {actions}
         </header>
@@ -35,20 +41,30 @@ export function Panel({ title, description, actions, children, className, bodyCl
   );
 }
 
+const tones = ["tone-1", "tone-2", "tone-3", "tone-4"];
+const toneOf = (s: string) => tones[[...s].reduce((a, c) => a + c.charCodeAt(0), 0) % tones.length];
+
 export function StatCard({ label, value, delta, hint, icon, action }: {
   label: string; value: string; delta?: number; hint?: string; icon?: ReactNode; action?: ReactNode;
 }) {
+  const tone = toneOf(label);
   return (
-    <div className="card-3d lift relative overflow-hidden rounded-xl border p-4">
-      <div className="pointer-events-none absolute -right-8 -top-8 size-24 rounded-full bg-primary/10 blur-2xl" />
-      <div className="flex items-center justify-between gap-2 text-xs text-muted-foreground">
-        <span className="flex min-w-0 items-center gap-2">{icon && <span className="grid size-7 shrink-0 place-items-center rounded-lg bg-gradient-primary text-primary-foreground shadow-glow [&>svg]:size-3.5">{icon}</span>}<span className="truncate">{label}</span></span>
+    <div className="card-3d lift group relative overflow-hidden rounded-2xl border p-4">
+      <div className={cn("pointer-events-none absolute -right-10 -top-10 size-32 rounded-full opacity-25 blur-2xl transition-opacity group-hover:opacity-50", tone)} />
+      <svg aria-hidden viewBox="0 0 120 40" className="pointer-events-none absolute bottom-0 right-0 h-12 w-32 text-primary opacity-15 transition-opacity group-hover:opacity-40">
+        <path d="M0 32 L15 26 L30 29 L45 18 L60 22 L75 10 L90 15 L105 6 L120 9" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+      </svg>
+      <div className="relative flex items-center justify-between gap-2 text-xs text-muted-foreground">
+        <span className="flex min-w-0 items-center gap-2.5">
+          <span className={cn("icon-3d grid size-9 shrink-0 place-items-center rounded-xl text-primary-foreground transition-transform group-hover:scale-110 [&>svg]:size-4", tone)}>{icon ?? <TrendingUp />}</span>
+          <span className="truncate font-medium">{label}</span>
+        </span>
         {action}
       </div>
-      <div className="mt-2 font-mono text-2xl font-medium tracking-tight">{value}</div>
-      <div className="mt-1 flex items-center gap-2 text-xs">
+      <div className="relative mt-3 font-mono text-2xl font-semibold tracking-tight sm:text-[1.7rem]">{value}</div>
+      <div className="relative mt-1 flex flex-wrap items-center gap-2 text-xs">
         {delta !== undefined && (
-          <span className={cn("inline-flex items-center gap-0.5 font-medium", delta >= 0 ? "text-success" : "text-destructive")}>
+          <span className={cn("inline-flex items-center gap-0.5 rounded-full px-1.5 py-0.5 font-medium", delta >= 0 ? "bg-success/10 text-success" : "bg-destructive/10 text-destructive")}>
             {delta >= 0 ? <TrendingUp className="size-3" /> : <TrendingDown className="size-3" />}
             {Math.abs(delta)}%
           </span>
