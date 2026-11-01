@@ -9,6 +9,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { Switch } from "@/components/ui/switch";
 import { CopyButton, DataTable, HttpStatus, Mono, PageHeader, Panel, StatCard, StatusBadge, fmtDate, fmtUsd, pageHead } from "@/components/shared";
 import { agents, calls, dltEntity, dltHeaders, dltTemplates, flows, optContacts, otpWhitelist, qrCodes, smsCampaigns, waBroadcasts, waWebhookEvents } from "@/services/messaging-data";
+import { ServiceRates } from "@/components/shared/service-rates";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { whatsappUsage } from "@/services/pricing";
 
 export const Route = createFileRoute("/app/wa/calls")({
   head: () => pageHead("WhatsApp Calls", "Inbound and outbound WhatsApp Business calling."),
@@ -16,7 +19,8 @@ export const Route = createFileRoute("/app/wa/calls")({
 });
 
 function Page() {
-
+  const [market, setMarket] = useState("India");
+  const rates = whatsappUsage.find((p) => p.market === market);
   return (
     <>
       <PageHeader title="WhatsApp Calls" description="Inbound and outbound WhatsApp Business calling." />
@@ -34,6 +38,8 @@ function Page() {
         { key: "s", header: "Status", cell: (c) => <StatusBadge status={c.status} label={c.status === "failed" ? "Missed" : "Answered"} /> },
         { key: "t", header: "Time", cell: (c) => <span className="text-muted-foreground">{c.at}</span> },
       ]} /></Panel>
+      <div className="mt-4"><Select value={market} onValueChange={setMarket}><SelectTrigger className="w-full sm:w-64" aria-label="Calling market"><SelectValue /></SelectTrigger><SelectContent>{whatsappUsage.map((p) => <SelectItem key={p.market} value={p.market}>{p.market}</SelectItem>)}</SelectContent></Select></div>
+      {rates && <ServiceRates title={`${market} calling rates (USD)`} rows={[{ label: "Business-initiated calling", usd: rates.calling_bi, unit: "minute" }]} />}
     </>
   );
 }

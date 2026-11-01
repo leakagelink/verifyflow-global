@@ -9,6 +9,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Switch } from "@/components/ui/switch";
 import { CopyButton, DataTable, HttpStatus, Mono, PageHeader, Panel, StatCard, StatusBadge, fmtDate, fmtUsd, pageHead } from "@/components/shared";
 import { agents, calls, dltEntity, dltHeaders, dltTemplates, flows, optContacts, otpWhitelist, qrCodes, smsCampaigns, waBroadcasts, waWebhookEvents } from "@/services/messaging-data";
+import { ServiceRates } from "@/components/shared/service-rates";
+import { smsPrices } from "@/services/pricing";
 
 export const Route = createFileRoute("/app/sms-broadcast")({
   head: () => pageHead("SMS Broadcasting", "Send bulk DLT-compliant SMS campaigns."),
@@ -42,6 +44,7 @@ function Page() {
           { key: "t", header: "Date", cell: (c) => <span className="text-muted-foreground">{fmtDate(c.at)}</span> },
         ]} /></Panel>
       </div>
+      <ServiceRates title="SMS rates" rows={smsPrices} />
     </>
   );
 }

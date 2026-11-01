@@ -10,6 +10,7 @@ import { Label } from "@/components/ui/label";
 import { CopyButton, Mono, PageHeader, Panel, StatusBadge, fmtDate, fmtUsd, pageHead } from "@/components/shared";
 import { rentalInbox, rentals as seed } from "@/services/mock-data";
 import { cn } from "@/lib/utils";
+import { formatServicePrice, rentalPrices } from "@/services/pricing";
 
 export const Route = createFileRoute("/app/rentals")({
   head: () => pageHead("Rental Numbers", "Weekly and monthly rental numbers with a shared SMS inbox."),
@@ -20,6 +21,7 @@ function Rentals() {
   const [rentals, setRentals] = useState(seed);
   const [sel, setSel] = useState(seed[0]!.id);
   const current = rentals.find((r) => r.id === sel)!;
+  const renewal = current.plan === "Monthly" ? rentalPrices.find((p) => p.country === current.country.code) : undefined;
   return (
     <>
       <PageHeader title="Rental numbers" description="Keep a number for weeks or months and receive unlimited SMS."
@@ -28,10 +30,10 @@ function Rentals() {
             <DialogTrigger asChild><Button size="sm"><Plus className="size-4" />Rent a number</Button></DialogTrigger>
             <DialogContent>
               <DialogHeader><DialogTitle>Rent a number</DialogTitle></DialogHeader>
-              <RadioGroup defaultValue="monthly" className="grid grid-cols-2 gap-2">
-                {([["weekly", "Weekly", "$4.50"], ["monthly", "Monthly", "$14.00"]] as const).map(([v, l, p]) => (
-                  <Label key={v} htmlFor={v} className="flex cursor-pointer items-center gap-3 rounded-md border p-3 has-[:checked]:border-primary has-[:checked]:bg-accent">
-                    <RadioGroupItem id={v} value={v} /><div><div>{l}</div><Mono className="text-xs text-muted-foreground">{p}</Mono></div>
+              <RadioGroup defaultValue="US" className="grid gap-2">
+                {rentalPrices.map((p) => (
+                  <Label key={p.country} htmlFor={`rent-${p.country}`} className="flex cursor-pointer items-center gap-3 rounded-md border p-3 has-[:checked]:border-primary has-[:checked]:bg-accent">
+                    <RadioGroupItem id={`rent-${p.country}`} value={p.country} /><div><div>{p.name} · Monthly</div><Mono className="text-xs text-muted-foreground">{formatServicePrice(p.priceInr, "INR")} · {formatServicePrice(p.price)} / month</Mono></div>
                   </Label>
                 ))}
               </RadioGroup>
@@ -61,7 +63,7 @@ function Rentals() {
               <label className="flex items-center gap-2 text-xs text-muted-foreground">Auto-renew
                 <Switch checked={current.autoRenew} onCheckedChange={(v) => { setRentals((rs) => rs.map((r) => (r.id === sel ? { ...r, autoRenew: v } : r))); toast(`Auto-renew ${v ? "on" : "off"}`); }} />
               </label>
-              <Button size="sm" variant="outline" className="h-7" onClick={() => toast.success(`Renewed for ${fmtUsd(current.price)}`)}><RefreshCw className="size-3.5" />Renew</Button>
+              <Button size="sm" variant="outline" className="h-7" disabled={!renewal} title={renewal ? `Renew for ${formatServicePrice(renewal.priceInr, "INR")} · ${formatServicePrice(renewal.price)}` : "Current renewal price unavailable"} onClick={() => renewal && toast.success(`Demo: renewed for ${formatServicePrice(renewal.priceInr, "INR")} · ${formatServicePrice(renewal.price)}`)}><RefreshCw className="size-3.5" />Renew{renewal ? ` · ${formatServicePrice(renewal.price)}` : " · Price unavailable"}</Button>
             </div>
           }>
           {current.status === "expired" ? (

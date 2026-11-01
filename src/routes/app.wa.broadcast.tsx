@@ -9,6 +9,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { Switch } from "@/components/ui/switch";
 import { CopyButton, DataTable, HttpStatus, Mono, PageHeader, Panel, StatCard, StatusBadge, fmtDate, fmtUsd, pageHead } from "@/components/shared";
 import { agents, calls, dltEntity, dltHeaders, dltTemplates, flows, optContacts, otpWhitelist, qrCodes, smsCampaigns, waBroadcasts, waWebhookEvents } from "@/services/messaging-data";
+import { ServiceRates } from "@/components/shared/service-rates";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { whatsappUsage } from "@/services/pricing";
 
 export const Route = createFileRoute("/app/wa/broadcast")({
   head: () => pageHead("WhatsApp Broadcasting", "Send approved templates to segmented audiences."),
@@ -16,7 +19,8 @@ export const Route = createFileRoute("/app/wa/broadcast")({
 });
 
 function Page() {
-
+  const [market, setMarket] = useState("India");
+  const rates = whatsappUsage.find((p) => p.market === market);
   return (
     <>
       <PageHeader title="WhatsApp Broadcasting" description="Send approved templates to segmented audiences." />
@@ -33,6 +37,14 @@ function Page() {
         { key: "s", header: "Status", cell: (b) => <StatusBadge status={b.status} label={b.status === "active" ? "Sending" : b.status === "pending" ? "Scheduled" : undefined} /> },
         { key: "t", header: "Date", cell: (b) => <span className="text-muted-foreground">{b.at}</span> },
       ]} /></Panel>
+      <div className="mt-4"><Select value={market} onValueChange={setMarket}><SelectTrigger className="w-full sm:w-64" aria-label="Recipient market"><SelectValue /></SelectTrigger><SelectContent>{whatsappUsage.map((p) => <SelectItem key={p.market} value={p.market}>{p.market}</SelectItem>)}</SelectContent></Select></div>
+      {rates && <ServiceRates title={`${market} messaging rates (USD)`} rows={[
+        { label: "Marketing", usd: rates.marketing, unit: "message" },
+        { label: "Utility", usd: rates.utility, unit: "message" },
+        { label: "Authentication", usd: rates.auth, unit: "message" },
+        { label: "Service", usd: rates.service, unit: "message" },
+        ...(rates.auth_intl > 0 ? [{ label: "International authentication", usd: rates.auth_intl, unit: "message" }] : []),
+      ]} />}
     </>
   );
 }

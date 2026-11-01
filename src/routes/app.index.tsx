@@ -10,6 +10,7 @@ import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { AddFundsDialog } from "@/components/shared/add-funds-dialog";
 import { CopyButton, Mono, PageHeader, Panel, StatCard, fmtUsd, pageHead } from "@/components/shared";
 import { countries, marketplace, otpFeedSeed, services, spendBreakdown, volumeSeries, wallet } from "@/services/mock-data";
+import { formatServicePrice } from "@/services/pricing";
 
 export const Route = createFileRoute("/app/")({
   head: () => pageHead("Dashboard", "Overview of your wallet, numbers, verifications and API traffic."),
@@ -110,10 +111,10 @@ function QuickBuy() {
         </Select>
         <Select value={service} onValueChange={setService}>
           <SelectTrigger className="w-full"><SelectValue /></SelectTrigger>
-          <SelectContent>{services.slice(0, 7).map((s) => <SelectItem key={s.id} value={s.id}>{s.name}</SelectItem>)}</SelectContent>
+          <SelectContent>{services.map((s) => <SelectItem key={s.id} value={s.id}>{s.name}</SelectItem>)}</SelectContent>
         </Select>
         <div className="grid grid-cols-3 gap-2 rounded-md bg-muted/60 p-3 text-xs">
-          <div><div className="text-muted-foreground">Price</div><Mono className="text-sm font-medium">{offer ? fmtUsd(offer.price) : "—"}</Mono></div>
+          <div><div className="text-muted-foreground">Price</div><Mono className="text-sm font-medium">{offer ? fmtUsd(offer.price) : "—"}</Mono>{offer && <div className="text-muted-foreground">{formatServicePrice(offer.priceInr, "INR")}</div>}</div>
           <div><div className="text-muted-foreground">Success</div><Mono className="text-sm font-medium">{offer?.successRate}%</Mono></div>
           <div><div className="text-muted-foreground">Stock</div><Mono className="text-sm font-medium">{offer?.stock ? offer.stock.toLocaleString() : "Out"}</Mono></div>
         </div>
