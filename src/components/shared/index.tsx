@@ -131,7 +131,30 @@ export function DataTable<T>({ columns, rows, onRowClick, empty = "No results" }
   columns: Column<T>[]; rows: T[]; onRowClick?: (row: T) => void; empty?: string;
 }) {
   return (
-    <div className="overflow-x-auto">
+    <>
+    {/* Phone: each row becomes a stacked card */}
+    <ul className="divide-y sm:hidden">
+      {rows.length === 0 && <li className="px-4 py-10 text-center text-sm text-muted-foreground">{empty}</li>}
+      {rows.map((r, i) => {
+        const [first, ...rest] = columns.filter((c) => c.header !== "");
+        const actions = columns.filter((c) => c.header === "");
+        return (
+          <li key={i} onClick={() => onRowClick?.(r)} className={cn("space-y-2 px-4 py-3 text-sm active:bg-muted/50", onRowClick && "cursor-pointer")}>
+            {first && <div className="min-w-0 font-medium [&_*]:max-w-full">{first.cell(r)}</div>}
+            <dl className="grid grid-cols-2 gap-x-3 gap-y-1.5">
+              {rest.map((c) => (
+                <div key={c.key} className="min-w-0">
+                  <dt className="text-[10px] font-medium uppercase tracking-wider text-muted-foreground">{c.header}</dt>
+                  <dd className="truncate">{c.cell(r)}</dd>
+                </div>
+              ))}
+            </dl>
+            {actions.length > 0 && <div className="flex justify-end gap-2" onClick={(e) => e.stopPropagation()}>{actions.map((c) => <span key={c.key}>{c.cell(r)}</span>)}</div>}
+          </li>
+        );
+      })}
+    </ul>
+    <div className="hidden overflow-x-auto sm:block">
       <table className="w-full text-sm">
         <thead>
           <tr className="border-b bg-muted/40">
