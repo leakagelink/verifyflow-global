@@ -179,6 +179,7 @@ export function DataTable<T>({ columns, rows, onRowClick, empty = "No results" }
         </tbody>
       </table>
     </div>
+    </>
   );
 }
 
