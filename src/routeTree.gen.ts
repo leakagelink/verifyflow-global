@@ -30,6 +30,11 @@ import { Route as AppUsageRouteImport } from './routes/app.usage'
 import { Route as AppWalletRouteImport } from './routes/app.wallet'
 import { Route as AppWebhooksRouteImport } from './routes/app.webhooks'
 import { Route as AppWhatsappRouteImport } from './routes/app.whatsapp'
+import { Route as AppWaAiRouteImport } from './routes/app.wa.ai'
+import { Route as AppWaBotsRouteImport } from './routes/app.wa.bots'
+import { Route as AppWaInboxRouteImport } from './routes/app.wa.inbox'
+import { Route as AppWaOnboardingRouteImport } from './routes/app.wa.onboarding'
+import { Route as AppWaTemplatesRouteImport } from './routes/app.wa.templates'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -136,6 +141,31 @@ const AppWhatsappRoute = AppWhatsappRouteImport.update({
   path: '/whatsapp',
   getParentRoute: () => AppRoute,
 } as any)
+const AppWaAiRoute = AppWaAiRouteImport.update({
+  id: '/wa/ai',
+  path: '/wa/ai',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppWaBotsRoute = AppWaBotsRouteImport.update({
+  id: '/wa/bots',
+  path: '/wa/bots',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppWaInboxRoute = AppWaInboxRouteImport.update({
+  id: '/wa/inbox',
+  path: '/wa/inbox',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppWaOnboardingRoute = AppWaOnboardingRouteImport.update({
+  id: '/wa/onboarding',
+  path: '/wa/onboarding',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppWaTemplatesRoute = AppWaTemplatesRouteImport.update({
+  id: '/wa/templates',
+  path: '/wa/templates',
+  getParentRoute: () => AppRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -159,6 +189,11 @@ export interface FileRoutesByFullPath {
   '/app/webhooks': typeof AppWebhooksRoute
   '/app/whatsapp': typeof AppWhatsappRoute
   '/app/': typeof AppIndexRoute
+  '/app/wa/ai': typeof AppWaAiRoute
+  '/app/wa/bots': typeof AppWaBotsRoute
+  '/app/wa/inbox': typeof AppWaInboxRoute
+  '/app/wa/onboarding': typeof AppWaOnboardingRoute
+  '/app/wa/templates': typeof AppWaTemplatesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -181,6 +216,11 @@ export interface FileRoutesByTo {
   '/app/webhooks': typeof AppWebhooksRoute
   '/app/whatsapp': typeof AppWhatsappRoute
   '/app': typeof AppIndexRoute
+  '/app/wa/ai': typeof AppWaAiRoute
+  '/app/wa/bots': typeof AppWaBotsRoute
+  '/app/wa/inbox': typeof AppWaInboxRoute
+  '/app/wa/onboarding': typeof AppWaOnboardingRoute
+  '/app/wa/templates': typeof AppWaTemplatesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -205,6 +245,11 @@ export interface FileRoutesById {
   '/app/webhooks': typeof AppWebhooksRoute
   '/app/whatsapp': typeof AppWhatsappRoute
   '/app/': typeof AppIndexRoute
+  '/app/wa/ai': typeof AppWaAiRoute
+  '/app/wa/bots': typeof AppWaBotsRoute
+  '/app/wa/inbox': typeof AppWaInboxRoute
+  '/app/wa/onboarding': typeof AppWaOnboardingRoute
+  '/app/wa/templates': typeof AppWaTemplatesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -230,6 +275,11 @@ export interface FileRouteTypes {
     | '/app/webhooks'
     | '/app/whatsapp'
     | '/app/'
+    | '/app/wa/ai'
+    | '/app/wa/bots'
+    | '/app/wa/inbox'
+    | '/app/wa/onboarding'
+    | '/app/wa/templates'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -252,6 +302,11 @@ export interface FileRouteTypes {
     | '/app/webhooks'
     | '/app/whatsapp'
     | '/app'
+    | '/app/wa/ai'
+    | '/app/wa/bots'
+    | '/app/wa/inbox'
+    | '/app/wa/onboarding'
+    | '/app/wa/templates'
   id:
     | '__root__'
     | '/'
@@ -275,6 +330,11 @@ export interface FileRouteTypes {
     | '/app/webhooks'
     | '/app/whatsapp'
     | '/app/'
+    | '/app/wa/ai'
+    | '/app/wa/bots'
+    | '/app/wa/inbox'
+    | '/app/wa/onboarding'
+    | '/app/wa/templates'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -431,6 +491,41 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppWhatsappRouteImport
       parentRoute: typeof AppRoute
     }
+    '/app/wa/ai': {
+      id: '/app/wa/ai'
+      path: '/wa/ai'
+      fullPath: '/app/wa/ai'
+      preLoaderRoute: typeof AppWaAiRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/wa/bots': {
+      id: '/app/wa/bots'
+      path: '/wa/bots'
+      fullPath: '/app/wa/bots'
+      preLoaderRoute: typeof AppWaBotsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/wa/inbox': {
+      id: '/app/wa/inbox'
+      path: '/wa/inbox'
+      fullPath: '/app/wa/inbox'
+      preLoaderRoute: typeof AppWaInboxRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/wa/onboarding': {
+      id: '/app/wa/onboarding'
+      path: '/wa/onboarding'
+      fullPath: '/app/wa/onboarding'
+      preLoaderRoute: typeof AppWaOnboardingRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/wa/templates': {
+      id: '/app/wa/templates'
+      path: '/wa/templates'
+      fullPath: '/app/wa/templates'
+      preLoaderRoute: typeof AppWaTemplatesRouteImport
+      parentRoute: typeof AppRoute
+    }
   }
 }
 
@@ -454,6 +549,11 @@ interface AppRouteChildren {
   AppWebhooksRoute: typeof AppWebhooksRoute
   AppWhatsappRoute: typeof AppWhatsappRoute
   AppIndexRoute: typeof AppIndexRoute
+  AppWaAiRoute: typeof AppWaAiRoute
+  AppWaBotsRoute: typeof AppWaBotsRoute
+  AppWaInboxRoute: typeof AppWaInboxRoute
+  AppWaOnboardingRoute: typeof AppWaOnboardingRoute
+  AppWaTemplatesRoute: typeof AppWaTemplatesRoute
 }
 
 const AppRouteChildren: AppRouteChildren = {
@@ -476,6 +576,11 @@ const AppRouteChildren: AppRouteChildren = {
   AppWebhooksRoute: AppWebhooksRoute,
   AppWhatsappRoute: AppWhatsappRoute,
   AppIndexRoute: AppIndexRoute,
+  AppWaAiRoute: AppWaAiRoute,
+  AppWaBotsRoute: AppWaBotsRoute,
+  AppWaInboxRoute: AppWaInboxRoute,
+  AppWaOnboardingRoute: AppWaOnboardingRoute,
+  AppWaTemplatesRoute: AppWaTemplatesRoute,
 }
 
 const AppRouteWithChildren = AppRoute._addFileChildren(AppRouteChildren)
