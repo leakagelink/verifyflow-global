@@ -8,3 +8,6 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+## Pricing
+- Derive customer service prices through `src/services/pricing.ts` from explicitly sourced upstream amounts in their original currency; keep historical transactions and wallet credits separate to avoid rewriting financial history.
