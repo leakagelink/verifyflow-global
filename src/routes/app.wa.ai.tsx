@@ -7,6 +7,8 @@ import { Input } from "@/components/ui/input";
 import { Switch } from "@/components/ui/switch";
 import { Textarea } from "@/components/ui/textarea";
 import { PageHeader, Panel, StatCard, StatusBadge, pageHead } from "@/components/shared";
+import { ServiceRates } from "@/components/shared/service-rates";
+import { aiPlans } from "@/services/pricing";
 
 export const Route = createFileRoute("/app/wa/ai")({
   head: () => pageHead("AI Hub", "Train an AI agent on your knowledge base to answer WhatsApp chats."),
@@ -57,6 +59,7 @@ function AiHub() {
           </form>
         </Panel>
       </div>
+      <ServiceRates title="AI token packages" rows={aiPlans.map((p) => ({ label: p.name, inr: p.inr, usd: p.usd, unit: `${p.tokens.toLocaleString("en-US")} tokens` }))} />
     </>
   );
 }

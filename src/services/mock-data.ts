@@ -1,4 +1,5 @@
 import { chartColors } from "@/lib/chart-colors";
+import { virtualPrices } from "./pricing";
 // Mock data layer. Each export mirrors a future REST resource from the NestJS backend.
 // Swap these for TanStack Query fetchers against `/v1/*` when the API is ready.
 
@@ -45,17 +46,20 @@ function seeded(i: number) {
 }
 
 export const marketplace = countries.flatMap((c, ci) =>
-  services.slice(0, 7).map((s, si) => {
+  services.flatMap((s, si) => {
+    const quote = virtualPrices.find((p) => p.country === c.code && p.service === s.id);
+    if (!quote) return [];
     const r = seeded(ci * 10 + si);
-    const stock = Math.floor(r * 4000);
+    const stock = quote.stock;
     return {
       id: `${c.code}-${s.id}`,
       country: c,
       service: s,
       carrier: pick(carriers, (ci + si) % carriers.length),
-      price: +(0.12 + r * 1.6).toFixed(2),
+      price: quote.price,
+      priceInr: quote.priceInr,
       successRate: Math.round(78 + r * 21),
-      stock: stock < 150 ? 0 : stock,
+      stock,
     };
   }),
 );

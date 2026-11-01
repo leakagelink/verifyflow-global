@@ -9,6 +9,8 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Mono, PageHeader, Panel, StatusBadge, pageHead } from "@/components/shared";
 import { waNumbers } from "@/services/messaging-data";
 import { cn } from "@/lib/utils";
+import { ServiceRates } from "@/components/shared/service-rates";
+import { whatsappPlans } from "@/services/pricing";
 
 export const Route = createFileRoute("/app/wa/onboarding")({
   head: () => pageHead("WhatsApp Onboarding", "Connect your business number to the WhatsApp Business API."),
@@ -54,7 +56,7 @@ function Onboarding() {
           {step === 2 && (
             <div className="max-w-xl space-y-4">
               <RadioGroup defaultValue="new" className="grid gap-2">
-                {[["new", "Use a new number", "A number not currently on any WhatsApp app."], ["migrate", "Migrate existing number", "Move a number from WhatsApp Business app or another provider."], ["buy", "Get a Numora number", "We provide a dedicated number for you (from $4/month)."]].map(([v, t, d]) => (
+                {[["new", "Use a new number", "A number not currently on any WhatsApp app."], ["migrate", "Migrate existing number", "Move a number from WhatsApp Business app or another provider."], ["buy", "Get a Numora number", "Dedicated WhatsApp Business number pricing unavailable."]].map(([v, t, d]) => (
                   <Label key={v} htmlFor={v} className="flex cursor-pointer items-start gap-3 rounded-md border p-3 has-[:checked]:border-primary has-[:checked]:bg-accent">
                     <RadioGroupItem id={v} value={v!} className="mt-0.5" /><div><div>{t}</div><div className="text-xs font-normal text-muted-foreground">{d}</div></div>
                   </Label>
@@ -87,6 +89,7 @@ function Onboarding() {
           </div>
         ))}
       </Panel>
+      <ServiceRates title="WhatsApp Business plans" rows={whatsappPlans.map((p) => ({ label: p.name, inr: p.inr, usd: p.usd, unit: p.cycle === "monthly" ? "month" : "year" }))} />
     </>
   );
 }

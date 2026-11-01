@@ -9,6 +9,7 @@ import { Switch } from "@/components/ui/switch";
 import { DataTable, Mono, PageHeader, Panel, fmtUsd, pageHead, type Column } from "@/components/shared";
 import { countries, marketplace, services } from "@/services/mock-data";
 import { cn } from "@/lib/utils";
+import { formatServicePrice } from "@/services/pricing";
 
 export const Route = createFileRoute("/app/marketplace")({
   head: () => pageHead("Get Number", "Browse virtual numbers by country, service, carrier, price and success rate."),
@@ -42,7 +43,7 @@ function Marketplace() {
     { key: "sr", header: "Success", cell: (r) => (
       <span className="flex items-center gap-2"><span className="h-1.5 w-16 overflow-hidden rounded-full bg-muted"><span className={cn("block h-full rounded-full", r.successRate > 90 ? "bg-success" : r.successRate > 82 ? "bg-warning" : "bg-destructive")} style={{ width: `${r.successRate}%` }} /></span><Mono>{r.successRate}%</Mono></span>) },
     { key: "st", header: "Stock", cell: (r) => r.stock ? <Mono>{r.stock.toLocaleString()}</Mono> : <span className="text-xs text-muted-foreground">Out of stock</span> },
-    { key: "p", header: "Price", className: "text-right", cell: (r) => <Mono className="font-medium">{fmtUsd(r.price)}</Mono> },
+    { key: "p", header: "Price", className: "text-right", cell: (r) => <div><Mono className="font-medium">{fmtUsd(r.price)}</Mono><div className="text-xs text-muted-foreground">{formatServicePrice(r.priceInr, "INR")}</div></div> },
     { key: "a", header: "", className: "text-right", cell: (r) => (
       <Button size="sm" variant={r.stock ? "default" : "outline"} disabled={!r.stock} className="h-7"
         onClick={() => { toast.success(`Reserved ${r.country.flag} ${r.service.name} number`); navigate({ to: "/app/sms" }); }}>Buy</Button>) },
@@ -50,9 +51,9 @@ function Marketplace() {
 
   return (
     <>
-      <PageHeader title="Get a number" description={`${marketplace.length} offers across ${countries.length} countries. Unused numbers are refunded automatically.`} />
+      <PageHeader title="Get a number" description={`${marketplace.length} priced offers across ${countries.length} countries · Prices as of November 1, 2026.`} />
       <div className="mb-4 flex flex-wrap gap-1.5">
-        {["all", ...services.slice(0, 7).map((s) => s.id)].map((id) => (
+        {["all", ...services.map((s) => s.id)].map((id) => (
           <button key={id} onClick={() => setService(id)}
             className={cn("rounded-full border px-3 py-1 text-xs font-medium transition-colors", service === id ? "border-primary bg-primary text-primary-foreground" : "bg-card hover:bg-muted")}>
             {id === "all" ? "All services" : services.find((s) => s.id === id)?.name}

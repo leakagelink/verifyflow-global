@@ -7,6 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CopyButton, Mono, PageHeader, Panel, StatusBadge, pageHead } from "@/components/shared";
 import { countries } from "@/services/mock-data";
+import { formatServicePrice, virtualPrices } from "@/services/pricing";
 
 export const Route = createFileRoute("/app/whatsapp")({
   head: () => pageHead("WhatsApp Verification", "Activate WhatsApp numbers with code, QR linking or voice OTP fallback."),
@@ -33,6 +34,7 @@ function WhatsApp() {
   const [qrState, setQrState] = useState<"waiting" | "linked">("waiting");
   const [voice, setVoice] = useState<"idle" | "calling" | "done">("idle");
   const c = countries.find((x) => x.code === country)!;
+  const offer = virtualPrices.find((p) => p.country === country && p.service === "whatsapp");
 
   return (
     <>
@@ -44,8 +46,8 @@ function WhatsApp() {
               <SelectTrigger className="w-full"><SelectValue /></SelectTrigger>
               <SelectContent>{countries.map((x) => <SelectItem key={x.code} value={x.code}>{x.flag} {x.name}</SelectItem>)}</SelectContent>
             </Select>
-            <div className="flex items-center justify-between rounded-md bg-muted/60 p-3 text-sm"><span className="text-muted-foreground">Price</span><Mono className="font-medium">$0.38</Mono></div>
-            <Button className="w-full" disabled={step === "pending"} onClick={() => { setStep("pending"); setTimeout(() => { setStep("done"); toast.success("WhatsApp code received"); }, 3500); }}>
+            <div className="flex flex-wrap items-center justify-between gap-2 rounded-md bg-muted/60 p-3 text-sm"><span className="text-muted-foreground">Price</span><Mono className="font-medium">{offer ? `${formatServicePrice(offer.priceInr, "INR")} · ${formatServicePrice(offer.price)}` : "Price unavailable"}</Mono></div>
+            <Button className="w-full" disabled={step === "pending" || !offer?.stock} onClick={() => { setStep("pending"); setTimeout(() => { setStep("done"); toast.success("WhatsApp code received"); }, 3500); }}>
               {step === "pending" ? <><Loader2 className="size-4 animate-spin" />Activating…</> : "Activate WhatsApp number"}
             </Button>
             {step !== "idle" && (
