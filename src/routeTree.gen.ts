@@ -15,16 +15,19 @@ import { Route as AppIndexRouteImport } from './routes/app.index'
 import { Route as AppAdminRouteImport } from './routes/app.admin'
 import { Route as AppApiKeysRouteImport } from './routes/app.api-keys'
 import { Route as AppApiLogsRouteImport } from './routes/app.api-logs'
+import { Route as AppDltRouteImport } from './routes/app.dlt'
 import { Route as AppDocsRouteImport } from './routes/app.docs'
 import { Route as AppInvoicesRouteImport } from './routes/app.invoices'
 import { Route as AppMarketplaceRouteImport } from './routes/app.marketplace'
 import { Route as AppNumbersRouteImport } from './routes/app.numbers'
+import { Route as AppOtpWhitelistRouteImport } from './routes/app.otp-whitelist'
 import { Route as AppReferralsRouteImport } from './routes/app.referrals'
 import { Route as AppRentalsRouteImport } from './routes/app.rentals'
 import { Route as AppReportsRouteImport } from './routes/app.reports'
 import { Route as AppSecurityRouteImport } from './routes/app.security'
 import { Route as AppSettingsRouteImport } from './routes/app.settings'
 import { Route as AppSmsRouteImport } from './routes/app.sms'
+import { Route as AppSmsBroadcastRouteImport } from './routes/app.sms-broadcast'
 import { Route as AppTeamRouteImport } from './routes/app.team'
 import { Route as AppUsageRouteImport } from './routes/app.usage'
 import { Route as AppWalletRouteImport } from './routes/app.wallet'
@@ -32,9 +35,16 @@ import { Route as AppWebhooksRouteImport } from './routes/app.webhooks'
 import { Route as AppWhatsappRouteImport } from './routes/app.whatsapp'
 import { Route as AppWaAiRouteImport } from './routes/app.wa.ai'
 import { Route as AppWaBotsRouteImport } from './routes/app.wa.bots'
+import { Route as AppWaBroadcastRouteImport } from './routes/app.wa.broadcast'
+import { Route as AppWaCallsRouteImport } from './routes/app.wa.calls'
+import { Route as AppWaFlowsRouteImport } from './routes/app.wa.flows'
 import { Route as AppWaInboxRouteImport } from './routes/app.wa.inbox'
 import { Route as AppWaOnboardingRouteImport } from './routes/app.wa.onboarding'
+import { Route as AppWaOptRouteImport } from './routes/app.wa.opt'
+import { Route as AppWaQrRouteImport } from './routes/app.wa.qr'
+import { Route as AppWaSupervisorRouteImport } from './routes/app.wa.supervisor'
 import { Route as AppWaTemplatesRouteImport } from './routes/app.wa.templates'
+import { Route as AppWaWebhooksRouteImport } from './routes/app.wa.webhooks'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -66,6 +76,11 @@ const AppApiLogsRoute = AppApiLogsRouteImport.update({
   path: '/api-logs',
   getParentRoute: () => AppRoute,
 } as any)
+const AppDltRoute = AppDltRouteImport.update({
+  id: '/dlt',
+  path: '/dlt',
+  getParentRoute: () => AppRoute,
+} as any)
 const AppDocsRoute = AppDocsRouteImport.update({
   id: '/docs',
   path: '/docs',
@@ -84,6 +99,11 @@ const AppMarketplaceRoute = AppMarketplaceRouteImport.update({
 const AppNumbersRoute = AppNumbersRouteImport.update({
   id: '/numbers',
   path: '/numbers',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppOtpWhitelistRoute = AppOtpWhitelistRouteImport.update({
+  id: '/otp-whitelist',
+  path: '/otp-whitelist',
   getParentRoute: () => AppRoute,
 } as any)
 const AppReferralsRoute = AppReferralsRouteImport.update({
@@ -114,6 +134,11 @@ const AppSettingsRoute = AppSettingsRouteImport.update({
 const AppSmsRoute = AppSmsRouteImport.update({
   id: '/sms',
   path: '/sms',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppSmsBroadcastRoute = AppSmsBroadcastRouteImport.update({
+  id: '/sms-broadcast',
+  path: '/sms-broadcast',
   getParentRoute: () => AppRoute,
 } as any)
 const AppTeamRoute = AppTeamRouteImport.update({
@@ -151,6 +176,21 @@ const AppWaBotsRoute = AppWaBotsRouteImport.update({
   path: '/wa/bots',
   getParentRoute: () => AppRoute,
 } as any)
+const AppWaBroadcastRoute = AppWaBroadcastRouteImport.update({
+  id: '/wa/broadcast',
+  path: '/wa/broadcast',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppWaCallsRoute = AppWaCallsRouteImport.update({
+  id: '/wa/calls',
+  path: '/wa/calls',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppWaFlowsRoute = AppWaFlowsRouteImport.update({
+  id: '/wa/flows',
+  path: '/wa/flows',
+  getParentRoute: () => AppRoute,
+} as any)
 const AppWaInboxRoute = AppWaInboxRouteImport.update({
   id: '/wa/inbox',
   path: '/wa/inbox',
@@ -161,9 +201,29 @@ const AppWaOnboardingRoute = AppWaOnboardingRouteImport.update({
   path: '/wa/onboarding',
   getParentRoute: () => AppRoute,
 } as any)
+const AppWaOptRoute = AppWaOptRouteImport.update({
+  id: '/wa/opt',
+  path: '/wa/opt',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppWaQrRoute = AppWaQrRouteImport.update({
+  id: '/wa/qr',
+  path: '/wa/qr',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppWaSupervisorRoute = AppWaSupervisorRouteImport.update({
+  id: '/wa/supervisor',
+  path: '/wa/supervisor',
+  getParentRoute: () => AppRoute,
+} as any)
 const AppWaTemplatesRoute = AppWaTemplatesRouteImport.update({
   id: '/wa/templates',
   path: '/wa/templates',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppWaWebhooksRoute = AppWaWebhooksRouteImport.update({
+  id: '/wa/webhooks',
+  path: '/wa/webhooks',
   getParentRoute: () => AppRoute,
 } as any)
 
@@ -173,16 +233,19 @@ export interface FileRoutesByFullPath {
   '/app/admin': typeof AppAdminRoute
   '/app/api-keys': typeof AppApiKeysRoute
   '/app/api-logs': typeof AppApiLogsRoute
+  '/app/dlt': typeof AppDltRoute
   '/app/docs': typeof AppDocsRoute
   '/app/invoices': typeof AppInvoicesRoute
   '/app/marketplace': typeof AppMarketplaceRoute
   '/app/numbers': typeof AppNumbersRoute
+  '/app/otp-whitelist': typeof AppOtpWhitelistRoute
   '/app/referrals': typeof AppReferralsRoute
   '/app/rentals': typeof AppRentalsRoute
   '/app/reports': typeof AppReportsRoute
   '/app/security': typeof AppSecurityRoute
   '/app/settings': typeof AppSettingsRoute
   '/app/sms': typeof AppSmsRoute
+  '/app/sms-broadcast': typeof AppSmsBroadcastRoute
   '/app/team': typeof AppTeamRoute
   '/app/usage': typeof AppUsageRoute
   '/app/wallet': typeof AppWalletRoute
@@ -191,25 +254,35 @@ export interface FileRoutesByFullPath {
   '/app/': typeof AppIndexRoute
   '/app/wa/ai': typeof AppWaAiRoute
   '/app/wa/bots': typeof AppWaBotsRoute
+  '/app/wa/broadcast': typeof AppWaBroadcastRoute
+  '/app/wa/calls': typeof AppWaCallsRoute
+  '/app/wa/flows': typeof AppWaFlowsRoute
   '/app/wa/inbox': typeof AppWaInboxRoute
   '/app/wa/onboarding': typeof AppWaOnboardingRoute
+  '/app/wa/opt': typeof AppWaOptRoute
+  '/app/wa/qr': typeof AppWaQrRoute
+  '/app/wa/supervisor': typeof AppWaSupervisorRoute
   '/app/wa/templates': typeof AppWaTemplatesRoute
+  '/app/wa/webhooks': typeof AppWaWebhooksRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/app/admin': typeof AppAdminRoute
   '/app/api-keys': typeof AppApiKeysRoute
   '/app/api-logs': typeof AppApiLogsRoute
+  '/app/dlt': typeof AppDltRoute
   '/app/docs': typeof AppDocsRoute
   '/app/invoices': typeof AppInvoicesRoute
   '/app/marketplace': typeof AppMarketplaceRoute
   '/app/numbers': typeof AppNumbersRoute
+  '/app/otp-whitelist': typeof AppOtpWhitelistRoute
   '/app/referrals': typeof AppReferralsRoute
   '/app/rentals': typeof AppRentalsRoute
   '/app/reports': typeof AppReportsRoute
   '/app/security': typeof AppSecurityRoute
   '/app/settings': typeof AppSettingsRoute
   '/app/sms': typeof AppSmsRoute
+  '/app/sms-broadcast': typeof AppSmsBroadcastRoute
   '/app/team': typeof AppTeamRoute
   '/app/usage': typeof AppUsageRoute
   '/app/wallet': typeof AppWalletRoute
@@ -218,9 +291,16 @@ export interface FileRoutesByTo {
   '/app': typeof AppIndexRoute
   '/app/wa/ai': typeof AppWaAiRoute
   '/app/wa/bots': typeof AppWaBotsRoute
+  '/app/wa/broadcast': typeof AppWaBroadcastRoute
+  '/app/wa/calls': typeof AppWaCallsRoute
+  '/app/wa/flows': typeof AppWaFlowsRoute
   '/app/wa/inbox': typeof AppWaInboxRoute
   '/app/wa/onboarding': typeof AppWaOnboardingRoute
+  '/app/wa/opt': typeof AppWaOptRoute
+  '/app/wa/qr': typeof AppWaQrRoute
+  '/app/wa/supervisor': typeof AppWaSupervisorRoute
   '/app/wa/templates': typeof AppWaTemplatesRoute
+  '/app/wa/webhooks': typeof AppWaWebhooksRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -229,16 +309,19 @@ export interface FileRoutesById {
   '/app/admin': typeof AppAdminRoute
   '/app/api-keys': typeof AppApiKeysRoute
   '/app/api-logs': typeof AppApiLogsRoute
+  '/app/dlt': typeof AppDltRoute
   '/app/docs': typeof AppDocsRoute
   '/app/invoices': typeof AppInvoicesRoute
   '/app/marketplace': typeof AppMarketplaceRoute
   '/app/numbers': typeof AppNumbersRoute
+  '/app/otp-whitelist': typeof AppOtpWhitelistRoute
   '/app/referrals': typeof AppReferralsRoute
   '/app/rentals': typeof AppRentalsRoute
   '/app/reports': typeof AppReportsRoute
   '/app/security': typeof AppSecurityRoute
   '/app/settings': typeof AppSettingsRoute
   '/app/sms': typeof AppSmsRoute
+  '/app/sms-broadcast': typeof AppSmsBroadcastRoute
   '/app/team': typeof AppTeamRoute
   '/app/usage': typeof AppUsageRoute
   '/app/wallet': typeof AppWalletRoute
@@ -247,9 +330,16 @@ export interface FileRoutesById {
   '/app/': typeof AppIndexRoute
   '/app/wa/ai': typeof AppWaAiRoute
   '/app/wa/bots': typeof AppWaBotsRoute
+  '/app/wa/broadcast': typeof AppWaBroadcastRoute
+  '/app/wa/calls': typeof AppWaCallsRoute
+  '/app/wa/flows': typeof AppWaFlowsRoute
   '/app/wa/inbox': typeof AppWaInboxRoute
   '/app/wa/onboarding': typeof AppWaOnboardingRoute
+  '/app/wa/opt': typeof AppWaOptRoute
+  '/app/wa/qr': typeof AppWaQrRoute
+  '/app/wa/supervisor': typeof AppWaSupervisorRoute
   '/app/wa/templates': typeof AppWaTemplatesRoute
+  '/app/wa/webhooks': typeof AppWaWebhooksRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -259,16 +349,19 @@ export interface FileRouteTypes {
     | '/app/admin'
     | '/app/api-keys'
     | '/app/api-logs'
+    | '/app/dlt'
     | '/app/docs'
     | '/app/invoices'
     | '/app/marketplace'
     | '/app/numbers'
+    | '/app/otp-whitelist'
     | '/app/referrals'
     | '/app/rentals'
     | '/app/reports'
     | '/app/security'
     | '/app/settings'
     | '/app/sms'
+    | '/app/sms-broadcast'
     | '/app/team'
     | '/app/usage'
     | '/app/wallet'
@@ -277,25 +370,35 @@ export interface FileRouteTypes {
     | '/app/'
     | '/app/wa/ai'
     | '/app/wa/bots'
+    | '/app/wa/broadcast'
+    | '/app/wa/calls'
+    | '/app/wa/flows'
     | '/app/wa/inbox'
     | '/app/wa/onboarding'
+    | '/app/wa/opt'
+    | '/app/wa/qr'
+    | '/app/wa/supervisor'
     | '/app/wa/templates'
+    | '/app/wa/webhooks'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/app/admin'
     | '/app/api-keys'
     | '/app/api-logs'
+    | '/app/dlt'
     | '/app/docs'
     | '/app/invoices'
     | '/app/marketplace'
     | '/app/numbers'
+    | '/app/otp-whitelist'
     | '/app/referrals'
     | '/app/rentals'
     | '/app/reports'
     | '/app/security'
     | '/app/settings'
     | '/app/sms'
+    | '/app/sms-broadcast'
     | '/app/team'
     | '/app/usage'
     | '/app/wallet'
@@ -304,9 +407,16 @@ export interface FileRouteTypes {
     | '/app'
     | '/app/wa/ai'
     | '/app/wa/bots'
+    | '/app/wa/broadcast'
+    | '/app/wa/calls'
+    | '/app/wa/flows'
     | '/app/wa/inbox'
     | '/app/wa/onboarding'
+    | '/app/wa/opt'
+    | '/app/wa/qr'
+    | '/app/wa/supervisor'
     | '/app/wa/templates'
+    | '/app/wa/webhooks'
   id:
     | '__root__'
     | '/'
@@ -314,16 +424,19 @@ export interface FileRouteTypes {
     | '/app/admin'
     | '/app/api-keys'
     | '/app/api-logs'
+    | '/app/dlt'
     | '/app/docs'
     | '/app/invoices'
     | '/app/marketplace'
     | '/app/numbers'
+    | '/app/otp-whitelist'
     | '/app/referrals'
     | '/app/rentals'
     | '/app/reports'
     | '/app/security'
     | '/app/settings'
     | '/app/sms'
+    | '/app/sms-broadcast'
     | '/app/team'
     | '/app/usage'
     | '/app/wallet'
@@ -332,9 +445,16 @@ export interface FileRouteTypes {
     | '/app/'
     | '/app/wa/ai'
     | '/app/wa/bots'
+    | '/app/wa/broadcast'
+    | '/app/wa/calls'
+    | '/app/wa/flows'
     | '/app/wa/inbox'
     | '/app/wa/onboarding'
+    | '/app/wa/opt'
+    | '/app/wa/qr'
+    | '/app/wa/supervisor'
     | '/app/wa/templates'
+    | '/app/wa/webhooks'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -386,6 +506,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppApiLogsRouteImport
       parentRoute: typeof AppRoute
     }
+    '/app/dlt': {
+      id: '/app/dlt'
+      path: '/dlt'
+      fullPath: '/app/dlt'
+      preLoaderRoute: typeof AppDltRouteImport
+      parentRoute: typeof AppRoute
+    }
     '/app/docs': {
       id: '/app/docs'
       path: '/docs'
@@ -412,6 +539,13 @@ declare module '@tanstack/react-router' {
       path: '/numbers'
       fullPath: '/app/numbers'
       preLoaderRoute: typeof AppNumbersRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/otp-whitelist': {
+      id: '/app/otp-whitelist'
+      path: '/otp-whitelist'
+      fullPath: '/app/otp-whitelist'
+      preLoaderRoute: typeof AppOtpWhitelistRouteImport
       parentRoute: typeof AppRoute
     }
     '/app/referrals': {
@@ -454,6 +588,13 @@ declare module '@tanstack/react-router' {
       path: '/sms'
       fullPath: '/app/sms'
       preLoaderRoute: typeof AppSmsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/sms-broadcast': {
+      id: '/app/sms-broadcast'
+      path: '/sms-broadcast'
+      fullPath: '/app/sms-broadcast'
+      preLoaderRoute: typeof AppSmsBroadcastRouteImport
       parentRoute: typeof AppRoute
     }
     '/app/team': {
@@ -505,6 +646,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppWaBotsRouteImport
       parentRoute: typeof AppRoute
     }
+    '/app/wa/broadcast': {
+      id: '/app/wa/broadcast'
+      path: '/wa/broadcast'
+      fullPath: '/app/wa/broadcast'
+      preLoaderRoute: typeof AppWaBroadcastRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/wa/calls': {
+      id: '/app/wa/calls'
+      path: '/wa/calls'
+      fullPath: '/app/wa/calls'
+      preLoaderRoute: typeof AppWaCallsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/wa/flows': {
+      id: '/app/wa/flows'
+      path: '/wa/flows'
+      fullPath: '/app/wa/flows'
+      preLoaderRoute: typeof AppWaFlowsRouteImport
+      parentRoute: typeof AppRoute
+    }
     '/app/wa/inbox': {
       id: '/app/wa/inbox'
       path: '/wa/inbox'
@@ -519,11 +681,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppWaOnboardingRouteImport
       parentRoute: typeof AppRoute
     }
+    '/app/wa/opt': {
+      id: '/app/wa/opt'
+      path: '/wa/opt'
+      fullPath: '/app/wa/opt'
+      preLoaderRoute: typeof AppWaOptRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/wa/qr': {
+      id: '/app/wa/qr'
+      path: '/wa/qr'
+      fullPath: '/app/wa/qr'
+      preLoaderRoute: typeof AppWaQrRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/wa/supervisor': {
+      id: '/app/wa/supervisor'
+      path: '/wa/supervisor'
+      fullPath: '/app/wa/supervisor'
+      preLoaderRoute: typeof AppWaSupervisorRouteImport
+      parentRoute: typeof AppRoute
+    }
     '/app/wa/templates': {
       id: '/app/wa/templates'
       path: '/wa/templates'
       fullPath: '/app/wa/templates'
       preLoaderRoute: typeof AppWaTemplatesRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/wa/webhooks': {
+      id: '/app/wa/webhooks'
+      path: '/wa/webhooks'
+      fullPath: '/app/wa/webhooks'
+      preLoaderRoute: typeof AppWaWebhooksRouteImport
       parentRoute: typeof AppRoute
     }
   }
@@ -533,16 +723,19 @@ interface AppRouteChildren {
   AppAdminRoute: typeof AppAdminRoute
   AppApiKeysRoute: typeof AppApiKeysRoute
   AppApiLogsRoute: typeof AppApiLogsRoute
+  AppDltRoute: typeof AppDltRoute
   AppDocsRoute: typeof AppDocsRoute
   AppInvoicesRoute: typeof AppInvoicesRoute
   AppMarketplaceRoute: typeof AppMarketplaceRoute
   AppNumbersRoute: typeof AppNumbersRoute
+  AppOtpWhitelistRoute: typeof AppOtpWhitelistRoute
   AppReferralsRoute: typeof AppReferralsRoute
   AppRentalsRoute: typeof AppRentalsRoute
   AppReportsRoute: typeof AppReportsRoute
   AppSecurityRoute: typeof AppSecurityRoute
   AppSettingsRoute: typeof AppSettingsRoute
   AppSmsRoute: typeof AppSmsRoute
+  AppSmsBroadcastRoute: typeof AppSmsBroadcastRoute
   AppTeamRoute: typeof AppTeamRoute
   AppUsageRoute: typeof AppUsageRoute
   AppWalletRoute: typeof AppWalletRoute
@@ -551,25 +744,35 @@ interface AppRouteChildren {
   AppIndexRoute: typeof AppIndexRoute
   AppWaAiRoute: typeof AppWaAiRoute
   AppWaBotsRoute: typeof AppWaBotsRoute
+  AppWaBroadcastRoute: typeof AppWaBroadcastRoute
+  AppWaCallsRoute: typeof AppWaCallsRoute
+  AppWaFlowsRoute: typeof AppWaFlowsRoute
   AppWaInboxRoute: typeof AppWaInboxRoute
   AppWaOnboardingRoute: typeof AppWaOnboardingRoute
+  AppWaOptRoute: typeof AppWaOptRoute
+  AppWaQrRoute: typeof AppWaQrRoute
+  AppWaSupervisorRoute: typeof AppWaSupervisorRoute
   AppWaTemplatesRoute: typeof AppWaTemplatesRoute
+  AppWaWebhooksRoute: typeof AppWaWebhooksRoute
 }
 
 const AppRouteChildren: AppRouteChildren = {
   AppAdminRoute: AppAdminRoute,
   AppApiKeysRoute: AppApiKeysRoute,
   AppApiLogsRoute: AppApiLogsRoute,
+  AppDltRoute: AppDltRoute,
   AppDocsRoute: AppDocsRoute,
   AppInvoicesRoute: AppInvoicesRoute,
   AppMarketplaceRoute: AppMarketplaceRoute,
   AppNumbersRoute: AppNumbersRoute,
+  AppOtpWhitelistRoute: AppOtpWhitelistRoute,
   AppReferralsRoute: AppReferralsRoute,
   AppRentalsRoute: AppRentalsRoute,
   AppReportsRoute: AppReportsRoute,
   AppSecurityRoute: AppSecurityRoute,
   AppSettingsRoute: AppSettingsRoute,
   AppSmsRoute: AppSmsRoute,
+  AppSmsBroadcastRoute: AppSmsBroadcastRoute,
   AppTeamRoute: AppTeamRoute,
   AppUsageRoute: AppUsageRoute,
   AppWalletRoute: AppWalletRoute,
@@ -578,9 +781,16 @@ const AppRouteChildren: AppRouteChildren = {
   AppIndexRoute: AppIndexRoute,
   AppWaAiRoute: AppWaAiRoute,
   AppWaBotsRoute: AppWaBotsRoute,
+  AppWaBroadcastRoute: AppWaBroadcastRoute,
+  AppWaCallsRoute: AppWaCallsRoute,
+  AppWaFlowsRoute: AppWaFlowsRoute,
   AppWaInboxRoute: AppWaInboxRoute,
   AppWaOnboardingRoute: AppWaOnboardingRoute,
+  AppWaOptRoute: AppWaOptRoute,
+  AppWaQrRoute: AppWaQrRoute,
+  AppWaSupervisorRoute: AppWaSupervisorRoute,
   AppWaTemplatesRoute: AppWaTemplatesRoute,
+  AppWaWebhooksRoute: AppWaWebhooksRoute,
 }
 
 const AppRouteWithChildren = AppRoute._addFileChildren(AppRouteChildren)
