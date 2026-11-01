@@ -1,5 +1,5 @@
 import {
-  Activity, BarChart3, BookOpen, CreditCard, FileText, Gift, Globe2, Home, KeyRound, LayoutGrid,
+  Activity, BarChart3, BookOpen, CreditCard, Gift, Globe2, Home, KeyRound, LayoutGrid,
   MessageCircle, MessageSquare, Phone, Receipt, ScrollText, Settings, Shield, ShieldCheck, Users, Webhook,
 } from "lucide-react";
 
@@ -46,4 +46,3 @@ export const navGroups = [
 ] as const;
 
 export const allNavItems = navGroups.flatMap((g) => g.items.map((i) => ({ ...i, group: g.label ?? "General" })));
-export type { FileText };

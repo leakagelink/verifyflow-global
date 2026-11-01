@@ -12,11 +12,15 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AppRouteImport } from './routes/app'
 import { Route as AppIndexRouteImport } from './routes/app.index'
+import { Route as AppApiKeysRouteImport } from './routes/app.api-keys'
+import { Route as AppApiLogsRouteImport } from './routes/app.api-logs'
+import { Route as AppDocsRouteImport } from './routes/app.docs'
 import { Route as AppMarketplaceRouteImport } from './routes/app.marketplace'
 import { Route as AppNumbersRouteImport } from './routes/app.numbers'
 import { Route as AppRentalsRouteImport } from './routes/app.rentals'
 import { Route as AppReportsRouteImport } from './routes/app.reports'
 import { Route as AppSmsRouteImport } from './routes/app.sms'
+import { Route as AppWebhooksRouteImport } from './routes/app.webhooks'
 import { Route as AppWhatsappRouteImport } from './routes/app.whatsapp'
 
 const IndexRoute = IndexRouteImport.update({
@@ -32,6 +36,21 @@ const AppRoute = AppRouteImport.update({
 const AppIndexRoute = AppIndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppApiKeysRoute = AppApiKeysRouteImport.update({
+  id: '/api-keys',
+  path: '/api-keys',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppApiLogsRoute = AppApiLogsRouteImport.update({
+  id: '/api-logs',
+  path: '/api-logs',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppDocsRoute = AppDocsRouteImport.update({
+  id: '/docs',
+  path: '/docs',
   getParentRoute: () => AppRoute,
 } as any)
 const AppMarketplaceRoute = AppMarketplaceRouteImport.update({
@@ -59,6 +78,11 @@ const AppSmsRoute = AppSmsRouteImport.update({
   path: '/sms',
   getParentRoute: () => AppRoute,
 } as any)
+const AppWebhooksRoute = AppWebhooksRouteImport.update({
+  id: '/webhooks',
+  path: '/webhooks',
+  getParentRoute: () => AppRoute,
+} as any)
 const AppWhatsappRoute = AppWhatsappRouteImport.update({
   id: '/whatsapp',
   path: '/whatsapp',
@@ -68,21 +92,29 @@ const AppWhatsappRoute = AppWhatsappRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/app': typeof AppRouteWithChildren
+  '/app/api-keys': typeof AppApiKeysRoute
+  '/app/api-logs': typeof AppApiLogsRoute
+  '/app/docs': typeof AppDocsRoute
   '/app/marketplace': typeof AppMarketplaceRoute
   '/app/numbers': typeof AppNumbersRoute
   '/app/rentals': typeof AppRentalsRoute
   '/app/reports': typeof AppReportsRoute
   '/app/sms': typeof AppSmsRoute
+  '/app/webhooks': typeof AppWebhooksRoute
   '/app/whatsapp': typeof AppWhatsappRoute
   '/app/': typeof AppIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/app/api-keys': typeof AppApiKeysRoute
+  '/app/api-logs': typeof AppApiLogsRoute
+  '/app/docs': typeof AppDocsRoute
   '/app/marketplace': typeof AppMarketplaceRoute
   '/app/numbers': typeof AppNumbersRoute
   '/app/rentals': typeof AppRentalsRoute
   '/app/reports': typeof AppReportsRoute
   '/app/sms': typeof AppSmsRoute
+  '/app/webhooks': typeof AppWebhooksRoute
   '/app/whatsapp': typeof AppWhatsappRoute
   '/app': typeof AppIndexRoute
 }
@@ -90,11 +122,15 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/app': typeof AppRouteWithChildren
+  '/app/api-keys': typeof AppApiKeysRoute
+  '/app/api-logs': typeof AppApiLogsRoute
+  '/app/docs': typeof AppDocsRoute
   '/app/marketplace': typeof AppMarketplaceRoute
   '/app/numbers': typeof AppNumbersRoute
   '/app/rentals': typeof AppRentalsRoute
   '/app/reports': typeof AppReportsRoute
   '/app/sms': typeof AppSmsRoute
+  '/app/webhooks': typeof AppWebhooksRoute
   '/app/whatsapp': typeof AppWhatsappRoute
   '/app/': typeof AppIndexRoute
 }
@@ -103,32 +139,44 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/app'
+    | '/app/api-keys'
+    | '/app/api-logs'
+    | '/app/docs'
     | '/app/marketplace'
     | '/app/numbers'
     | '/app/rentals'
     | '/app/reports'
     | '/app/sms'
+    | '/app/webhooks'
     | '/app/whatsapp'
     | '/app/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/app/api-keys'
+    | '/app/api-logs'
+    | '/app/docs'
     | '/app/marketplace'
     | '/app/numbers'
     | '/app/rentals'
     | '/app/reports'
     | '/app/sms'
+    | '/app/webhooks'
     | '/app/whatsapp'
     | '/app'
   id:
     | '__root__'
     | '/'
     | '/app'
+    | '/app/api-keys'
+    | '/app/api-logs'
+    | '/app/docs'
     | '/app/marketplace'
     | '/app/numbers'
     | '/app/rentals'
     | '/app/reports'
     | '/app/sms'
+    | '/app/webhooks'
     | '/app/whatsapp'
     | '/app/'
   fileRoutesById: FileRoutesById
@@ -159,6 +207,27 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/app/'
       preLoaderRoute: typeof AppIndexRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/api-keys': {
+      id: '/app/api-keys'
+      path: '/api-keys'
+      fullPath: '/app/api-keys'
+      preLoaderRoute: typeof AppApiKeysRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/api-logs': {
+      id: '/app/api-logs'
+      path: '/api-logs'
+      fullPath: '/app/api-logs'
+      preLoaderRoute: typeof AppApiLogsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/docs': {
+      id: '/app/docs'
+      path: '/docs'
+      fullPath: '/app/docs'
+      preLoaderRoute: typeof AppDocsRouteImport
       parentRoute: typeof AppRoute
     }
     '/app/marketplace': {
@@ -196,6 +265,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppSmsRouteImport
       parentRoute: typeof AppRoute
     }
+    '/app/webhooks': {
+      id: '/app/webhooks'
+      path: '/webhooks'
+      fullPath: '/app/webhooks'
+      preLoaderRoute: typeof AppWebhooksRouteImport
+      parentRoute: typeof AppRoute
+    }
     '/app/whatsapp': {
       id: '/app/whatsapp'
       path: '/whatsapp'
@@ -207,21 +283,29 @@ declare module '@tanstack/react-router' {
 }
 
 interface AppRouteChildren {
+  AppApiKeysRoute: typeof AppApiKeysRoute
+  AppApiLogsRoute: typeof AppApiLogsRoute
+  AppDocsRoute: typeof AppDocsRoute
   AppMarketplaceRoute: typeof AppMarketplaceRoute
   AppNumbersRoute: typeof AppNumbersRoute
   AppRentalsRoute: typeof AppRentalsRoute
   AppReportsRoute: typeof AppReportsRoute
   AppSmsRoute: typeof AppSmsRoute
+  AppWebhooksRoute: typeof AppWebhooksRoute
   AppWhatsappRoute: typeof AppWhatsappRoute
   AppIndexRoute: typeof AppIndexRoute
 }
 
 const AppRouteChildren: AppRouteChildren = {
+  AppApiKeysRoute: AppApiKeysRoute,
+  AppApiLogsRoute: AppApiLogsRoute,
+  AppDocsRoute: AppDocsRoute,
   AppMarketplaceRoute: AppMarketplaceRoute,
   AppNumbersRoute: AppNumbersRoute,
   AppRentalsRoute: AppRentalsRoute,
   AppReportsRoute: AppReportsRoute,
   AppSmsRoute: AppSmsRoute,
+  AppWebhooksRoute: AppWebhooksRoute,
   AppWhatsappRoute: AppWhatsappRoute,
   AppIndexRoute: AppIndexRoute,
 }
