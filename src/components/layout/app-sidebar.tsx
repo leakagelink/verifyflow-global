@@ -15,7 +15,7 @@ export function AppSidebar() {
   return (
     <Sidebar collapsible="icon">
       <SidebarHeader className="h-14 justify-center border-b border-sidebar-border text-sidebar-accent-foreground">
-        <Link to="/" className="flex items-center gap-2 px-1"><Logo /></Link>
+        <Link to="/" onClick={() => setOpenMobile(false)} className="flex items-center gap-2 px-1"><Logo /></Link>
       </SidebarHeader>
       <SidebarContent>
         {navGroups.map((g, gi) => (
@@ -26,7 +26,7 @@ export function AppSidebar() {
                 {g.items.map((item) => (
                   <SidebarMenuItem key={item.url}>
                     <SidebarMenuButton asChild isActive={isActive(item.url)} tooltip={item.title} className="h-8 data-[active=true]:font-medium">
-                      <Link to={item.url}><item.icon /><span>{item.title}</span></Link>
+                      <Link to={item.url} onClick={() => setOpenMobile(false)}><item.icon /><span>{item.title}</span></Link>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
                 ))}
