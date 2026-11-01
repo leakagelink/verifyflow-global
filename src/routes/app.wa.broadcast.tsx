@@ -20,7 +20,7 @@ function Page() {
   return (
     <>
       <PageHeader title="WhatsApp Broadcasting" description="Send approved templates to segmented audiences." />
-      <div className="grid gap-3 sm:grid-cols-4">
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
         <StatCard label="Messages sent (30d)" value="21,610" /><StatCard label="Delivered" value="97.4%" /><StatCard label="Read rate" value="69.5%" delta={4} /><StatCard label="Replies" value="1,522" />
       </div>
       <div className="mt-4 flex justify-end"><Button size="sm" onClick={() => toast.success("Demo: broadcast created")}><Plus className="size-4" />New broadcast</Button></div>

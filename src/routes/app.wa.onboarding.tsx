@@ -27,9 +27,9 @@ function Onboarding() {
     <>
       <PageHeader title="WhatsApp Business onboarding" description="Get your number on the official WhatsApp Business API in about 10 minutes." />
       <div className="grid gap-4 lg:grid-cols-[240px_1fr]">
-        <ol className="space-y-1">
+        <ol className="-mx-1 flex gap-1 overflow-x-auto px-1 pb-1 lg:mx-0 lg:block lg:space-y-1 lg:overflow-visible lg:p-0">
           {steps.map((s, i) => (
-            <li key={s} className={cn("flex items-center gap-3 rounded-md px-3 py-2 text-sm", i === step && "bg-accent text-accent-foreground font-medium")}>
+            <li key={s} className={cn("flex shrink-0 items-center gap-2 whitespace-nowrap rounded-md px-3 py-2 text-sm lg:gap-3", i === step && "bg-accent text-accent-foreground font-medium")}>
               <span className={cn("grid size-6 place-items-center rounded-full border font-mono text-[11px]", i < step && "border-success bg-success text-success-foreground")}>
                 {i < step ? <Check className="size-3.5" /> : i + 1}
               </span>{s}

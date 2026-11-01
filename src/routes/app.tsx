@@ -1,6 +1,7 @@
 import { createFileRoute, Outlet, useRouterState } from "@tanstack/react-router";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/layout/app-sidebar";
+import { MobileNav } from "@/components/layout/mobile-nav";
 import { Topbar } from "@/components/layout/topbar";
 import { EnvProvider, useEnv } from "@/components/layout/env-context";
 
@@ -33,11 +34,12 @@ function AppLayout() {
             </div>
             <Topbar />
             <SandboxBanner />
-            <main className="mx-auto w-full max-w-[1400px] flex-1 p-4 md:p-6">
+            <main className="mx-auto w-full max-w-[1400px] flex-1 p-3 pb-28 sm:p-4 sm:pb-28 md:p-6">
               <div key={path} className="stagger">
                 <Outlet />
               </div>
             </main>
+            <MobileNav />
           </SidebarInset>
         </div>
       </SidebarProvider>

@@ -20,7 +20,7 @@ function Page() {
   return (
     <>
       <PageHeader title="SMS Broadcasting" description="Send bulk DLT-compliant SMS campaigns." />
-      <div className="grid gap-3 sm:grid-cols-4">
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
         <StatCard label="Sent (30d)" value="96,440" delta={14} /><StatCard label="Delivery rate" value="96.8%" />
         <StatCard label="Scheduled" value="1" /><StatCard label="Spend (30d)" value={fmtUsd(531.5)} />
       </div>

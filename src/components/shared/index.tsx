@@ -26,7 +26,7 @@ export function Panel({ title, description, actions, children, className, bodyCl
   title?: ReactNode; description?: string; actions?: ReactNode; children: ReactNode; className?: string; bodyClassName?: string;
 }) {
   return (
-    <section className={cn("card-3d rounded-2xl border text-card-foreground", className)}>
+    <section className={cn("card-3d min-w-0 rounded-2xl border text-card-foreground", className)}>
       {(title || actions) && (
         <header className="flex items-center justify-between gap-3 border-b px-4 py-3">
           <div className="min-w-0">
@@ -49,7 +49,7 @@ export function StatCard({ label, value, delta, hint, icon, action }: {
 }) {
   const tone = toneOf(label);
   return (
-    <div className="card-3d lift group relative overflow-hidden rounded-2xl border p-4">
+    <div className="card-3d lift group relative min-w-0 overflow-hidden rounded-2xl border p-3 sm:p-4">
       <div className={cn("pointer-events-none absolute -right-10 -top-10 size-32 rounded-full opacity-25 blur-2xl transition-opacity group-hover:opacity-50", tone)} />
       <svg aria-hidden viewBox="0 0 120 40" className="pointer-events-none absolute bottom-0 right-0 h-12 w-32 text-primary opacity-15 transition-opacity group-hover:opacity-40">
         <path d="M0 32 L15 26 L30 29 L45 18 L60 22 L75 10 L90 15 L105 6 L120 9" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
@@ -61,7 +61,7 @@ export function StatCard({ label, value, delta, hint, icon, action }: {
         </span>
         {action}
       </div>
-      <div className="relative mt-3 font-mono text-2xl font-semibold tracking-tight sm:text-[1.7rem]">{value}</div>
+      <div className="relative mt-3 truncate font-mono text-xl font-semibold tracking-tight sm:text-[1.7rem]">{value}</div>
       <div className="relative mt-1 flex flex-wrap items-center gap-2 text-xs">
         {delta !== undefined && (
           <span className={cn("inline-flex items-center gap-0.5 rounded-full px-1.5 py-0.5 font-medium", delta >= 0 ? "bg-success/10 text-success" : "bg-destructive/10 text-destructive")}>
@@ -131,7 +131,30 @@ export function DataTable<T>({ columns, rows, onRowClick, empty = "No results" }
   columns: Column<T>[]; rows: T[]; onRowClick?: (row: T) => void; empty?: string;
 }) {
   return (
-    <div className="overflow-x-auto">
+    <>
+    {/* Phone: each row becomes a stacked card */}
+    <ul className="divide-y sm:hidden">
+      {rows.length === 0 && <li className="px-4 py-10 text-center text-sm text-muted-foreground">{empty}</li>}
+      {rows.map((r, i) => {
+        const [first, ...rest] = columns.filter((c) => c.header !== "");
+        const actions = columns.filter((c) => c.header === "");
+        return (
+          <li key={i} onClick={() => onRowClick?.(r)} className={cn("space-y-2 px-4 py-3 text-sm active:bg-muted/50", onRowClick && "cursor-pointer")}>
+            {first && <div className="min-w-0 font-medium [&_*]:max-w-full">{first.cell(r)}</div>}
+            <dl className="grid grid-cols-2 gap-x-3 gap-y-1.5">
+              {rest.map((c) => (
+                <div key={c.key} className="min-w-0">
+                  <dt className="text-[10px] font-medium uppercase tracking-wider text-muted-foreground">{c.header}</dt>
+                  <dd className="truncate">{c.cell(r)}</dd>
+                </div>
+              ))}
+            </dl>
+            {actions.length > 0 && <div className="flex justify-end gap-2" onClick={(e) => e.stopPropagation()}>{actions.map((c) => <span key={c.key}>{c.cell(r)}</span>)}</div>}
+          </li>
+        );
+      })}
+    </ul>
+    <div className="hidden overflow-x-auto sm:block">
       <table className="w-full text-sm">
         <thead>
           <tr className="border-b bg-muted/40">
@@ -156,6 +179,7 @@ export function DataTable<T>({ columns, rows, onRowClick, empty = "No results" }
         </tbody>
       </table>
     </div>
+    </>
   );
 }
 

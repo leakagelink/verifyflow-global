@@ -77,7 +77,7 @@ function ApiKeys() {
             </DialogContent>
           </Dialog>
         } />
-      <div className="mb-4 grid gap-3 sm:grid-cols-3">
+      <div className="mb-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
         <StatCard label="Active keys" value={keys.filter((k) => k.status === "active").length.toString()} />
         <StatCard label="Requests (30d)" value={keys.reduce((a, k) => a + k.calls30d, 0).toLocaleString()} delta={8.2} />
         <StatCard label="Rate limit" value="100 req/s" hint="Per key, burst 300" />

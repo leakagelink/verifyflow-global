@@ -26,7 +26,7 @@ function AiHub() {
   return (
     <>
       <PageHeader title="AI hub" description="An AI agent that answers customers 24/7 from your own content, and hands over to humans when unsure." />
-      <div className="grid gap-3 sm:grid-cols-4">
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
         <StatCard label="Chats handled by AI" value="2,914" delta={18} /><StatCard label="Resolution rate" value="71%" />
         <StatCard label="Handover to agents" value="29%" /><StatCard label="Avg reply time" value="2.1s" />
       </div>

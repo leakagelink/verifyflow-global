@@ -20,7 +20,7 @@ function Page() {
   return (
     <>
       <PageHeader title="Supervisor Dashboard" description="Live view of agents, queues and response times." />
-      <div className="grid gap-3 sm:grid-cols-5"><StatCard label="Open chats" value="12" /><StatCard label="Waiting in queue" value="3" /><StatCard label="Avg first response" value="1m 04s" /><StatCard label="Resolved today" value="120" delta={9} /><StatCard label="CSAT" value="4.7 / 5" /></div>
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-5"><StatCard label="Open chats" value="12" /><StatCard label="Waiting in queue" value="3" /><StatCard label="Avg first response" value="1m 04s" /><StatCard label="Resolved today" value="120" delta={9} /><StatCard label="CSAT" value="4.7 / 5" /></div>
       <Panel className="mt-4" title="Agents" bodyClassName="p-0"><DataTable rows={agents} columns={[
         { key: "n", header: "Agent", cell: (a) => <span className="flex items-center gap-2"><span className={a.status === "online" ? "size-2 rounded-full bg-success" : a.status === "away" ? "size-2 rounded-full bg-warning" : "size-2 rounded-full bg-muted-foreground"} />{a.name}</span> },
         { key: "s", header: "Status", cell: (a) => <span className="capitalize text-muted-foreground">{a.status}</span> },

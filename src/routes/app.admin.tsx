@@ -19,7 +19,7 @@ function Page() {
   return (
     <>
       <PageHeader title="Admin Portal" description="Platform analytics, users and upstream provider health." />
-      <div className="grid gap-3 sm:grid-cols-4">
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
         <StatCard label="Revenue (30d)" value={fmtUsd(admin.kpis.revenue)} delta={9.4} /><StatCard label="Users" value={admin.kpis.users.toLocaleString()} />
         <StatCard label="Orders (24h)" value={admin.kpis.orders24h.toLocaleString()} /><StatCard label="Gross margin" value={`${admin.kpis.margin}%`} />
       </div>
