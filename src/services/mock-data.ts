@@ -1,3 +1,4 @@
+import { chartColors } from "@/lib/chart-colors";
 // Mock data layer. Each export mirrors a future REST resource from the NestJS backend.
 // Swap these for TanStack Query fetchers against `/v1/*` when the API is ready.
 
@@ -24,14 +25,14 @@ export const countries = [
 ];
 
 export const services = [
-  { id: "telegram", name: "Telegram", color: "var(--chart-3)" },
-  { id: "whatsapp", name: "WhatsApp", color: "var(--chart-2)" },
-  { id: "google", name: "Google", color: "var(--chart-1)" },
+  { id: "telegram", name: "Telegram", color: chartColors[2] },
+  { id: "whatsapp", name: "WhatsApp", color: chartColors[1] },
+  { id: "google", name: "Google", color: chartColors[0] },
   { id: "openai", name: "OpenAI", color: "var(--foreground)" },
-  { id: "discord", name: "Discord", color: "var(--chart-1)" },
-  { id: "microsoft", name: "Microsoft", color: "var(--chart-3)" },
-  { id: "amazon", name: "Amazon", color: "var(--chart-4)" },
-  { id: "tinder", name: "Tinder", color: "var(--chart-5)" },
+  { id: "discord", name: "Discord", color: chartColors[0] },
+  { id: "microsoft", name: "Microsoft", color: chartColors[2] },
+  { id: "amazon", name: "Amazon", color: chartColors[3] },
+  { id: "tinder", name: "Tinder", color: chartColors[4] },
   { id: "uber", name: "Uber", color: "var(--foreground)" },
   { id: "x", name: "X (Twitter)", color: "var(--foreground)" },
 ];
@@ -97,10 +98,10 @@ export const volumeSeries = Array.from({ length: 90 }, (_, i) => {
 });
 
 export const spendBreakdown = [
-  { name: "SMS OTP", value: 642.3, fill: "var(--chart-1)" },
-  { name: "WhatsApp", value: 318.75, fill: "var(--chart-2)" },
-  { name: "Rentals", value: 214.0, fill: "var(--chart-3)" },
-  { name: "KYC API", value: 96.4, fill: "var(--chart-4)" },
+  { name: "SMS OTP", value: 642.3, fill: chartColors[0] },
+  { name: "WhatsApp", value: 318.75, fill: chartColors[1] },
+  { name: "Rentals", value: 214.0, fill: chartColors[2] },
+  { name: "KYC API", value: 96.4, fill: chartColors[3] },
 ];
 
 export const otpFeedSeed = [

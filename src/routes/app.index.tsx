@@ -1,3 +1,4 @@
+import { chartColors } from "@/lib/chart-colors";
 import { useEffect, useMemo, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { AlertTriangle, ArrowRight, Gauge, Phone, ShieldCheck, Wallet, Zap } from "lucide-react";
@@ -52,15 +53,15 @@ function Dashboard() {
             <ResponsiveContainer>
               <AreaChart data={data} margin={{ left: -20, right: 4, top: 4 }}>
                 <defs>
-                  <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="var(--chart-1)" stopOpacity={0.25} /><stop offset="100%" stopColor="var(--chart-1)" stopOpacity={0} /></linearGradient>
-                  <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="var(--chart-2)" stopOpacity={0.25} /><stop offset="100%" stopColor="var(--chart-2)" stopOpacity={0} /></linearGradient>
+                  <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor=chartColors[0] stopOpacity={0.25} /><stop offset="100%" stopColor=chartColors[0] stopOpacity={0} /></linearGradient>
+                  <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor=chartColors[1] stopOpacity={0.25} /><stop offset="100%" stopColor=chartColors[1] stopOpacity={0} /></linearGradient>
                 </defs>
                 <CartesianGrid stroke="var(--border)" vertical={false} />
                 <XAxis dataKey="date" tick={{ fontSize: 11, fill: "var(--muted-foreground)" }} tickLine={false} axisLine={false} minTickGap={24} />
                 <YAxis tick={{ fontSize: 11, fill: "var(--muted-foreground)" }} tickLine={false} axisLine={false} />
                 <Tooltip contentStyle={tooltipStyle} />
-                <Area type="monotone" dataKey="sms" name="SMS" stroke="var(--chart-1)" strokeWidth={2} fill="url(#g1)" />
-                <Area type="monotone" dataKey="whatsapp" name="WhatsApp" stroke="var(--chart-2)" strokeWidth={2} fill="url(#g2)" />
+                <Area type="monotone" dataKey="sms" name="SMS" stroke=chartColors[0] strokeWidth={2} fill="url(#g1)" />
+                <Area type="monotone" dataKey="whatsapp" name="WhatsApp" stroke=chartColors[1] strokeWidth={2} fill="url(#g2)" />
               </AreaChart>
             </ResponsiveContainer>
           </div>
