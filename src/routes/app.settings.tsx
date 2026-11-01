@@ -20,7 +20,7 @@ function Page() {
     <>
       <PageHeader title="Settings" description="Profile and notification preferences." />
       <div className="grid max-w-3xl gap-4">
-        <Panel title="Profile"><div className="grid grid-cols-2 gap-3 sm:grid-cols-2">
+        <Panel title="Profile"><div className="grid gap-3 sm:grid-cols-2">
           <div className="space-y-1.5"><Label>Name</Label><Input defaultValue="Dheeraj Tagde" /></div>
           <div className="space-y-1.5"><Label>Email</Label><Input defaultValue="dheeraj@acme.io" /></div>
           <div className="space-y-1.5"><Label>Company</Label><Input defaultValue="Acme Inc" /></div>
