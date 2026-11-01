@@ -23,7 +23,7 @@ function Page() {
         <StatCard label="Revenue (30d)" value={fmtUsd(admin.kpis.revenue)} delta={9.4} /><StatCard label="Users" value={admin.kpis.users.toLocaleString()} />
         <StatCard label="Orders (24h)" value={admin.kpis.orders24h.toLocaleString()} /><StatCard label="Gross margin" value={`${admin.kpis.margin}%`} />
       </div>
-      <Panel className="mt-4" title="Upstream provider status (APITXT.com)"><div className="grid grid-cols-2 gap-3 sm:grid-cols-2 xl:grid-cols-4">{admin.upstream.map((u) => (
+      <Panel className="mt-4" title="Upstream provider status (APITXT.com)"><div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">{admin.upstream.map((u) => (
         <div key={u.name} className="rounded-md border p-3"><div className="flex items-center justify-between text-sm font-medium">{u.name.replace("APITXT.com — ", "")}<StatusBadge status={u.status} /></div>
           <div className="mt-2 text-xs text-muted-foreground"><Mono>{u.latency}ms</Mono> · <Mono>{u.uptime}%</Mono> uptime</div></div>))}</div></Panel>
       <Panel className="mt-4" title="Users" bodyClassName="p-0"><DataTable rows={admin.users} columns={[
