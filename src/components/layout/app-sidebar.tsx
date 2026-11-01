@@ -8,7 +8,7 @@ import { Logo } from "./logo";
 
 export function AppSidebar() {
   const path = useRouterState({ select: (s) => s.location.pathname });
-  const isActive = (url: string) => (url === "/app" ? path === "/app" || path === "/app/" : path.startsWith(url));
+  const isActive = (url: string) => (url === "/app" ? path === "/app" || path === "/app/" : path === url || path.startsWith(url + "/"));
   return (
     <Sidebar collapsible="icon">
       <SidebarHeader className="h-14 justify-center border-b border-sidebar-border text-sidebar-accent-foreground">
