@@ -1,13 +1,16 @@
+import { useEffect } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
 import {
   Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupContent, SidebarGroupLabel,
-  SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem,
+  SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem, useSidebar,
 } from "@/components/ui/sidebar";
 import { navGroups } from "./nav";
 import { Logo } from "./logo";
 
 export function AppSidebar() {
   const path = useRouterState({ select: (s) => s.location.pathname });
+  const { setOpenMobile } = useSidebar();
+  useEffect(() => setOpenMobile(false), [path, setOpenMobile]);
   const isActive = (url: string) => (url === "/app" ? path === "/app" || path === "/app/" : path === url || path.startsWith(url + "/"));
   return (
     <Sidebar collapsible="icon">

@@ -45,8 +45,8 @@ export function Topbar() {
     <header className="sticky top-0 z-20 flex h-14 items-center gap-2 border-b bg-background/70 px-3 backdrop-blur-xl md:px-4">
       <SidebarTrigger />
       <button onClick={() => setOpen(true)}
-        className="flex h-8 w-full max-w-xs items-center gap-2 rounded-md border bg-card px-2.5 text-sm text-muted-foreground transition-colors hover:border-ring/40">
-        <Search className="size-3.5" /><span className="flex-1 text-left">Search…</span>
+        aria-label="Search" className="flex h-8 w-8 shrink-0 items-center justify-center gap-2 rounded-md border bg-card sm:w-full sm:max-w-xs sm:justify-start sm:px-2.5 text-sm text-muted-foreground transition-colors hover:border-ring/40">
+        <Search className="size-3.5" /><span className="hidden flex-1 text-left sm:inline">Search…</span>
         <kbd className="hidden rounded border bg-muted px-1.5 font-mono text-[10px] sm:inline">⌘K</kbd>
       </button>
       <div className="ml-auto flex items-center gap-1.5 md:gap-2">
@@ -56,12 +56,12 @@ export function Topbar() {
           <Switch checked={live} onCheckedChange={setLive} className="scale-75" aria-label="Toggle live mode" />
         </label>
         <AddFundsDialog>
-          <button className="hidden items-center gap-2 rounded-md border bg-card py-1 pl-2.5 pr-1 text-xs sm:flex">
+          <button className="flex items-center gap-2 rounded-md border bg-card py-1 pl-2 pr-1 text-xs">
             <span className="font-mono font-medium">${wallet.balance.toFixed(2)}</span>
-            <span className="rounded bg-primary px-1.5 py-0.5 text-[11px] font-medium text-primary-foreground">Recharge</span>
+            <span className="hidden rounded bg-primary px-1.5 py-0.5 text-[11px] font-medium text-primary-foreground sm:inline">Recharge</span>
           </button>
         </AddFundsDialog>
-        <Button size="sm" className="h-8" asChild>
+        <Button size="sm" className="hidden h-8 sm:inline-flex" asChild>
           <Link to="/app/marketplace"><Plus className="size-4" /><span className="hidden sm:inline">Get Number</span></Link>
         </Button>
         <Button variant="ghost" size="icon" className="size-8" onClick={toggle} aria-label="Toggle theme">

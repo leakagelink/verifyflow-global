@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { Paperclip, Phone, Search, Send, Sparkles, Zap } from "lucide-react";
+import { ArrowLeft, Paperclip, Phone, Search, Send, Sparkles, Zap } from "lucide-react";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -18,6 +18,7 @@ const quick = ["Thanks for reaching out! 😊", "Let me check that for you.", "Y
 function Inbox() {
   const [sel, setSel] = useState("c1");
   const [text, setText] = useState("");
+  const [mobileChat, setMobileChat] = useState(false);
   const [msgs, setMsgs] = useState(chatMessages);
   const c = chats.find((x) => x.id === sel)!;
   const list = msgs[sel] ?? [{ from: "user" as const, text: c.last, time: c.time }];
@@ -27,14 +28,14 @@ function Inbox() {
     setText("");
   };
   return (
-    <div className="-m-4 grid h-[calc(100dvh-3.5rem)] grid-cols-1 grid-rows-[auto_1fr] md:grid-rows-1 border-t md:-m-6 md:grid-cols-[300px_1fr] xl:grid-cols-[300px_1fr_260px]">
-      <aside className="flex max-h-60 min-h-0 flex-col border-b bg-card md:max-h-none md:border-b-0 md:border-r">
+    <div className="-m-4 grid h-[calc(100dvh-3.5rem-6.5rem)] grid-cols-1 md:h-[calc(100dvh-3.5rem)] border-t md:-m-6 md:grid-cols-[300px_1fr] xl:grid-cols-[300px_1fr_260px]">
+      <aside className={cn("min-h-0 flex-col border-r bg-card md:flex", mobileChat ? "hidden" : "flex")}>
         <div className="border-b p-3"><div className="relative"><Search className="absolute left-2.5 top-2.5 size-3.5 text-muted-foreground" /><Input placeholder="Search chats" className="h-9 pl-8" /></div>
           <div className="mt-2 flex gap-1 text-xs">{["All", "Mine", "Unassigned", "Bot"].map((f, i) => <span key={f} className={cn("rounded-full border px-2 py-0.5", i === 0 && "border-primary bg-primary text-primary-foreground")}>{f}</span>)}</div></div>
         <ul className="min-h-0 flex-1 overflow-y-auto">
           {chats.map((x) => (
             <li key={x.id}>
-              <button onClick={() => setSel(x.id)} className={cn("flex w-full gap-3 border-b px-3 py-3 text-left transition-colors", sel === x.id ? "bg-accent" : "hover:bg-muted/50")}>
+              <button onClick={() => { setSel(x.id); setMobileChat(true); }} className={cn("flex w-full gap-3 border-b px-3 py-3 text-left transition-colors", sel === x.id ? "bg-accent" : "hover:bg-muted/50")}>
                 <Avatar className="size-9"><AvatarFallback className="text-xs">{x.name.split(" ").map((p) => p[0]).join("")}</AvatarFallback></Avatar>
                 <div className="min-w-0 flex-1">
                   <div className="flex items-center justify-between text-sm"><span className="font-medium">{x.name}</span><span className="text-[11px] text-muted-foreground">{x.time}</span></div>
@@ -45,11 +46,12 @@ function Inbox() {
           ))}
         </ul>
       </aside>
-      <section className="flex min-h-0 flex-col">
-        <header className="flex items-center justify-between border-b bg-card px-4 py-2.5">
-          <div><div className="text-sm font-medium">{c.name}</div><Mono className="text-xs text-muted-foreground">{c.phone}</Mono></div>
-          <div className="flex items-center gap-2">
-            <span className={cn("rounded-full px-2 py-0.5 text-[11px]", c.window === "open" ? "bg-success/10 text-success" : "bg-muted text-muted-foreground")}>{c.window === "open" ? "24h window open" : "Window closed — template only"}</span>
+      <section className={cn("min-h-0 flex-col md:flex", mobileChat ? "flex" : "hidden")}>
+        <header className="flex items-center justify-between gap-2 border-b bg-card px-3 py-2.5 md:px-4">
+          <button onClick={() => setMobileChat(false)} className="rounded-md p-1 md:hidden" aria-label="Back to chats"><ArrowLeft className="size-4" /></button>
+          <div className="min-w-0 flex-1"><div className="text-sm font-medium">{c.name}</div><Mono className="text-xs text-muted-foreground">{c.phone}</Mono></div>
+          <div className="flex shrink-0 items-center gap-1 md:gap-2">
+            <span className={cn("hidden rounded-full px-2 py-0.5 text-[11px] sm:inline", c.window === "open" ? "bg-success/10 text-success" : "bg-muted text-muted-foreground")}>{c.window === "open" ? "24h window open" : "Window closed — template only"}</span>
             <Button size="icon" variant="ghost" className="size-8" aria-label="Call"><Phone className="size-4" /></Button>
             <Button size="sm" variant="outline" className="h-8">Resolve</Button>
           </div>
@@ -65,9 +67,9 @@ function Inbox() {
           ))}
         </div>
         <div className="border-t bg-card p-3">
-          <div className="mb-2 flex flex-wrap gap-1.5">
-            {quick.map((q) => <button key={q} onClick={() => setText(q)} className="flex items-center gap-1 rounded-full border px-2 py-0.5 text-xs hover:bg-muted"><Zap className="size-3" />{q}</button>)}
-            <button onClick={() => setText("Yes, you can! Please share the new address and I'll update order #A-20931 before it ships.")} className="flex items-center gap-1 rounded-full border border-primary/40 px-2 py-0.5 text-xs text-primary hover:bg-accent"><Sparkles className="size-3" />AI suggest</button>
+          <div className="mb-2 flex gap-1.5 overflow-x-auto pb-1 md:flex-wrap">
+            {quick.map((q) => <button key={q} onClick={() => setText(q)} className="flex shrink-0 items-center gap-1 whitespace-nowrap rounded-full border px-2 py-0.5 text-xs hover:bg-muted"><Zap className="size-3" />{q}</button>)}
+            <button onClick={() => setText("Yes, you can! Please share the new address and I'll update order #A-20931 before it ships.")} className="flex shrink-0 items-center gap-1 whitespace-nowrap rounded-full border border-primary/40 px-2 py-0.5 text-xs text-primary hover:bg-accent"><Sparkles className="size-3" />AI suggest</button>
           </div>
           <form className="flex gap-2" onSubmit={(e) => { e.preventDefault(); send(text); }}>
             <Button type="button" size="icon" variant="ghost" aria-label="Attach"><Paperclip className="size-4" /></Button>
