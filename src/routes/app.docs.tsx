@@ -94,7 +94,7 @@ function Docs() {
           </div>
           <div className="min-w-0 space-y-4 xl:sticky xl:top-20 xl:self-start">
             <div>
-              <Tabs value={lang} onValueChange={setLang}><TabsList className="h-8">{[["curl", "cURL"], ["python", "Python"], ["node", "Node.js"], ["go", "Go"]].map(([v, l]) => <TabsTrigger key={v} value={v} className="text-xs">{l}</TabsTrigger>)}</TabsList></Tabs>
+              <Tabs value={lang} onValueChange={setLang}><TabsList className="h-8">{[["curl", "cURL"], ["python", "Python"], ["node", "Node.js"], ["go", "Go"]].map(([v, l]) => <TabsTrigger key={v} value={v!} className="text-xs">{l}</TabsTrigger>)}</TabsList></Tabs>
               <CodeBlock className="mt-2" code={snippet(lang, e)} title="Request" />
             </div>
             <CodeBlock code={JSON.stringify(e.response, null, 2)} title="Response · 200" />
