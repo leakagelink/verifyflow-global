@@ -1,4 +1,4 @@
-import { createFileRoute, Outlet } from "@tanstack/react-router";
+import { createFileRoute, Outlet, useRouterState } from "@tanstack/react-router";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/layout/app-sidebar";
 import { Topbar } from "@/components/layout/topbar";
@@ -19,16 +19,24 @@ function SandboxBanner() {
 }
 
 function AppLayout() {
+  const path = useRouterState({ select: (s) => s.location.pathname });
   return (
     <EnvProvider>
       <SidebarProvider>
         <div className="flex min-h-screen w-full">
           <AppSidebar />
-          <SidebarInset className="min-w-0 bg-background">
+          <SidebarInset className="relative min-w-0 bg-transparent">
+            <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+              <div className="animate-blob absolute -left-20 top-10 size-96 rounded-full bg-primary/20 blur-3xl" />
+              <div className="animate-blob absolute right-0 top-1/3 size-[28rem] rounded-full bg-chart-3/20 blur-3xl [animation-delay:-6s]" />
+              <div className="animate-blob absolute bottom-0 left-1/3 size-80 rounded-full bg-chart-2/15 blur-3xl [animation-delay:-12s]" />
+            </div>
             <Topbar />
             <SandboxBanner />
             <main className="mx-auto w-full max-w-[1400px] flex-1 p-4 md:p-6">
-              <Outlet />
+              <div key={path} className="stagger">
+                <Outlet />
+              </div>
             </main>
           </SidebarInset>
         </div>
