@@ -27,8 +27,8 @@ function Inbox() {
     setText("");
   };
   return (
-    <div className="-m-4 grid h-[calc(100vh-3.5rem)] grid-cols-1 border-t md:-m-6 md:grid-cols-[300px_1fr] xl:grid-cols-[300px_1fr_260px]">
-      <aside className="flex min-h-0 flex-col border-r bg-card">
+    <div className="-m-4 grid h-[calc(100dvh-3.5rem)] grid-cols-1 border-t md:-m-6 md:grid-cols-[300px_1fr] xl:grid-cols-[300px_1fr_260px]">
+      <aside className="hidden min-h-0 flex-col border-r bg-card md:flex">
         <div className="border-b p-3"><div className="relative"><Search className="absolute left-2.5 top-2.5 size-3.5 text-muted-foreground" /><Input placeholder="Search chats" className="h-9 pl-8" /></div>
           <div className="mt-2 flex gap-1 text-xs">{["All", "Mine", "Unassigned", "Bot"].map((f, i) => <span key={f} className={cn("rounded-full border px-2 py-0.5", i === 0 && "border-primary bg-primary text-primary-foreground")}>{f}</span>)}</div></div>
         <ul className="min-h-0 flex-1 overflow-y-auto">

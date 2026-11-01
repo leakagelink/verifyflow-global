@@ -8,7 +8,7 @@ export function PageHeader({ title, description, actions }: { title: string; des
   return (
     <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
       <div>
-        <h1 className="text-xl font-semibold tracking-tight">{title}</h1>
+        <h1 className="text-xl font-semibold tracking-tight sm:text-2xl">{title}</h1>
         {description && <p className="mt-1 text-sm text-muted-foreground">{description}</p>}
       </div>
       {actions && <div className="flex flex-wrap items-center gap-2">{actions}</div>}
@@ -20,7 +20,7 @@ export function Panel({ title, description, actions, children, className, bodyCl
   title?: ReactNode; description?: string; actions?: ReactNode; children: ReactNode; className?: string; bodyClassName?: string;
 }) {
   return (
-    <section className={cn("rounded-lg border bg-card text-card-foreground shadow-[0_1px_2px_0_oklch(0_0_0/0.03)]", className)}>
+    <section className={cn("card-3d rounded-xl border text-card-foreground", className)}>
       {(title || actions) && (
         <header className="flex items-center justify-between gap-3 border-b px-4 py-3">
           <div>
@@ -39,9 +39,10 @@ export function StatCard({ label, value, delta, hint, icon, action }: {
   label: string; value: string; delta?: number; hint?: string; icon?: ReactNode; action?: ReactNode;
 }) {
   return (
-    <div className="rounded-lg border bg-card p-4">
-      <div className="flex items-center justify-between text-xs text-muted-foreground">
-        <span className="flex items-center gap-1.5">{icon}{label}</span>
+    <div className="card-3d lift relative overflow-hidden rounded-xl border p-4">
+      <div className="pointer-events-none absolute -right-8 -top-8 size-24 rounded-full bg-primary/10 blur-2xl" />
+      <div className="flex items-center justify-between gap-2 text-xs text-muted-foreground">
+        <span className="flex min-w-0 items-center gap-2">{icon && <span className="grid size-7 shrink-0 place-items-center rounded-lg bg-gradient-primary text-primary-foreground shadow-glow [&>svg]:size-3.5">{icon}</span>}<span className="truncate">{label}</span></span>
         {action}
       </div>
       <div className="mt-2 font-mono text-2xl font-medium tracking-tight">{value}</div>
