@@ -49,7 +49,7 @@ function snippet(lang: string, e: Endpoint) {
 }
 
 function Docs() {
-  const [active, setActive] = useState(endpoints[0].id);
+  const [active, setActive] = useState(endpoints[0]!.id);
   const [lang, setLang] = useState("curl");
   const [running, setRunning] = useState(false);
   const [result, setResult] = useState<string | null>(null);
@@ -85,7 +85,7 @@ function Docs() {
             )}
             <h3 className="mb-2 mt-6 text-xs font-medium uppercase tracking-wider text-muted-foreground">Try it in sandbox</h3>
             <div className="space-y-2 rounded-md border p-3">
-              {e.params.map((p) => <div key={p.name} className="flex items-center gap-2"><Mono className="w-24 text-xs text-muted-foreground">{p.name}</Mono><Input defaultValue={p.example} className="h-8 font-mono text-xs" /></div>)}
+              {e.params.map((p) => <div key={p.name} className="flex items-center gap-2"><Mono className="w-24 text-xs text-muted-foreground">{p.name}</Mono><Input defaultValue={p.example ?? ""} className="h-8 font-mono text-xs" /></div>)}
               <Button size="sm" disabled={running} onClick={() => { setRunning(true); setResult(null); setTimeout(() => { setRunning(false); setResult(JSON.stringify(e.response, null, 2)); }, 700); }}>
                 {running ? <Loader2 className="size-3.5 animate-spin" /> : <Play className="size-3.5" />}Run in sandbox
               </Button>
@@ -94,7 +94,7 @@ function Docs() {
           </div>
           <div className="min-w-0 space-y-4 xl:sticky xl:top-20 xl:self-start">
             <div>
-              <Tabs value={lang} onValueChange={setLang}><TabsList className="h-8">{[["curl", "cURL"], ["python", "Python"], ["node", "Node.js"], ["go", "Go"]].map(([v, l]) => <TabsTrigger key={v} value={v} className="text-xs">{l}</TabsTrigger>)}</TabsList></Tabs>
+              <Tabs value={lang} onValueChange={setLang}><TabsList className="h-8">{[["curl", "cURL"], ["python", "Python"], ["node", "Node.js"], ["go", "Go"]].map(([v, l]) => <TabsTrigger key={v} value={v!} className="text-xs">{l}</TabsTrigger>)}</TabsList></Tabs>
               <CodeBlock className="mt-2" code={snippet(lang, e)} title="Request" />
             </div>
             <CodeBlock code={JSON.stringify(e.response, null, 2)} title="Response · 200" />

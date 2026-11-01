@@ -1,6 +1,11 @@
 // Mock data layer. Each export mirrors a future REST resource from the NestJS backend.
 // Swap these for TanStack Query fetchers against `/v1/*` when the API is ready.
 
+export function pick<T>(a: readonly T[], i: number): T {
+  const n = Math.floor(i);
+  return a[((n % a.length) + a.length) % a.length] as T;
+}
+
 export type Status =
   | "completed" | "pending" | "waiting" | "cancelled" | "refunded" | "failed"
   | "active" | "expired" | "revoked" | "paid" | "operational" | "degraded" | "down";
@@ -46,7 +51,7 @@ export const marketplace = countries.flatMap((c, ci) =>
       id: `${c.code}-${s.id}`,
       country: c,
       service: s,
-      carrier: carriers[(ci + si) % carriers.length],
+      carrier: pick(carriers, (ci + si) % carriers.length),
       price: +(0.12 + r * 1.6).toFixed(2),
       successRate: Math.round(78 + r * 21),
       stock: stock < 150 ? 0 : stock,
@@ -55,18 +60,18 @@ export const marketplace = countries.flatMap((c, ci) =>
 );
 
 export const activeNumbers = [
-  { id: "ord_8f2k1", number: "+1 (415) 555-0132", country: countries[0], service: services[0], expiresIn: 1140, status: "waiting" as Status, cost: 0.42 },
-  { id: "ord_8f2k2", number: "+44 7700 900461", country: countries[1], service: services[2], expiresIn: 620, status: "completed" as Status, code: "482913", cost: 0.65 },
-  { id: "ord_8f2k3", number: "+91 98765 43210", country: countries[2], service: services[1], expiresIn: 1490, status: "waiting" as Status, cost: 0.18 },
-  { id: "ord_8f2k4", number: "+49 1512 3456789", country: countries[3], service: services[3], expiresIn: 300, status: "completed" as Status, code: "730215", cost: 1.12 },
-  { id: "ord_8f2k5", number: "+55 11 91234-5678", country: countries[4], service: services[4], expiresIn: 880, status: "pending" as Status, cost: 0.29 },
+  { id: "ord_8f2k1", number: "+1 (415) 555-0132", country: pick(countries, 0), service: pick(services, 0), expiresIn: 1140, status: "waiting" as Status, cost: 0.42 },
+  { id: "ord_8f2k2", number: "+44 7700 900461", country: pick(countries, 1), service: pick(services, 2), expiresIn: 620, status: "completed" as Status, code: "482913", cost: 0.65 },
+  { id: "ord_8f2k3", number: "+91 98765 43210", country: pick(countries, 2), service: pick(services, 1), expiresIn: 1490, status: "waiting" as Status, cost: 0.18 },
+  { id: "ord_8f2k4", number: "+49 1512 3456789", country: pick(countries, 3), service: pick(services, 3), expiresIn: 300, status: "completed" as Status, code: "730215", cost: 1.12 },
+  { id: "ord_8f2k5", number: "+55 11 91234-5678", country: pick(countries, 4), service: pick(services, 4), expiresIn: 880, status: "pending" as Status, cost: 0.29 },
 ];
 
 const statuses: Status[] = ["completed", "completed", "completed", "completed", "cancelled", "refunded", "failed"];
 export const verifications = Array.from({ length: 48 }, (_, i) => {
-  const c = countries[i % countries.length];
-  const s = services[(i * 3) % services.length];
-  const st = statuses[i % statuses.length];
+  const c = pick(countries, i % countries.length);
+  const s = pick(services, (i * 3) % services.length);
+  const st = pick(statuses, i % statuses.length);
   const d = new Date(Date.UTC(2026, 9, 31, 23, 0) - i * 3600_000 * 5.3);
   return {
     id: `vrf_${(100000 + i * 7919).toString(36)}`,
@@ -108,9 +113,9 @@ export const otpFeedSeed = [
 ];
 
 export const rentals = [
-  { id: "rnt_01", number: "+1 (628) 555-0199", country: countries[0], plan: "Monthly", price: 14.0, renewsAt: "2026-11-24", autoRenew: true, status: "active" as Status, unread: 3 },
-  { id: "rnt_02", number: "+44 7400 123987", country: countries[1], plan: "Weekly", price: 4.5, renewsAt: "2026-11-05", autoRenew: false, status: "active" as Status, unread: 0 },
-  { id: "rnt_03", number: "+31 6 12345678", country: countries[6], plan: "Monthly", price: 11.0, renewsAt: "2026-10-29", autoRenew: false, status: "expired" as Status, unread: 0 },
+  { id: "rnt_01", number: "+1 (628) 555-0199", country: pick(countries, 0), plan: "Monthly", price: 14.0, renewsAt: "2026-11-24", autoRenew: true, status: "active" as Status, unread: 3 },
+  { id: "rnt_02", number: "+44 7400 123987", country: pick(countries, 1), plan: "Weekly", price: 4.5, renewsAt: "2026-11-05", autoRenew: false, status: "active" as Status, unread: 0 },
+  { id: "rnt_03", number: "+31 6 12345678", country: pick(countries, 6), plan: "Monthly", price: 11.0, renewsAt: "2026-10-29", autoRenew: false, status: "expired" as Status, unread: 0 },
 ];
 
 export const rentalInbox = [
@@ -131,7 +136,7 @@ const endpoints = [
   ["GET", "/v1/wallet/balance"], ["POST", "/v1/whatsapp/activate"], ["GET", "/v1/prices"], ["POST", "/v1/kyc/verify"],
 ] as const;
 export const apiLogs = Array.from({ length: 40 }, (_, i) => {
-  const [method, path] = endpoints[i % endpoints.length];
+  const [method, path] = pick(endpoints, i % endpoints.length);
   const r = seeded(i + 200);
   const status = r > 0.92 ? 500 : r > 0.84 ? 429 : r > 0.76 ? 402 : r > 0.7 ? 400 : i % 7 === 0 ? 201 : 200;
   return {
@@ -150,8 +155,8 @@ export const webhooks = [
 ];
 export const webhookEvents = Array.from({ length: 12 }, (_, i) => ({
   id: `evt_${(70000 + i * 811).toString(36)}`,
-  type: ["sms.received", "number.expired", "wallet.low_balance", "number.cancelled"][i % 4],
-  endpoint: i % 5 === 4 ? webhooks[1].url : webhooks[0].url,
+  type: pick(["sms.received", "number.expired", "wallet.low_balance", "number.cancelled"], i % 4),
+  endpoint: i % 5 === 4 ? pick(webhooks, 1).url : pick(webhooks, 0).url,
   code: i % 5 === 4 ? 504 : 200,
   attempts: i % 5 === 4 ? 3 : 1,
   at: new Date(Date.UTC(2026, 10, 1, 4, 20) - i * 640_000).toISOString(),
@@ -168,9 +173,9 @@ export const transactions = Array.from({ length: 18 }, (_, i) => {
   const isTopup = i % 4 === 0;
   return {
     id: isTopup ? `INV-2026-${String(1042 - i).padStart(4, "0")}` : `TXN-${(5000 - i * 13).toString()}`,
-    type: isTopup ? "Top-up" : ["SMS OTP", "WhatsApp", "Rental renewal"][i % 3],
-    method: isTopup ? ["Visa •• 4242", "USDT (TRC20)", "PayPal", "Wire"][(i / 4) % 4] : "Wallet",
-    amount: isTopup ? [100, 500, 25, 100, 2000][(i / 4) % 5] : -+(0.2 + seeded(i) * 14).toFixed(2),
+    type: isTopup ? "Top-up" : pick(["SMS OTP", "WhatsApp", "Rental renewal"], i % 3),
+    method: isTopup ? pick(["Visa •• 4242", "USDT (TRC20)", "PayPal", "Wire"], (i / 4) % 4) : "Wallet",
+    amount: isTopup ? pick([100, 500, 25, 100, 2000], (i / 4) % 5) : -+(0.2 + seeded(i) * 14).toFixed(2),
     status: (i === 2 ? "refunded" : i === 9 ? "pending" : "paid") as Status,
     at: new Date(Date.UTC(2026, 9, 31) - i * 86400_000 * 1.6).toISOString(),
   };

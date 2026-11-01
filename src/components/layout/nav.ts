@@ -1,6 +1,6 @@
 import {
   Activity, BarChart3, BookOpen, CreditCard, Gift, Globe2, Home, KeyRound, LayoutGrid,
-  MessageCircle, MessageSquare, Phone, Receipt, ScrollText, Settings, Shield, ShieldCheck, Users, Webhook,
+  MessageCircle, MessageSquare, Megaphone, FileCheck2, ListChecks, Rocket, MessagesSquare, LayoutTemplate, Bot, Sparkles, Workflow, UserCheck, PhoneCall, MonitorCheck, QrCode, Radio, Phone, Receipt, ScrollText, Settings, Shield, ShieldCheck, Users, Webhook,
 } from "lucide-react";
 
 export const navGroups = [
@@ -11,9 +11,34 @@ export const navGroups = [
       { title: "Get Number", url: "/app/marketplace", icon: Globe2 },
       { title: "Active Numbers", url: "/app/numbers", icon: Phone },
       { title: "SMS Verifications", url: "/app/sms", icon: MessageSquare },
-      { title: "WhatsApp", url: "/app/whatsapp", icon: MessageCircle },
+      { title: "WhatsApp OTP", url: "/app/whatsapp", icon: MessageCircle },
       { title: "Rental Numbers", url: "/app/rentals", icon: LayoutGrid },
       { title: "History & Reports", url: "/app/reports", icon: BarChart3 },
+    ],
+  },
+  {
+    label: "Text SMS",
+    items: [
+      { title: "SMS Broadcasting", url: "/app/sms-broadcast", icon: Megaphone },
+      { title: "DLT Management", url: "/app/dlt", icon: FileCheck2 },
+      { title: "OTP Whitelist", url: "/app/otp-whitelist", icon: ListChecks },
+    ],
+  },
+  {
+    label: "WhatsApp Business",
+    items: [
+      { title: "Onboarding", url: "/app/wa/onboarding", icon: Rocket },
+      { title: "Live Chat", url: "/app/wa/inbox", icon: MessagesSquare },
+      { title: "Broadcasting", url: "/app/wa/broadcast", icon: Radio },
+      { title: "Templates", url: "/app/wa/templates", icon: LayoutTemplate },
+      { title: "Bot Builder", url: "/app/wa/bots", icon: Bot },
+      { title: "AI Hub", url: "/app/wa/ai", icon: Sparkles },
+      { title: "Flows", url: "/app/wa/flows", icon: Workflow },
+      { title: "Opt-in / Opt-out", url: "/app/wa/opt", icon: UserCheck },
+      { title: "Calls", url: "/app/wa/calls", icon: PhoneCall },
+      { title: "Supervisor", url: "/app/wa/supervisor", icon: MonitorCheck },
+      { title: "QR Codes", url: "/app/wa/qr", icon: QrCode },
+      { title: "WA Webhooks", url: "/app/wa/webhooks", icon: Webhook },
     ],
   },
   {

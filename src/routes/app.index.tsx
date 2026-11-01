@@ -129,7 +129,7 @@ function OtpFeed() {
   useEffect(() => {
     let n = 100;
     const t = setInterval(() => {
-      const src = otpFeedSeed[Math.floor(Math.random() * otpFeedSeed.length)];
+      const src = otpFeedSeed[Math.floor(Math.random() * otpFeedSeed.length)]!;
       const code = String(Math.floor(100000 + Math.random() * 899999));
       setItems((prev) => [{ ...src, code, id: n++, ago: 0 }, ...prev.map((p) => ({ ...p, ago: p.ago + 6 }))].slice(0, 7));
     }, 6000);
