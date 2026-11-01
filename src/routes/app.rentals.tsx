@@ -18,7 +18,7 @@ export const Route = createFileRoute("/app/rentals")({
 
 function Rentals() {
   const [rentals, setRentals] = useState(seed);
-  const [sel, setSel] = useState(seed[0].id);
+  const [sel, setSel] = useState(seed[0]!.id);
   const current = rentals.find((r) => r.id === sel)!;
   return (
     <>
@@ -29,7 +29,7 @@ function Rentals() {
             <DialogContent>
               <DialogHeader><DialogTitle>Rent a number</DialogTitle></DialogHeader>
               <RadioGroup defaultValue="monthly" className="grid grid-cols-2 gap-2">
-                {[["weekly", "Weekly", "$4.50"], ["monthly", "Monthly", "$14.00"]].map(([v, l, p]) => (
+                {[["weekly", "Weekly", "$4.50"], ["monthly", "Monthly", "$14.00"]] as const.map(([v, l, p]) => (
                   <Label key={v} htmlFor={v} className="flex cursor-pointer items-center gap-3 rounded-md border p-3 has-[:checked]:border-primary has-[:checked]:bg-accent">
                     <RadioGroupItem id={v} value={v} /><div><div>{l}</div><Mono className="text-xs text-muted-foreground">{p}</Mono></div>
                   </Label>

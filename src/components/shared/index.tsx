@@ -74,9 +74,9 @@ const statusStyles: Record<string, string> = {
   down: "bg-destructive/10 text-destructive border-destructive/20",
 };
 
-export function StatusBadge({ status, label }: { status: Status | string; label?: string }) {
+export function StatusBadge({ status, label }: { status: Status | string; label?: string | undefined }) {
   return (
-    <span className={cn("inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 text-[11px] font-medium capitalize", statusStyles[status] ?? statusStyles.cancelled)}>
+    <span className={cn("inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 text-[11px] font-medium capitalize", statusStyles[status] ?? statusStyles["cancelled"])}>
       <span className={cn("size-1.5 rounded-full bg-current", status === "waiting" && "animate-pulse")} />
       {label ?? status}
     </span>
@@ -151,7 +151,7 @@ export const fmtDate = (iso: string) => new Date(iso).toLocaleString("en-US", { 
 
 export function downloadCsv(filename: string, rows: Record<string, unknown>[]) {
   if (!rows.length) return;
-  const head = Object.keys(rows[0]);
+  const head = Object.keys(rows[0]!);
   const csv = [head.join(","), ...rows.map((r) => head.map((h) => JSON.stringify(r[h] ?? "")).join(","))].join("\n");
   const a = document.createElement("a");
   a.href = URL.createObjectURL(new Blob([csv], { type: "text/csv" }));

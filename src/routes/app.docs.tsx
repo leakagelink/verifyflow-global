@@ -49,7 +49,7 @@ function snippet(lang: string, e: Endpoint) {
 }
 
 function Docs() {
-  const [active, setActive] = useState(endpoints[0].id);
+  const [active, setActive] = useState(endpoints[0]!.id);
   const [lang, setLang] = useState("curl");
   const [running, setRunning] = useState(false);
   const [result, setResult] = useState<string | null>(null);
@@ -85,7 +85,7 @@ function Docs() {
             )}
             <h3 className="mb-2 mt-6 text-xs font-medium uppercase tracking-wider text-muted-foreground">Try it in sandbox</h3>
             <div className="space-y-2 rounded-md border p-3">
-              {e.params.map((p) => <div key={p.name} className="flex items-center gap-2"><Mono className="w-24 text-xs text-muted-foreground">{p.name}</Mono><Input defaultValue={p.example} className="h-8 font-mono text-xs" /></div>)}
+              {e.params.map((p) => <div key={p.name} className="flex items-center gap-2"><Mono className="w-24 text-xs text-muted-foreground">{p.name}</Mono><Input defaultValue={p.example ?? ""} className="h-8 font-mono text-xs" /></div>)}
               <Button size="sm" disabled={running} onClick={() => { setRunning(true); setResult(null); setTimeout(() => { setRunning(false); setResult(JSON.stringify(e.response, null, 2)); }, 700); }}>
                 {running ? <Loader2 className="size-3.5 animate-spin" /> : <Play className="size-3.5" />}Run in sandbox
               </Button>
