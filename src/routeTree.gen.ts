@@ -11,6 +11,13 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AppRouteImport } from './routes/app'
+import { Route as AppIndexRouteImport } from './routes/app.index'
+import { Route as AppMarketplaceRouteImport } from './routes/app.marketplace'
+import { Route as AppNumbersRouteImport } from './routes/app.numbers'
+import { Route as AppRentalsRouteImport } from './routes/app.rentals'
+import { Route as AppReportsRouteImport } from './routes/app.reports'
+import { Route as AppSmsRouteImport } from './routes/app.sms'
+import { Route as AppWhatsappRouteImport } from './routes/app.whatsapp'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -22,31 +29,113 @@ const AppRoute = AppRouteImport.update({
   path: '/app',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AppIndexRoute = AppIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppMarketplaceRoute = AppMarketplaceRouteImport.update({
+  id: '/marketplace',
+  path: '/marketplace',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppNumbersRoute = AppNumbersRouteImport.update({
+  id: '/numbers',
+  path: '/numbers',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppRentalsRoute = AppRentalsRouteImport.update({
+  id: '/rentals',
+  path: '/rentals',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppReportsRoute = AppReportsRouteImport.update({
+  id: '/reports',
+  path: '/reports',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppSmsRoute = AppSmsRouteImport.update({
+  id: '/sms',
+  path: '/sms',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppWhatsappRoute = AppWhatsappRouteImport.update({
+  id: '/whatsapp',
+  path: '/whatsapp',
+  getParentRoute: () => AppRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/app': typeof AppRoute
+  '/app': typeof AppRouteWithChildren
+  '/app/marketplace': typeof AppMarketplaceRoute
+  '/app/numbers': typeof AppNumbersRoute
+  '/app/rentals': typeof AppRentalsRoute
+  '/app/reports': typeof AppReportsRoute
+  '/app/sms': typeof AppSmsRoute
+  '/app/whatsapp': typeof AppWhatsappRoute
+  '/app/': typeof AppIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/app': typeof AppRoute
+  '/app/marketplace': typeof AppMarketplaceRoute
+  '/app/numbers': typeof AppNumbersRoute
+  '/app/rentals': typeof AppRentalsRoute
+  '/app/reports': typeof AppReportsRoute
+  '/app/sms': typeof AppSmsRoute
+  '/app/whatsapp': typeof AppWhatsappRoute
+  '/app': typeof AppIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/app': typeof AppRoute
+  '/app': typeof AppRouteWithChildren
+  '/app/marketplace': typeof AppMarketplaceRoute
+  '/app/numbers': typeof AppNumbersRoute
+  '/app/rentals': typeof AppRentalsRoute
+  '/app/reports': typeof AppReportsRoute
+  '/app/sms': typeof AppSmsRoute
+  '/app/whatsapp': typeof AppWhatsappRoute
+  '/app/': typeof AppIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/app'
+  fullPaths:
+    | '/'
+    | '/app'
+    | '/app/marketplace'
+    | '/app/numbers'
+    | '/app/rentals'
+    | '/app/reports'
+    | '/app/sms'
+    | '/app/whatsapp'
+    | '/app/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/app'
-  id: '__root__' | '/' | '/app'
+  to:
+    | '/'
+    | '/app/marketplace'
+    | '/app/numbers'
+    | '/app/rentals'
+    | '/app/reports'
+    | '/app/sms'
+    | '/app/whatsapp'
+    | '/app'
+  id:
+    | '__root__'
+    | '/'
+    | '/app'
+    | '/app/marketplace'
+    | '/app/numbers'
+    | '/app/rentals'
+    | '/app/reports'
+    | '/app/sms'
+    | '/app/whatsapp'
+    | '/app/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  AppRoute: typeof AppRoute
+  AppRoute: typeof AppRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
@@ -65,12 +154,83 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/app/': {
+      id: '/app/'
+      path: '/'
+      fullPath: '/app/'
+      preLoaderRoute: typeof AppIndexRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/marketplace': {
+      id: '/app/marketplace'
+      path: '/marketplace'
+      fullPath: '/app/marketplace'
+      preLoaderRoute: typeof AppMarketplaceRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/numbers': {
+      id: '/app/numbers'
+      path: '/numbers'
+      fullPath: '/app/numbers'
+      preLoaderRoute: typeof AppNumbersRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/rentals': {
+      id: '/app/rentals'
+      path: '/rentals'
+      fullPath: '/app/rentals'
+      preLoaderRoute: typeof AppRentalsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/reports': {
+      id: '/app/reports'
+      path: '/reports'
+      fullPath: '/app/reports'
+      preLoaderRoute: typeof AppReportsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/sms': {
+      id: '/app/sms'
+      path: '/sms'
+      fullPath: '/app/sms'
+      preLoaderRoute: typeof AppSmsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/whatsapp': {
+      id: '/app/whatsapp'
+      path: '/whatsapp'
+      fullPath: '/app/whatsapp'
+      preLoaderRoute: typeof AppWhatsappRouteImport
+      parentRoute: typeof AppRoute
+    }
   }
 }
 
+interface AppRouteChildren {
+  AppMarketplaceRoute: typeof AppMarketplaceRoute
+  AppNumbersRoute: typeof AppNumbersRoute
+  AppRentalsRoute: typeof AppRentalsRoute
+  AppReportsRoute: typeof AppReportsRoute
+  AppSmsRoute: typeof AppSmsRoute
+  AppWhatsappRoute: typeof AppWhatsappRoute
+  AppIndexRoute: typeof AppIndexRoute
+}
+
+const AppRouteChildren: AppRouteChildren = {
+  AppMarketplaceRoute: AppMarketplaceRoute,
+  AppNumbersRoute: AppNumbersRoute,
+  AppRentalsRoute: AppRentalsRoute,
+  AppReportsRoute: AppReportsRoute,
+  AppSmsRoute: AppSmsRoute,
+  AppWhatsappRoute: AppWhatsappRoute,
+  AppIndexRoute: AppIndexRoute,
+}
+
+const AppRouteWithChildren = AppRoute._addFileChildren(AppRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  AppRoute: AppRoute,
+  AppRoute: AppRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
