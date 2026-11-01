@@ -49,7 +49,7 @@ export function StatCard({ label, value, delta, hint, icon, action }: {
 }) {
   const tone = toneOf(label);
   return (
-    <div className="card-3d lift group relative min-w-0 overflow-hidden rounded-2xl border p-4">
+    <div className="card-3d lift group relative min-w-0 overflow-hidden rounded-2xl border p-3 sm:p-4">
       <div className={cn("pointer-events-none absolute -right-10 -top-10 size-32 rounded-full opacity-25 blur-2xl transition-opacity group-hover:opacity-50", tone)} />
       <svg aria-hidden viewBox="0 0 120 40" className="pointer-events-none absolute bottom-0 right-0 h-12 w-32 text-primary opacity-15 transition-opacity group-hover:opacity-40">
         <path d="M0 32 L15 26 L30 29 L45 18 L60 22 L75 10 L90 15 L105 6 L120 9" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
@@ -61,7 +61,7 @@ export function StatCard({ label, value, delta, hint, icon, action }: {
         </span>
         {action}
       </div>
-      <div className="relative mt-3 font-mono text-2xl font-semibold tracking-tight sm:text-[1.7rem]">{value}</div>
+      <div className="relative mt-3 truncate font-mono text-xl font-semibold tracking-tight sm:text-[1.7rem]">{value}</div>
       <div className="relative mt-1 flex flex-wrap items-center gap-2 text-xs">
         {delta !== undefined && (
           <span className={cn("inline-flex items-center gap-0.5 rounded-full px-1.5 py-0.5 font-medium", delta >= 0 ? "bg-success/10 text-success" : "bg-destructive/10 text-destructive")}>

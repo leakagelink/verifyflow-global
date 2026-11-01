@@ -34,7 +34,7 @@ function Dashboard() {
         </div>
       )}
 
-      <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-2 xl:grid-cols-4">
         <StatCard label="Wallet balance" icon={<Wallet className="size-3.5" />} value={fmtUsd(wallet.balance)} hint={`${fmtUsd(wallet.monthSpend)} spent this month`}
           action={<AddFundsDialog><button className="text-xs font-medium text-primary hover:underline">Add funds</button></AddFundsDialog>} />
         <StatCard label="Active numbers" icon={<Phone className="size-3.5" />} value="5" hint="2 waiting for SMS · 3 rentals" />

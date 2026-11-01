@@ -35,7 +35,7 @@ function Reports() {
     <>
       <PageHeader title="History & reports" description="Every verification on your account, filterable and exportable."
         actions={<Button size="sm" variant="outline" onClick={() => downloadCsv("verifications.csv", rows.map((r) => ({ id: r.id, number: r.number, country: r.country.code, service: r.service.name, channel: r.channel, status: r.status, code: r.code, cost: r.cost, created_at: r.createdAt })))}><Download className="size-4" />Export CSV</Button>} />
-      <div className="mb-4 grid gap-3 sm:grid-cols-3">
+      <div className="mb-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
         <StatCard label="Verifications" value={rows.length.toString()} />
         <StatCard label="Success rate" value={rows.length ? `${((ok / rows.length) * 100).toFixed(1)}%` : "—"} />
         <StatCard label="Total cost" value={fmtUsd(rows.reduce((a, r) => a + r.cost, 0))} />

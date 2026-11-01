@@ -20,7 +20,7 @@ function Page() {
   return (
     <>
       <PageHeader title="Opt-in & Opt-out" description="Consent management for WhatsApp contacts." />
-      <div className="grid gap-3 sm:grid-cols-3"><StatCard label="Opted in" value="24,912" delta={6} /><StatCard label="Opted out" value="1,208" /><StatCard label="Opt-out rate" value="4.6%" /></div>
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3"><StatCard label="Opted in" value="24,912" delta={6} /><StatCard label="Opted out" value="1,208" /><StatCard label="Opt-out rate" value="4.6%" /></div>
       <Panel className="mt-4" title="Keywords">
         <div className="grid gap-3 text-sm sm:grid-cols-2">
           <div className="space-y-1.5"><Label>Opt-out keywords</Label><Input defaultValue="STOP, UNSUBSCRIBE, बंद" /></div>

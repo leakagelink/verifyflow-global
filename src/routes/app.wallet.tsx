@@ -19,12 +19,12 @@ function Page() {
   return (
     <>
       <PageHeader title="Wallet & Credits" description="Your credit balance, packages and top-ups." />
-      <div className="grid gap-3 sm:grid-cols-3">
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
         <StatCard label="Balance" value={fmtUsd(wallet.balance)} action={<AddFundsDialog><button className="text-xs font-medium text-primary">Add funds</button></AddFundsDialog>} />
         <StatCard label="Spent this month" value={fmtUsd(wallet.monthSpend)} delta={6.1} />
         <StatCard label="Low balance alert" value={fmtUsd(wallet.lowBalanceThreshold)} hint="Email + webhook" />
       </div>
-      <div className="mt-4 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+      <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-2 xl:grid-cols-4">
         {creditPackages.map((p) => (
           <Panel key={p.amount}><Mono className="text-2xl font-medium">${p.amount}</Mono><p className="text-xs text-muted-foreground">{p.bonus ? `+$${p.bonus} bonus credits` : "No bonus"}</p>
             <AddFundsDialog><Button size="sm" className="mt-3 w-full" variant={p.popular ? "default" : "outline"}>Buy</Button></AddFundsDialog></Panel>

@@ -21,7 +21,7 @@ function Page() {
       <PageHeader title="Refer & Earn" description="Referral link, commissions and payouts." />
       <Panel title="Your referral link"><div className="flex items-center gap-2 rounded-md border bg-muted/50 p-2"><Mono className="flex-1">{referrals.link}</Mono><CopyButton value={referrals.link} /></div>
         <p className="mt-2 text-xs text-muted-foreground">Earn {referrals.rate}% of every top-up your referrals make, for life.</p></Panel>
-      <div className="mt-4 grid gap-3 sm:grid-cols-4">
+      <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
         <StatCard label="Clicks" value={referrals.clicks.toLocaleString()} /><StatCard label="Signups" value={String(referrals.signups)} />
         <StatCard label="Earned" value={fmtUsd(referrals.earned)} /><StatCard label="Pending payout" value={fmtUsd(referrals.pending)} />
       </div>

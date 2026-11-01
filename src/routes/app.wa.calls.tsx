@@ -20,7 +20,7 @@ function Page() {
   return (
     <>
       <PageHeader title="WhatsApp Calls" description="Inbound and outbound WhatsApp Business calling." />
-      <div className="grid gap-3 sm:grid-cols-4"><StatCard label="Calls today" value="38" /><StatCard label="Answered" value="92%" /><StatCard label="Avg duration" value="3m 40s" /><StatCard label="Missed" value="3" /></div>
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-4"><StatCard label="Calls today" value="38" /><StatCard label="Answered" value="92%" /><StatCard label="Avg duration" value="3m 40s" /><StatCard label="Missed" value="3" /></div>
       <Panel className="mt-4" title="Calling settings"><div className="space-y-2 text-sm">
         <label className="flex items-center justify-between">Allow customers to call this number <Switch defaultChecked /></label>
         <label className="flex items-center justify-between">Show call button in chats <Switch defaultChecked /></label>
