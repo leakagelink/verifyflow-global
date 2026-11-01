@@ -26,7 +26,7 @@ export function Panel({ title, description, actions, children, className, bodyCl
   title?: ReactNode; description?: string; actions?: ReactNode; children: ReactNode; className?: string; bodyClassName?: string;
 }) {
   return (
-    <section className={cn("card-3d rounded-2xl border text-card-foreground", className)}>
+    <section className={cn("card-3d min-w-0 rounded-2xl border text-card-foreground", className)}>
       {(title || actions) && (
         <header className="flex items-center justify-between gap-3 border-b px-4 py-3">
           <div className="min-w-0">
@@ -49,7 +49,7 @@ export function StatCard({ label, value, delta, hint, icon, action }: {
 }) {
   const tone = toneOf(label);
   return (
-    <div className="card-3d lift group relative overflow-hidden rounded-2xl border p-4">
+    <div className="card-3d lift group relative min-w-0 overflow-hidden rounded-2xl border p-4">
       <div className={cn("pointer-events-none absolute -right-10 -top-10 size-32 rounded-full opacity-25 blur-2xl transition-opacity group-hover:opacity-50", tone)} />
       <svg aria-hidden viewBox="0 0 120 40" className="pointer-events-none absolute bottom-0 right-0 h-12 w-32 text-primary opacity-15 transition-opacity group-hover:opacity-40">
         <path d="M0 32 L15 26 L30 29 L45 18 L60 22 L75 10 L90 15 L105 6 L120 9" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
