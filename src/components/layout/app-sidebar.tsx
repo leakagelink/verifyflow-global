@@ -11,7 +11,7 @@ export function AppSidebar() {
   const isActive = (url: string) => (url === "/app" ? path === "/app" || path === "/app/" : path.startsWith(url));
   return (
     <Sidebar collapsible="icon">
-      <SidebarHeader className="h-14 justify-center border-b">
+      <SidebarHeader className="h-14 justify-center border-b border-sidebar-border text-sidebar-accent-foreground">
         <Link to="/" className="flex items-center gap-2 px-1"><Logo /></Link>
       </SidebarHeader>
       <SidebarContent>
@@ -33,9 +33,9 @@ export function AppSidebar() {
         ))}
       </SidebarContent>
       <SidebarFooter className="border-t group-data-[collapsible=icon]:hidden">
-        <div className="rounded-md bg-muted/60 p-3 text-xs">
+        <div className="rounded-lg bg-sidebar-accent p-3 text-xs text-sidebar-accent-foreground">
           <div className="flex items-center gap-1.5 font-medium"><span className="size-1.5 rounded-full bg-success" />All systems operational</div>
-          <div className="mt-0.5 text-muted-foreground">Upstream latency 182ms</div>
+          <div className="mt-0.5 opacity-70">Upstream latency 182ms</div>
         </div>
       </SidebarFooter>
     </Sidebar>
