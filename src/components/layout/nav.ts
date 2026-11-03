@@ -42,6 +42,14 @@ export const navGroups = [
     ],
   },
   {
+    label: "KYC APIs",
+    items: [
+      { title: "Verification Hub", url: "/app/kyc", icon: ShieldCheck },
+      { title: "KYC Logs", url: "/app/kyc/logs", icon: ScrollText },
+      { title: "KYC Docs", url: "/app/kyc/docs", icon: BookOpen },
+    ],
+  },
+  {
     label: "Developer",
     items: [
       { title: "API Keys", url: "/app/api-keys", icon: KeyRound },
