@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AppRouteImport } from './routes/app'
+import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as AppIndexRouteImport } from './routes/app.index'
 import { Route as AppAdminRouteImport } from './routes/app.admin'
 import { Route as AppApiKeysRouteImport } from './routes/app.api-keys'
@@ -57,6 +58,11 @@ const IndexRoute = IndexRouteImport.update({
 const AppRoute = AppRouteImport.update({
   id: '/app',
   path: '/app',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PricingRoute = PricingRouteImport.update({
+  id: '/pricing',
+  path: '/pricing',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AppIndexRoute = AppIndexRouteImport.update({
@@ -248,6 +254,7 @@ const AppWaWebhooksRoute = AppWaWebhooksRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/app': typeof AppRouteWithChildren
+  '/pricing': typeof PricingRoute
   '/app/admin': typeof AppAdminRoute
   '/app/api-keys': typeof AppApiKeysRoute
   '/app/api-logs': typeof AppApiLogsRoute
@@ -288,6 +295,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/pricing': typeof PricingRoute
   '/app/admin': typeof AppAdminRoute
   '/app/api-keys': typeof AppApiKeysRoute
   '/app/api-logs': typeof AppApiLogsRoute
@@ -330,6 +338,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/app': typeof AppRouteWithChildren
+  '/pricing': typeof PricingRoute
   '/app/admin': typeof AppAdminRoute
   '/app/api-keys': typeof AppApiKeysRoute
   '/app/api-logs': typeof AppApiLogsRoute
@@ -373,6 +382,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/app'
+    | '/pricing'
     | '/app/admin'
     | '/app/api-keys'
     | '/app/api-logs'
@@ -413,6 +423,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/pricing'
     | '/app/admin'
     | '/app/api-keys'
     | '/app/api-logs'
@@ -454,6 +465,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/app'
+    | '/pricing'
     | '/app/admin'
     | '/app/api-keys'
     | '/app/api-logs'
@@ -496,6 +508,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AppRoute: typeof AppRouteWithChildren
+  PricingRoute: typeof PricingRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -512,6 +525,13 @@ declare module '@tanstack/react-router' {
       path: '/app'
       fullPath: '/app'
       preLoaderRoute: typeof AppRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pricing': {
+      id: '/pricing'
+      path: '/pricing'
+      fullPath: '/pricing'
+      preLoaderRoute: typeof PricingRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/app/': {
@@ -861,6 +881,7 @@ const AppRouteWithChildren = AppRoute._addFileChildren(AppRouteChildren)
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AppRoute: AppRouteWithChildren,
+  PricingRoute: PricingRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
