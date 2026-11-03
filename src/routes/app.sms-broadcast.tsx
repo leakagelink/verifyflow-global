@@ -10,7 +10,7 @@ import { Switch } from "@/components/ui/switch";
 import { CopyButton, DataTable, HttpStatus, Mono, PageHeader, Panel, StatCard, StatusBadge, fmtDate, fmtUsd, pageHead } from "@/components/shared";
 import { agents, calls, dltEntity, dltHeaders, dltTemplates, flows, optContacts, otpWhitelist, qrCodes, smsCampaigns, waBroadcasts, waWebhookEvents } from "@/services/messaging-data";
 import { ServiceRates } from "@/components/shared/service-rates";
-import { smsPrices } from "@/services/pricing";
+import { smsPrices, voicePrices } from "@/services/pricing";
 
 export const Route = createFileRoute("/app/sms-broadcast")({
   head: () => pageHead("SMS Broadcasting", "Send bulk DLT-compliant SMS campaigns."),
@@ -45,6 +45,7 @@ function Page() {
         ]} /></Panel>
       </div>
       <ServiceRates title="SMS rates" rows={smsPrices} />
+      <ServiceRates title="Voice rates (INR)" rows={voicePrices.map((p) => ({ label: p.label, usd: 0, inr: p.inr, unit: p.unit }))} />
     </>
   );
 }
