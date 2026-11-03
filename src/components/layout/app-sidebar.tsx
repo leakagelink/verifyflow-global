@@ -11,7 +11,12 @@ export function AppSidebar() {
   const path = useRouterState({ select: (s) => s.location.pathname });
   const { setOpenMobile } = useSidebar();
   useEffect(() => setOpenMobile(false), [path, setOpenMobile]);
-  const isActive = (url: string) => (url === "/app" ? path === "/app" || path === "/app/" : path === url || path.startsWith(url + "/"));
+  const isActive = (url: string) => {
+    if (url === "/app") return path === "/app" || path === "/app/";
+    if (path === url) return true;
+    const deeper = navGroups.some((g) => g.items.some((i) => i.url !== url && i.url.startsWith(url + "/") && path.startsWith(i.url)));
+    return !deeper && path.startsWith(url + "/");
+  };
   return (
     <Sidebar collapsible="icon">
       <SidebarHeader className="h-14 justify-center border-b border-sidebar-border text-sidebar-accent-foreground">

@@ -18,6 +18,7 @@ import { Route as AppApiLogsRouteImport } from './routes/app.api-logs'
 import { Route as AppDltRouteImport } from './routes/app.dlt'
 import { Route as AppDocsRouteImport } from './routes/app.docs'
 import { Route as AppInvoicesRouteImport } from './routes/app.invoices'
+import { Route as AppKycRouteImport } from './routes/app.kyc'
 import { Route as AppMarketplaceRouteImport } from './routes/app.marketplace'
 import { Route as AppNumbersRouteImport } from './routes/app.numbers'
 import { Route as AppOtpWhitelistRouteImport } from './routes/app.otp-whitelist'
@@ -33,6 +34,8 @@ import { Route as AppUsageRouteImport } from './routes/app.usage'
 import { Route as AppWalletRouteImport } from './routes/app.wallet'
 import { Route as AppWebhooksRouteImport } from './routes/app.webhooks'
 import { Route as AppWhatsappRouteImport } from './routes/app.whatsapp'
+import { Route as AppKycDocsRouteImport } from './routes/app.kyc_.docs'
+import { Route as AppKycLogsRouteImport } from './routes/app.kyc_.logs'
 import { Route as AppWaAiRouteImport } from './routes/app.wa.ai'
 import { Route as AppWaBotsRouteImport } from './routes/app.wa.bots'
 import { Route as AppWaBroadcastRouteImport } from './routes/app.wa.broadcast'
@@ -89,6 +92,11 @@ const AppDocsRoute = AppDocsRouteImport.update({
 const AppInvoicesRoute = AppInvoicesRouteImport.update({
   id: '/invoices',
   path: '/invoices',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppKycRoute = AppKycRouteImport.update({
+  id: '/kyc',
+  path: '/kyc',
   getParentRoute: () => AppRoute,
 } as any)
 const AppMarketplaceRoute = AppMarketplaceRouteImport.update({
@@ -166,6 +174,16 @@ const AppWhatsappRoute = AppWhatsappRouteImport.update({
   path: '/whatsapp',
   getParentRoute: () => AppRoute,
 } as any)
+const AppKycDocsRoute = AppKycDocsRouteImport.update({
+  id: '/kyc_/docs',
+  path: '/kyc/docs',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppKycLogsRoute = AppKycLogsRouteImport.update({
+  id: '/kyc_/logs',
+  path: '/kyc/logs',
+  getParentRoute: () => AppRoute,
+} as any)
 const AppWaAiRoute = AppWaAiRouteImport.update({
   id: '/wa/ai',
   path: '/wa/ai',
@@ -236,6 +254,7 @@ export interface FileRoutesByFullPath {
   '/app/dlt': typeof AppDltRoute
   '/app/docs': typeof AppDocsRoute
   '/app/invoices': typeof AppInvoicesRoute
+  '/app/kyc': typeof AppKycRoute
   '/app/marketplace': typeof AppMarketplaceRoute
   '/app/numbers': typeof AppNumbersRoute
   '/app/otp-whitelist': typeof AppOtpWhitelistRoute
@@ -252,6 +271,8 @@ export interface FileRoutesByFullPath {
   '/app/webhooks': typeof AppWebhooksRoute
   '/app/whatsapp': typeof AppWhatsappRoute
   '/app/': typeof AppIndexRoute
+  '/app/kyc/docs': typeof AppKycDocsRoute
+  '/app/kyc/logs': typeof AppKycLogsRoute
   '/app/wa/ai': typeof AppWaAiRoute
   '/app/wa/bots': typeof AppWaBotsRoute
   '/app/wa/broadcast': typeof AppWaBroadcastRoute
@@ -273,6 +294,7 @@ export interface FileRoutesByTo {
   '/app/dlt': typeof AppDltRoute
   '/app/docs': typeof AppDocsRoute
   '/app/invoices': typeof AppInvoicesRoute
+  '/app/kyc': typeof AppKycRoute
   '/app/marketplace': typeof AppMarketplaceRoute
   '/app/numbers': typeof AppNumbersRoute
   '/app/otp-whitelist': typeof AppOtpWhitelistRoute
@@ -289,6 +311,8 @@ export interface FileRoutesByTo {
   '/app/webhooks': typeof AppWebhooksRoute
   '/app/whatsapp': typeof AppWhatsappRoute
   '/app': typeof AppIndexRoute
+  '/app/kyc/docs': typeof AppKycDocsRoute
+  '/app/kyc/logs': typeof AppKycLogsRoute
   '/app/wa/ai': typeof AppWaAiRoute
   '/app/wa/bots': typeof AppWaBotsRoute
   '/app/wa/broadcast': typeof AppWaBroadcastRoute
@@ -312,6 +336,7 @@ export interface FileRoutesById {
   '/app/dlt': typeof AppDltRoute
   '/app/docs': typeof AppDocsRoute
   '/app/invoices': typeof AppInvoicesRoute
+  '/app/kyc': typeof AppKycRoute
   '/app/marketplace': typeof AppMarketplaceRoute
   '/app/numbers': typeof AppNumbersRoute
   '/app/otp-whitelist': typeof AppOtpWhitelistRoute
@@ -328,6 +353,8 @@ export interface FileRoutesById {
   '/app/webhooks': typeof AppWebhooksRoute
   '/app/whatsapp': typeof AppWhatsappRoute
   '/app/': typeof AppIndexRoute
+  '/app/kyc_/docs': typeof AppKycDocsRoute
+  '/app/kyc_/logs': typeof AppKycLogsRoute
   '/app/wa/ai': typeof AppWaAiRoute
   '/app/wa/bots': typeof AppWaBotsRoute
   '/app/wa/broadcast': typeof AppWaBroadcastRoute
@@ -352,6 +379,7 @@ export interface FileRouteTypes {
     | '/app/dlt'
     | '/app/docs'
     | '/app/invoices'
+    | '/app/kyc'
     | '/app/marketplace'
     | '/app/numbers'
     | '/app/otp-whitelist'
@@ -368,6 +396,8 @@ export interface FileRouteTypes {
     | '/app/webhooks'
     | '/app/whatsapp'
     | '/app/'
+    | '/app/kyc/docs'
+    | '/app/kyc/logs'
     | '/app/wa/ai'
     | '/app/wa/bots'
     | '/app/wa/broadcast'
@@ -389,6 +419,7 @@ export interface FileRouteTypes {
     | '/app/dlt'
     | '/app/docs'
     | '/app/invoices'
+    | '/app/kyc'
     | '/app/marketplace'
     | '/app/numbers'
     | '/app/otp-whitelist'
@@ -405,6 +436,8 @@ export interface FileRouteTypes {
     | '/app/webhooks'
     | '/app/whatsapp'
     | '/app'
+    | '/app/kyc/docs'
+    | '/app/kyc/logs'
     | '/app/wa/ai'
     | '/app/wa/bots'
     | '/app/wa/broadcast'
@@ -427,6 +460,7 @@ export interface FileRouteTypes {
     | '/app/dlt'
     | '/app/docs'
     | '/app/invoices'
+    | '/app/kyc'
     | '/app/marketplace'
     | '/app/numbers'
     | '/app/otp-whitelist'
@@ -443,6 +477,8 @@ export interface FileRouteTypes {
     | '/app/webhooks'
     | '/app/whatsapp'
     | '/app/'
+    | '/app/kyc_/docs'
+    | '/app/kyc_/logs'
     | '/app/wa/ai'
     | '/app/wa/bots'
     | '/app/wa/broadcast'
@@ -525,6 +561,13 @@ declare module '@tanstack/react-router' {
       path: '/invoices'
       fullPath: '/app/invoices'
       preLoaderRoute: typeof AppInvoicesRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/kyc': {
+      id: '/app/kyc'
+      path: '/kyc'
+      fullPath: '/app/kyc'
+      preLoaderRoute: typeof AppKycRouteImport
       parentRoute: typeof AppRoute
     }
     '/app/marketplace': {
@@ -632,6 +675,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppWhatsappRouteImport
       parentRoute: typeof AppRoute
     }
+    '/app/kyc_/docs': {
+      id: '/app/kyc_/docs'
+      path: '/kyc/docs'
+      fullPath: '/app/kyc/docs'
+      preLoaderRoute: typeof AppKycDocsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/kyc_/logs': {
+      id: '/app/kyc_/logs'
+      path: '/kyc/logs'
+      fullPath: '/app/kyc/logs'
+      preLoaderRoute: typeof AppKycLogsRouteImport
+      parentRoute: typeof AppRoute
+    }
     '/app/wa/ai': {
       id: '/app/wa/ai'
       path: '/wa/ai'
@@ -726,6 +783,7 @@ interface AppRouteChildren {
   AppDltRoute: typeof AppDltRoute
   AppDocsRoute: typeof AppDocsRoute
   AppInvoicesRoute: typeof AppInvoicesRoute
+  AppKycRoute: typeof AppKycRoute
   AppMarketplaceRoute: typeof AppMarketplaceRoute
   AppNumbersRoute: typeof AppNumbersRoute
   AppOtpWhitelistRoute: typeof AppOtpWhitelistRoute
@@ -742,6 +800,8 @@ interface AppRouteChildren {
   AppWebhooksRoute: typeof AppWebhooksRoute
   AppWhatsappRoute: typeof AppWhatsappRoute
   AppIndexRoute: typeof AppIndexRoute
+  AppKycDocsRoute: typeof AppKycDocsRoute
+  AppKycLogsRoute: typeof AppKycLogsRoute
   AppWaAiRoute: typeof AppWaAiRoute
   AppWaBotsRoute: typeof AppWaBotsRoute
   AppWaBroadcastRoute: typeof AppWaBroadcastRoute
@@ -763,6 +823,7 @@ const AppRouteChildren: AppRouteChildren = {
   AppDltRoute: AppDltRoute,
   AppDocsRoute: AppDocsRoute,
   AppInvoicesRoute: AppInvoicesRoute,
+  AppKycRoute: AppKycRoute,
   AppMarketplaceRoute: AppMarketplaceRoute,
   AppNumbersRoute: AppNumbersRoute,
   AppOtpWhitelistRoute: AppOtpWhitelistRoute,
@@ -779,6 +840,8 @@ const AppRouteChildren: AppRouteChildren = {
   AppWebhooksRoute: AppWebhooksRoute,
   AppWhatsappRoute: AppWhatsappRoute,
   AppIndexRoute: AppIndexRoute,
+  AppKycDocsRoute: AppKycDocsRoute,
+  AppKycLogsRoute: AppKycLogsRoute,
   AppWaAiRoute: AppWaAiRoute,
   AppWaBotsRoute: AppWaBotsRoute,
   AppWaBroadcastRoute: AppWaBroadcastRoute,
