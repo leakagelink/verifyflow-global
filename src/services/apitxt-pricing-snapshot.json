@@ -1,3401 +1,3409 @@
 {
-  "checkedAt": "2026-11-01",
-  "sources": [
-    "https://apitxt.com/api/public/pricing",
-    "https://apitxt.com/api/public/virtual-countries?service_code={service_code}",
-    "https://apitxt.com/api/wa-credit-line-pricing/public/rates?currency=USD"
-  ],
-  "virtual": [
-    {
-      "service": "telegram",
-      "country": "CA",
-      "inr": 81.37,
-      "usd": 0.93,
-      "stock": 4592
-    },
-    {
-      "service": "telegram",
-      "country": "ID",
-      "inr": 95.62,
-      "usd": 1.08,
-      "stock": 167
-    },
-    {
-      "service": "telegram",
-      "country": "BR",
-      "inr": 114.63,
-      "usd": 1.28,
-      "stock": 54179
-    },
-    {
-      "service": "telegram",
-      "country": "PH",
-      "inr": 116.53,
-      "usd": 1.3,
-      "stock": 286
-    },
-    {
-      "service": "telegram",
-      "country": "IN",
-      "inr": 133.64,
-      "usd": 1.48,
-      "stock": 324
-    },
-    {
-      "service": "telegram",
-      "country": "GB",
-      "inr": 145.05,
-      "usd": 1.6,
-      "stock": 13192
-    },
-    {
-      "service": "telegram",
-      "country": "NL",
-      "inr": 220.14,
-      "usd": 2.39,
-      "stock": 122870
-    },
-    {
-      "service": "telegram",
-      "country": "US",
-      "inr": 240.1,
-      "usd": 2.6,
-      "stock": 73057
-    },
-    {
-      "service": "telegram",
-      "country": "DE",
-      "inr": 326.6,
-      "usd": 3.51,
-      "stock": 12492
-    },
-    {
-      "service": "telegram",
-      "country": "FR",
-      "inr": 333.25,
-      "usd": 3.58,
-      "stock": 1136
-    },
-    {
-      "service": "whatsapp",
-      "country": "ID",
-      "inr": 83.27,
-      "usd": 0.95,
-      "stock": 174474
-    },
-    {
-      "service": "whatsapp",
-      "country": "PH",
-      "inr": 84.22,
-      "usd": 0.96,
-      "stock": 820
-    },
-    {
-      "service": "whatsapp",
-      "country": "CA",
-      "inr": 114.63,
-      "usd": 1.28,
-      "stock": 328
-    },
-    {
-      "service": "whatsapp",
-      "country": "GB",
-      "inr": 132.69,
-      "usd": 1.47,
-      "stock": 125950
-    },
-    {
-      "service": "whatsapp",
-      "country": "IN",
-      "inr": 173.56,
-      "usd": 1.9,
-      "stock": 276
-    },
-    {
-      "service": "whatsapp",
-      "country": "BR",
-      "inr": 184.97,
-      "usd": 2.02,
-      "stock": 66712
-    },
-    {
-      "service": "whatsapp",
-      "country": "DE",
-      "inr": 290.48,
-      "usd": 3.13,
-      "stock": 25657
-    },
-    {
-      "service": "whatsapp",
-      "country": "US",
-      "inr": 342.75,
-      "usd": 3.68,
-      "stock": 200446
-    },
-    {
-      "service": "whatsapp",
-      "country": "FR",
-      "inr": 371.27,
-      "usd": 3.98,
-      "stock": 47744
-    },
-    {
-      "service": "google",
-      "country": "ID",
-      "inr": 67.11,
-      "usd": 0.78,
-      "stock": 2185081
-    },
-    {
-      "service": "google",
-      "country": "CA",
-      "inr": 67.11,
-      "usd": 0.78,
-      "stock": 267010
-    },
-    {
-      "service": "google",
-      "country": "NL",
-      "inr": 67.11,
-      "usd": 0.78,
-      "stock": 3272481
-    },
-    {
-      "service": "google",
-      "country": "BR",
-      "inr": 67.11,
-      "usd": 0.78,
-      "stock": 29045
-    },
-    {
-      "service": "google",
-      "country": "GB",
-      "inr": 69.96,
-      "usd": 0.81,
-      "stock": 29134
-    },
-    {
-      "service": "google",
-      "country": "DE",
-      "inr": 72.81,
-      "usd": 0.84,
-      "stock": 30031009
-    },
-    {
-      "service": "google",
-      "country": "PH",
-      "inr": 74.71,
-      "usd": 0.86,
-      "stock": 194
-    },
-    {
-      "service": "google",
-      "country": "IN",
-      "inr": 78.52,
-      "usd": 0.9,
-      "stock": 131497
-    },
-    {
-      "service": "google",
-      "country": "FR",
-      "inr": 82.32,
-      "usd": 0.94,
-      "stock": 63082
-    },
-    {
-      "service": "google",
-      "country": "US",
-      "inr": 112.73,
-      "usd": 1.26,
-      "stock": 48035
-    },
-    {
-      "service": "openai",
-      "country": "GB",
-      "inr": 61.41,
-      "usd": 0.72,
-      "stock": 759
-    },
-    {
-      "service": "openai",
-      "country": "PH",
-      "inr": 63.31,
-      "usd": 0.74,
-      "stock": 12536
-    },
-    {
-      "service": "openai",
-      "country": "ID",
-      "inr": 65.21,
-      "usd": 0.76,
-      "stock": 296
-    },
-    {
-      "service": "openai",
-      "country": "IN",
-      "inr": 65.21,
-      "usd": 0.76,
-      "stock": 10503
-    },
-    {
-      "service": "openai",
-      "country": "BR",
-      "inr": 65.21,
-      "usd": 0.76,
-      "stock": 37364
-    },
-    {
-      "service": "openai",
-      "country": "NL",
-      "inr": 67.11,
-      "usd": 0.78,
-      "stock": 192651
-    },
-    {
-      "service": "openai",
-      "country": "CA",
-      "inr": 72.81,
-      "usd": 0.84,
-      "stock": 9204
-    },
-    {
-      "service": "openai",
-      "country": "US",
-      "inr": 74.71,
-      "usd": 0.86,
-      "stock": 822591
-    },
-    {
-      "service": "openai",
-      "country": "DE",
-      "inr": 80.42,
-      "usd": 0.92,
-      "stock": 19761
-    },
-    {
-      "service": "discord",
-      "country": "US",
-      "inr": 76.61,
-      "usd": 0.88,
-      "stock": 171635
-    },
-    {
-      "service": "discord",
-      "country": "ID",
-      "inr": 76.61,
-      "usd": 0.88,
-      "stock": 9527
-    },
-    {
-      "service": "discord",
-      "country": "PH",
-      "inr": 76.61,
-      "usd": 0.88,
-      "stock": 115246
-    },
-    {
-      "service": "discord",
-      "country": "CA",
-      "inr": 76.61,
-      "usd": 0.88,
-      "stock": 211179
-    },
-    {
-      "service": "discord",
-      "country": "IN",
-      "inr": 76.61,
-      "usd": 0.88,
-      "stock": 10280
-    },
-    {
-      "service": "discord",
-      "country": "GB",
-      "inr": 76.61,
-      "usd": 0.88,
-      "stock": 249257
-    },
-    {
-      "service": "discord",
-      "country": "DE",
-      "inr": 76.61,
-      "usd": 0.88,
-      "stock": 173471
-    },
-    {
-      "service": "discord",
-      "country": "FR",
-      "inr": 76.61,
-      "usd": 0.88,
-      "stock": 2736581
-    },
-    {
-      "service": "discord",
-      "country": "NL",
-      "inr": 76.61,
-      "usd": 0.88,
-      "stock": 202549
-    },
-    {
-      "service": "discord",
-      "country": "BR",
-      "inr": 76.61,
-      "usd": 0.88,
-      "stock": 12423
-    },
-    {
-      "service": "microsoft",
-      "country": "US",
-      "inr": 70.91,
-      "usd": 0.82,
-      "stock": 267461
-    },
-    {
-      "service": "microsoft",
-      "country": "ID",
-      "inr": 70.91,
-      "usd": 0.82,
-      "stock": 110318
-    },
-    {
-      "service": "microsoft",
-      "country": "PH",
-      "inr": 70.91,
-      "usd": 0.82,
-      "stock": 103551
-    },
-    {
-      "service": "microsoft",
-      "country": "CA",
-      "inr": 70.91,
-      "usd": 0.82,
-      "stock": 9547
-    },
-    {
-      "service": "microsoft",
-      "country": "IN",
-      "inr": 70.91,
-      "usd": 0.82,
-      "stock": 8616
-    },
-    {
-      "service": "microsoft",
-      "country": "DE",
-      "inr": 70.91,
-      "usd": 0.82,
-      "stock": 109075
-    },
-    {
-      "service": "microsoft",
-      "country": "FR",
-      "inr": 70.91,
-      "usd": 0.82,
-      "stock": 314655
-    },
-    {
-      "service": "microsoft",
-      "country": "NL",
-      "inr": 70.91,
-      "usd": 0.82,
-      "stock": 390279
-    },
-    {
-      "service": "microsoft",
-      "country": "BR",
-      "inr": 70.91,
-      "usd": 0.82,
-      "stock": 5952
-    },
-    {
-      "service": "microsoft",
-      "country": "GB",
-      "inr": 72.81,
-      "usd": 0.84,
-      "stock": 1136
-    },
-    {
-      "service": "amazon",
-      "country": "ID",
-      "inr": 76.61,
-      "usd": 0.88,
-      "stock": 167865
-    },
-    {
-      "service": "amazon",
-      "country": "PH",
-      "inr": 76.61,
-      "usd": 0.88,
-      "stock": 21016
-    },
-    {
-      "service": "amazon",
-      "country": "CA",
-      "inr": 76.61,
-      "usd": 0.88,
-      "stock": 9313
-    },
-    {
-      "service": "amazon",
-      "country": "IN",
-      "inr": 76.61,
-      "usd": 0.88,
-      "stock": 93454
-    },
-    {
-      "service": "amazon",
-      "country": "DE",
-      "inr": 76.61,
-      "usd": 0.88,
-      "stock": 12739
-    },
-    {
-      "service": "amazon",
-      "country": "FR",
-      "inr": 76.61,
-      "usd": 0.88,
-      "stock": 3070
-    },
-    {
-      "service": "amazon",
-      "country": "NL",
-      "inr": 76.61,
-      "usd": 0.88,
-      "stock": 30242
-    },
-    {
-      "service": "amazon",
-      "country": "BR",
-      "inr": 76.61,
-      "usd": 0.88,
-      "stock": 24570
-    },
-    {
-      "service": "amazon",
-      "country": "US",
-      "inr": 82.32,
-      "usd": 0.94,
-      "stock": 485911
-    },
-    {
-      "service": "amazon",
-      "country": "GB",
-      "inr": 82.32,
-      "usd": 0.94,
-      "stock": 380
-    },
-    {
-      "service": "tinder",
-      "country": "US",
-      "inr": 92.77,
-      "usd": 1.05,
-      "stock": 326
-    },
-    {
-      "service": "tinder",
-      "country": "ID",
-      "inr": 92.77,
-      "usd": 1.05,
-      "stock": 9527
-    },
-    {
-      "service": "tinder",
-      "country": "PH",
-      "inr": 92.77,
-      "usd": 1.05,
-      "stock": 211788
-    },
-    {
-      "service": "tinder",
-      "country": "CA",
-      "inr": 92.77,
-      "usd": 1.05,
-      "stock": 326260
-    },
-    {
-      "service": "tinder",
-      "country": "IN",
-      "inr": 92.77,
-      "usd": 1.05,
-      "stock": 7109
-    },
-    {
-      "service": "tinder",
-      "country": "DE",
-      "inr": 92.77,
-      "usd": 1.05,
-      "stock": 782021
-    },
-    {
-      "service": "tinder",
-      "country": "FR",
-      "inr": 92.77,
-      "usd": 1.05,
-      "stock": 2737001
-    },
-    {
-      "service": "tinder",
-      "country": "NL",
-      "inr": 92.77,
-      "usd": 1.05,
-      "stock": 20167
-    },
-    {
-      "service": "tinder",
-      "country": "BR",
-      "inr": 92.77,
-      "usd": 1.05,
-      "stock": 30534
-    },
-    {
-      "service": "tinder",
-      "country": "GB",
-      "inr": 96.57,
-      "usd": 1.09,
-      "stock": 1068
-    },
-    {
-      "service": "uber",
-      "country": "NL",
-      "inr": 57.6,
-      "usd": 0.68,
-      "stock": 6549962
-    },
-    {
-      "service": "uber",
-      "country": "GB",
-      "inr": 62.36,
-      "usd": 0.73,
-      "stock": 969
-    },
-    {
-      "service": "uber",
-      "country": "CA",
-      "inr": 63.31,
-      "usd": 0.74,
-      "stock": 32191
-    },
-    {
-      "service": "uber",
-      "country": "DE",
-      "inr": 63.31,
-      "usd": 0.74,
-      "stock": 29943339
-    },
-    {
-      "service": "uber",
-      "country": "US",
-      "inr": 65.21,
-      "usd": 0.76,
-      "stock": 173259
-    },
-    {
-      "service": "uber",
-      "country": "BR",
-      "inr": 65.21,
-      "usd": 0.76,
-      "stock": 2525460
-    },
-    {
-      "service": "x",
-      "country": "ID",
-      "inr": 57.6,
-      "usd": 0.68,
-      "stock": 28703
-    },
-    {
-      "service": "x",
-      "country": "DE",
-      "inr": 57.6,
-      "usd": 0.68,
-      "stock": 29943339
-    },
-    {
-      "service": "x",
-      "country": "NL",
-      "inr": 57.6,
-      "usd": 0.68,
-      "stock": 3272481
-    },
-    {
-      "service": "x",
-      "country": "BR",
-      "inr": 57.6,
-      "usd": 0.68,
-      "stock": 16317
-    },
-    {
-      "service": "x",
-      "country": "IN",
-      "inr": 59.51,
-      "usd": 0.7,
-      "stock": 2000
-    },
-    {
-      "service": "x",
-      "country": "GB",
-      "inr": 59.51,
-      "usd": 0.7,
-      "stock": 999
-    },
-    {
-      "service": "x",
-      "country": "PH",
-      "inr": 61.41,
-      "usd": 0.72,
-      "stock": 106759
-    },
-    {
-      "service": "x",
-      "country": "CA",
-      "inr": 65.21,
-      "usd": 0.76,
-      "stock": 164314
-    },
-    {
-      "service": "x",
-      "country": "FR",
-      "inr": 65.21,
-      "usd": 0.76,
-      "stock": 189
-    },
-    {
-      "service": "x",
-      "country": "US",
-      "inr": 70.91,
-      "usd": 0.82,
-      "stock": 1643
-    }
-  ],
-  "rentals": [
-    {
-      "area_id": 1,
-      "area_code": "CA",
-      "area_name": "Canada",
-      "price_inr_month": 432.68,
-      "price_usd_month": 4.7,
-      "min_months": 1,
-      "price_inr_total": 432.68,
-      "price_usd_total": 4.7,
-      "stock_count": 145
-    },
-    {
-      "area_id": 2,
-      "area_code": "GB",
-      "area_name": "United Kingdom",
-      "price_inr_month": 670.3,
-      "price_usd_month": 7.2,
-      "min_months": 1,
-      "price_inr_total": 670.3,
-      "price_usd_total": 7.2,
-      "stock_count": 38
-    },
-    {
-      "area_id": 3,
-      "area_code": "US",
-      "area_name": "United States of America",
-      "price_inr_month": 480.2,
-      "price_usd_month": 5.2,
-      "min_months": 1,
-      "price_inr_total": 480.2,
-      "price_usd_total": 5.2,
-      "stock_count": 166
-    }
-  ],
-  "sms": {
-    "otp_services": {
-      "price_per_credit": 0.22,
-      "price_per_credit_usd": 0.003
-    },
-    "otp_platform": {
-      "price_per_credit": 0.3,
-      "price_per_credit_usd": 0.0048
-    },
-    "promotional": {
-      "price_per_credit": 0.2,
-      "price_per_credit_usd": 0.0027
-    },
-    "transactional": {
-      "price_per_credit": 0.18,
-      "price_per_credit_usd": 0.0024
-    }
+ "checkedAt": "2026-11-01",
+ "sources": [
+  "https://apitxt.com/api/public/pricing",
+  "https://apitxt.com/api/public/virtual-countries?service_code={service_code}",
+  "https://apitxt.com/api/wa-credit-line-pricing/public/rates?currency=USD"
+ ],
+ "virtual": [
+  {
+   "service": "telegram",
+   "country": "CA",
+   "inr": 81.37,
+   "usd": 0.93,
+   "stock": 4592
   },
-  "whatsappPlans": [
-    {
-      "name": "Developer",
-      "cycle": "monthly",
-      "inr": 199.0,
-      "usd": 2.5
-    },
-    {
-      "name": "Starter",
-      "cycle": "monthly",
-      "inr": 999.0,
-      "usd": 13.0
-    },
-    {
-      "name": "Developer",
-      "cycle": "yearly",
-      "inr": 1499.0,
-      "usd": 16.0
-    },
-    {
-      "name": "Growth",
-      "cycle": "monthly",
-      "inr": 1599.0,
-      "usd": 20.0
-    },
-    {
-      "name": "Starter",
-      "cycle": "yearly",
-      "inr": 9999.0,
-      "usd": 129.0
-    },
-    {
-      "name": "Growth",
-      "cycle": "yearly",
-      "inr": 15999.0,
-      "usd": 199.0
-    }
-  ],
-  "aiPlans": [
-    {
-      "name": "Starter",
-      "tokens": 500000,
-      "type": "plan",
-      "inr": 499.0,
-      "usd": 6.0
-    },
-    {
-      "name": "Growth",
-      "tokens": 1000000,
-      "type": "plan",
-      "inr": 899.0,
-      "usd": 10.0
-    },
-    {
-      "name": "Turbo Pack",
-      "tokens": 5000000,
-      "type": "topup",
-      "inr": 3499.0,
-      "usd": 38.0
-    },
-    {
-      "name": "Advanced",
-      "tokens": 10000000,
-      "type": "plan",
-      "inr": 5999.0,
-      "usd": 64.0
-    },
-    {
-      "name": "Mega Pack",
-      "tokens": 25000000,
-      "type": "topup",
-      "inr": 11999.0,
-      "usd": 126.0
-    },
-    {
-      "name": "Ultra Pack",
-      "tokens": 50000000,
-      "type": "topup",
-      "inr": 19999.0,
-      "usd": 210.0
-    }
-  ],
-  "whatsappUsage": [
-    {
-      "market": "India",
-      "market_slug": "india",
-      "prefix": "91",
-      "marketing": 0.0128,
-      "utility": 0.0019,
-      "auth": 0.0019,
-      "auth_intl": 0.0309,
-      "calling_bi": 0.0058,
-      "service": 0.0016
-    },
-    {
-      "market": "Afghanistan",
-      "market_slug": "rest-of-middle-east",
-      "prefix": "93",
-      "marketing": 0.0402,
-      "utility": 0.0096,
-      "auth": 0.0096,
-      "auth_intl": 0,
-      "calling_bi": 0.0132,
-      "service": 0.0093
-    },
-    {
-      "market": "Albania",
-      "market_slug": "rest-of-central-eastern-europe",
-      "prefix": "355",
-      "marketing": 0.087,
-      "utility": 0.0217,
-      "auth": 0.0217,
-      "auth_intl": 0,
-      "calling_bi": 0.01,
-      "service": 0.0214
-    },
-    {
-      "market": "Algeria",
-      "market_slug": "rest-of-africa",
-      "prefix": "213",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "American Samoa",
-      "market_slug": "rest-of-asia-pacific",
-      "prefix": "1684",
-      "marketing": 0.0852,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0119,
-      "service": 0.0115
-    },
-    {
-      "market": "Andorra",
-      "market_slug": "rest-of-western-europe",
-      "prefix": "376",
-      "marketing": 0.0602,
-      "utility": 0.0176,
-      "auth": 0.0176,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0173
-    },
-    {
-      "market": "Angola",
-      "market_slug": "rest-of-africa",
-      "prefix": "244",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Anguilla",
-      "market_slug": "rest-of-latin-america",
-      "prefix": "1264",
-      "marketing": 0.075,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0121,
-      "service": 0.0115
-    },
-    {
-      "market": "Antigua and Barbuda",
-      "market_slug": "rest-of-latin-america",
-      "prefix": "1268",
-      "marketing": 0.075,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0121,
-      "service": 0.0115
-    },
-    {
-      "market": "Argentina",
-      "market_slug": "argentina",
-      "prefix": "54",
-      "marketing": 0.0628,
-      "utility": 0.0265,
-      "auth": 0.0265,
-      "auth_intl": 0,
-      "calling_bi": 0.0106,
-      "service": 0.0262
-    },
-    {
-      "market": "Armenia",
-      "market_slug": "rest-of-central-eastern-europe",
-      "prefix": "374",
-      "marketing": 0.087,
-      "utility": 0.0217,
-      "auth": 0.0217,
-      "auth_intl": 0,
-      "calling_bi": 0.01,
-      "service": 0.0214
-    },
-    {
-      "market": "Aruba",
-      "market_slug": "rest-of-latin-america",
-      "prefix": "297",
-      "marketing": 0.075,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0121,
-      "service": 0.0115
-    },
-    {
-      "market": "Australia",
-      "market_slug": "rest-of-asia-pacific",
-      "prefix": "61",
-      "marketing": 0.0852,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0119,
-      "service": 0.0115
-    },
-    {
-      "market": "Austria",
-      "market_slug": "rest-of-western-europe",
-      "prefix": "43",
-      "marketing": 0.0602,
-      "utility": 0.0176,
-      "auth": 0.0176,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0173
-    },
-    {
-      "market": "Azerbaijan",
-      "market_slug": "rest-of-central-eastern-europe",
-      "prefix": "994",
-      "marketing": 0.087,
-      "utility": 0.0217,
-      "auth": 0.0217,
-      "auth_intl": 0,
-      "calling_bi": 0.01,
-      "service": 0.0214
-    },
-    {
-      "market": "Bahamas",
-      "market_slug": "rest-of-latin-america",
-      "prefix": "1242",
-      "marketing": 0.075,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0121,
-      "service": 0.0115
-    },
-    {
-      "market": "Bahrain",
-      "market_slug": "rest-of-middle-east",
-      "prefix": "973",
-      "marketing": 0.0402,
-      "utility": 0.0096,
-      "auth": 0.0096,
-      "auth_intl": 0,
-      "calling_bi": 0.0132,
-      "service": 0.0093
-    },
-    {
-      "market": "Bangladesh",
-      "market_slug": "rest-of-asia-pacific",
-      "prefix": "880",
-      "marketing": 0.0852,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0119,
-      "service": 0.0115
-    },
-    {
-      "market": "Barbados",
-      "market_slug": "rest-of-latin-america",
-      "prefix": "1246",
-      "marketing": 0.075,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0121,
-      "service": 0.0115
-    },
-    {
-      "market": "Belarus",
-      "market_slug": "rest-of-central-eastern-europe",
-      "prefix": "375",
-      "marketing": 0.087,
-      "utility": 0.0217,
-      "auth": 0.0217,
-      "auth_intl": 0,
-      "calling_bi": 0.01,
-      "service": 0.0214
-    },
-    {
-      "market": "Belgium",
-      "market_slug": "rest-of-western-europe",
-      "prefix": "32",
-      "marketing": 0.0602,
-      "utility": 0.0176,
-      "auth": 0.0176,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0173
-    },
-    {
-      "market": "Belize",
-      "market_slug": "rest-of-latin-america",
-      "prefix": "501",
-      "marketing": 0.075,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0121,
-      "service": 0.0115
-    },
-    {
-      "market": "Benin",
-      "market_slug": "rest-of-africa",
-      "prefix": "229",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Bermuda",
-      "market_slug": "rest-of-latin-america",
-      "prefix": "1441",
-      "marketing": 0.075,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0121,
-      "service": 0.0115
-    },
-    {
-      "market": "Bhutan",
-      "market_slug": "rest-of-asia-pacific",
-      "prefix": "975",
-      "marketing": 0.0852,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0119,
-      "service": 0.0115
-    },
-    {
-      "market": "Bolivia",
-      "market_slug": "rest-of-latin-america",
-      "prefix": "591",
-      "marketing": 0.075,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0121,
-      "service": 0.0115
-    },
-    {
-      "market": "Bosnia",
-      "market_slug": "rest-of-central-eastern-europe",
-      "prefix": "387",
-      "marketing": 0.087,
-      "utility": 0.0217,
-      "auth": 0.0217,
-      "auth_intl": 0,
-      "calling_bi": 0.01,
-      "service": 0.0214
-    },
-    {
-      "market": "Botswana",
-      "market_slug": "rest-of-africa",
-      "prefix": "267",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Brazil",
-      "market_slug": "brazil",
-      "prefix": "55",
-      "marketing": 0.0635,
-      "utility": 0.0073,
-      "auth": 0.0073,
-      "auth_intl": 0,
-      "calling_bi": 0.0113,
-      "service": 0.007
-    },
-    {
-      "market": "British Virgin Islands",
-      "market_slug": "rest-of-latin-america",
-      "prefix": "1284",
-      "marketing": 0.075,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0121,
-      "service": 0.0115
-    },
-    {
-      "market": "Brunei",
-      "market_slug": "rest-of-asia-pacific",
-      "prefix": "673",
-      "marketing": 0.0852,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0119,
-      "service": 0.0115
-    },
-    {
-      "market": "Bulgaria",
-      "market_slug": "rest-of-central-eastern-europe",
-      "prefix": "359",
-      "marketing": 0.087,
-      "utility": 0.0217,
-      "auth": 0.0217,
-      "auth_intl": 0,
-      "calling_bi": 0.01,
-      "service": 0.0214
-    },
-    {
-      "market": "Burkina Faso",
-      "market_slug": "rest-of-africa",
-      "prefix": "226",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Burundi",
-      "market_slug": "rest-of-africa",
-      "prefix": "257",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Cambodia",
-      "market_slug": "rest-of-asia-pacific",
-      "prefix": "855",
-      "marketing": 0.0852,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0119,
-      "service": 0.0115
-    },
-    {
-      "market": "Cameroon",
-      "market_slug": "rest-of-africa",
-      "prefix": "237",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Cape Verde",
-      "market_slug": "rest-of-africa",
-      "prefix": "238",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Cayman Islands",
-      "market_slug": "rest-of-latin-america",
-      "prefix": "1345",
-      "marketing": 0.075,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0121,
-      "service": 0.0115
-    },
-    {
-      "market": "Central African Rep",
-      "market_slug": "rest-of-africa",
-      "prefix": "236",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Chad",
-      "market_slug": "rest-of-africa",
-      "prefix": "235",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Chile",
-      "market_slug": "chile",
-      "prefix": "56",
-      "marketing": 0.0899,
-      "utility": 0.0205,
-      "auth": 0.0205,
-      "auth_intl": 0,
-      "calling_bi": 0.0126,
-      "service": 0.0202
-    },
-    {
-      "market": "China",
-      "market_slug": "rest-of-asia-pacific",
-      "prefix": "86",
-      "marketing": 0.0852,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0119,
-      "service": 0.0115
-    },
-    {
-      "market": "Colombia",
-      "market_slug": "colombia",
-      "prefix": "57",
-      "marketing": 0.0135,
-      "utility": 0.0013,
-      "auth": 0.0013,
-      "auth_intl": 0,
-      "calling_bi": 0.0116,
-      "service": 0.001
-    },
-    {
-      "market": "Comoros",
-      "market_slug": "rest-of-africa",
-      "prefix": "269",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Congo",
-      "market_slug": "rest-of-africa",
-      "prefix": "242",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Cook Islands",
-      "market_slug": "rest-of-asia-pacific",
-      "prefix": "682",
-      "marketing": 0.0852,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0119,
-      "service": 0.0115
-    },
-    {
-      "market": "Costa Rica",
-      "market_slug": "rest-of-latin-america",
-      "prefix": "506",
-      "marketing": 0.075,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0121,
-      "service": 0.0115
-    },
-    {
-      "market": "Croatia",
-      "market_slug": "rest-of-central-eastern-europe",
-      "prefix": "385",
-      "marketing": 0.087,
-      "utility": 0.0217,
-      "auth": 0.0217,
-      "auth_intl": 0,
-      "calling_bi": 0.01,
-      "service": 0.0214
-    },
-    {
-      "market": "Cuba",
-      "market_slug": "rest-of-latin-america",
-      "prefix": "53",
-      "marketing": 0.075,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0121,
-      "service": 0.0115
-    },
-    {
-      "market": "Curacao / Caribbean Netherlands",
-      "market_slug": "rest-of-latin-america",
-      "prefix": "599",
-      "marketing": 0.075,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0121,
-      "service": 0.0115
-    },
-    {
-      "market": "Cyprus",
-      "market_slug": "rest-of-western-europe",
-      "prefix": "357",
-      "marketing": 0.0602,
-      "utility": 0.0176,
-      "auth": 0.0176,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0173
-    },
-    {
-      "market": "Czech Republic",
-      "market_slug": "rest-of-central-eastern-europe",
-      "prefix": "420",
-      "marketing": 0.087,
-      "utility": 0.0217,
-      "auth": 0.0217,
-      "auth_intl": 0,
-      "calling_bi": 0.01,
-      "service": 0.0214
-    },
-    {
-      "market": "Denmark",
-      "market_slug": "rest-of-western-europe",
-      "prefix": "45",
-      "marketing": 0.0602,
-      "utility": 0.0176,
-      "auth": 0.0176,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0173
-    },
-    {
-      "market": "Djibouti",
-      "market_slug": "rest-of-africa",
-      "prefix": "253",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Dominica",
-      "market_slug": "rest-of-latin-america",
-      "prefix": "1767",
-      "marketing": 0.075,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0121,
-      "service": 0.0115
-    },
-    {
-      "market": "Dominican Republic",
-      "market_slug": "rest-of-latin-america",
-      "prefix": "1809",
-      "marketing": 0.075,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0121,
-      "service": 0.0115
-    },
-    {
-      "market": "DR Congo",
-      "market_slug": "rest-of-africa",
-      "prefix": "243",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Ecuador",
-      "market_slug": "rest-of-latin-america",
-      "prefix": "593",
-      "marketing": 0.075,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0121,
-      "service": 0.0115
-    },
-    {
-      "market": "Egypt",
-      "market_slug": "egypt",
-      "prefix": "20",
-      "marketing": 0.0654,
-      "utility": 0.0041,
-      "auth": 0.0041,
-      "auth_intl": 0.0655,
-      "calling_bi": 0.0132,
-      "service": 0.0038
-    },
-    {
-      "market": "El Salvador",
-      "market_slug": "rest-of-latin-america",
-      "prefix": "503",
-      "marketing": 0.075,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0121,
-      "service": 0.0115
-    },
-    {
-      "market": "Equatorial Guinea",
-      "market_slug": "rest-of-africa",
-      "prefix": "240",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Eritrea",
-      "market_slug": "rest-of-africa",
-      "prefix": "291",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Estonia",
-      "market_slug": "rest-of-central-eastern-europe",
-      "prefix": "372",
-      "marketing": 0.087,
-      "utility": 0.0217,
-      "auth": 0.0217,
-      "auth_intl": 0,
-      "calling_bi": 0.01,
-      "service": 0.0214
-    },
-    {
-      "market": "Eswatini",
-      "market_slug": "rest-of-africa",
-      "prefix": "268",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Ethiopia",
-      "market_slug": "rest-of-africa",
-      "prefix": "251",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Falkland Islands",
-      "market_slug": "rest-of-latin-america",
-      "prefix": "500",
-      "marketing": 0.075,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0121,
-      "service": 0.0115
-    },
-    {
-      "market": "Faroe Islands",
-      "market_slug": "rest-of-western-europe",
-      "prefix": "298",
-      "marketing": 0.0602,
-      "utility": 0.0176,
-      "auth": 0.0176,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0173
-    },
-    {
-      "market": "Fiji",
-      "market_slug": "rest-of-asia-pacific",
-      "prefix": "679",
-      "marketing": 0.0852,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0119,
-      "service": 0.0115
-    },
-    {
-      "market": "Finland",
-      "market_slug": "rest-of-western-europe",
-      "prefix": "358",
-      "marketing": 0.0602,
-      "utility": 0.0176,
-      "auth": 0.0176,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0173
-    },
-    {
-      "market": "France",
-      "market_slug": "france",
-      "prefix": "33",
-      "marketing": 0.0869,
-      "utility": 0.0305,
-      "auth": 0.0305,
-      "auth_intl": 0,
-      "calling_bi": 0.0104,
-      "service": 0.0302
-    },
-    {
-      "market": "French Guiana",
-      "market_slug": "rest-of-latin-america",
-      "prefix": "594",
-      "marketing": 0.075,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0121,
-      "service": 0.0115
-    },
-    {
-      "market": "French Polynesia",
-      "market_slug": "rest-of-asia-pacific",
-      "prefix": "689",
-      "marketing": 0.0852,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0119,
-      "service": 0.0115
-    },
-    {
-      "market": "Gabon",
-      "market_slug": "rest-of-africa",
-      "prefix": "241",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Gambia",
-      "market_slug": "rest-of-africa",
-      "prefix": "220",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Georgia",
-      "market_slug": "rest-of-central-eastern-europe",
-      "prefix": "995",
-      "marketing": 0.087,
-      "utility": 0.0217,
-      "auth": 0.0217,
-      "auth_intl": 0,
-      "calling_bi": 0.01,
-      "service": 0.0214
-    },
-    {
-      "market": "Germany",
-      "market_slug": "germany",
-      "prefix": "49",
-      "marketing": 0.1375,
-      "utility": 0.0555,
-      "auth": 0.0555,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0552
-    },
-    {
-      "market": "Ghana",
-      "market_slug": "rest-of-africa",
-      "prefix": "233",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Gibraltar",
-      "market_slug": "rest-of-western-europe",
-      "prefix": "350",
-      "marketing": 0.0602,
-      "utility": 0.0176,
-      "auth": 0.0176,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0173
-    },
-    {
-      "market": "Greece",
-      "market_slug": "rest-of-western-europe",
-      "prefix": "30",
-      "marketing": 0.0602,
-      "utility": 0.0176,
-      "auth": 0.0176,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0173
-    },
-    {
-      "market": "Greenland",
-      "market_slug": "rest-of-western-europe",
-      "prefix": "299",
-      "marketing": 0.0602,
-      "utility": 0.0176,
-      "auth": 0.0176,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0173
-    },
-    {
-      "market": "Grenada",
-      "market_slug": "rest-of-latin-america",
-      "prefix": "1473",
-      "marketing": 0.075,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0121,
-      "service": 0.0115
-    },
-    {
-      "market": "Guadeloupe",
-      "market_slug": "rest-of-latin-america",
-      "prefix": "590",
-      "marketing": 0.075,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0121,
-      "service": 0.0115
-    },
-    {
-      "market": "Guam",
-      "market_slug": "rest-of-asia-pacific",
-      "prefix": "1671",
-      "marketing": 0.0852,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0119,
-      "service": 0.0115
-    },
-    {
-      "market": "Guatemala",
-      "market_slug": "rest-of-latin-america",
-      "prefix": "502",
-      "marketing": 0.075,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0121,
-      "service": 0.0115
-    },
-    {
-      "market": "Guernsey",
-      "market_slug": "rest-of-western-europe",
-      "prefix": "44-GG",
-      "marketing": 0.0602,
-      "utility": 0.0176,
-      "auth": 0.0176,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0173
-    },
-    {
-      "market": "Guinea",
-      "market_slug": "rest-of-africa",
-      "prefix": "224",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Guinea-Bissau",
-      "market_slug": "rest-of-africa",
-      "prefix": "245",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Guyana",
-      "market_slug": "rest-of-latin-america",
-      "prefix": "592",
-      "marketing": 0.075,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0121,
-      "service": 0.0115
-    },
-    {
-      "market": "Haiti",
-      "market_slug": "rest-of-latin-america",
-      "prefix": "509",
-      "marketing": 0.075,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0121,
-      "service": 0.0115
-    },
-    {
-      "market": "Honduras",
-      "market_slug": "rest-of-latin-america",
-      "prefix": "504",
-      "marketing": 0.075,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0121,
-      "service": 0.0115
-    },
-    {
-      "market": "Hong Kong",
-      "market_slug": "hong-kong",
-      "prefix": "852",
-      "marketing": 0.0742,
-      "utility": 0.0265,
-      "auth": 0.0265,
-      "auth_intl": 0,
-      "calling_bi": 0,
-      "service": 0.0262
-    },
-    {
-      "market": "Hungary",
-      "market_slug": "hungary",
-      "prefix": "36",
-      "marketing": 0.087,
-      "utility": 0.0355,
-      "auth": 0.0355,
-      "auth_intl": 0,
-      "calling_bi": 0,
-      "service": 0.0352
-    },
-    {
-      "market": "Iceland",
-      "market_slug": "rest-of-western-europe",
-      "prefix": "354",
-      "marketing": 0.0602,
-      "utility": 0.0176,
-      "auth": 0.0176,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0173
-    },
-    {
-      "market": "Indonesia",
-      "market_slug": "indonesia",
-      "prefix": "62",
-      "marketing": 0.0421,
-      "utility": 0.0255,
-      "auth": 0.0255,
-      "auth_intl": 0.1365,
-      "calling_bi": 0.0247,
-      "service": 0.0252
-    },
-    {
-      "market": "Iran",
-      "market_slug": "rest-of-middle-east",
-      "prefix": "98",
-      "marketing": 0.0402,
-      "utility": 0.0096,
-      "auth": 0.0096,
-      "auth_intl": 0,
-      "calling_bi": 0.0132,
-      "service": 0.0093
-    },
-    {
-      "market": "Iraq",
-      "market_slug": "rest-of-middle-east",
-      "prefix": "964",
-      "marketing": 0.0402,
-      "utility": 0.0096,
-      "auth": 0.0096,
-      "auth_intl": 0,
-      "calling_bi": 0.0132,
-      "service": 0.0093
-    },
-    {
-      "market": "Ireland",
-      "market_slug": "rest-of-western-europe",
-      "prefix": "353",
-      "marketing": 0.0602,
-      "utility": 0.0176,
-      "auth": 0.0176,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0173
-    },
-    {
-      "market": "Isle of Man",
-      "market_slug": "rest-of-western-europe",
-      "prefix": "44-IM",
-      "marketing": 0.0602,
-      "utility": 0.0176,
-      "auth": 0.0176,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0173
-    },
-    {
-      "market": "Israel",
-      "market_slug": "israel",
-      "prefix": "972",
-      "marketing": 0.0363,
-      "utility": 0.0058,
-      "auth": 0.0058,
-      "auth_intl": 0,
-      "calling_bi": 0.0132,
-      "service": 0.0055
-    },
-    {
-      "market": "Italy",
-      "market_slug": "italy",
-      "prefix": "39",
-      "marketing": 0.0805,
-      "utility": 0.0305,
-      "auth": 0.0305,
-      "auth_intl": 0,
-      "calling_bi": 0.0126,
-      "service": 0.0302
-    },
-    {
-      "market": "Ivory Coast",
-      "market_slug": "rest-of-africa",
-      "prefix": "225",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Jamaica",
-      "market_slug": "rest-of-latin-america",
-      "prefix": "1876",
-      "marketing": 0.075,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0121,
-      "service": 0.0115
-    },
-    {
-      "market": "Japan",
-      "market_slug": "rest-of-asia-pacific",
-      "prefix": "81",
-      "marketing": 0.0852,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0119,
-      "service": 0.0115
-    },
-    {
-      "market": "Jersey",
-      "market_slug": "rest-of-western-europe",
-      "prefix": "44-JE",
-      "marketing": 0.0602,
-      "utility": 0.0176,
-      "auth": 0.0176,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0173
-    },
-    {
-      "market": "Jordan",
-      "market_slug": "rest-of-middle-east",
-      "prefix": "962",
-      "marketing": 0.0402,
-      "utility": 0.0096,
-      "auth": 0.0096,
-      "auth_intl": 0,
-      "calling_bi": 0.0132,
-      "service": 0.0093
-    },
-    {
-      "market": "Kazakhstan",
-      "market_slug": "rest-of-central-eastern-europe",
-      "prefix": "7-KZ",
-      "marketing": 0.087,
-      "utility": 0.0217,
-      "auth": 0.0217,
-      "auth_intl": 0,
-      "calling_bi": 0.01,
-      "service": 0.0214
-    },
-    {
-      "market": "Kenya",
-      "market_slug": "rest-of-africa",
-      "prefix": "254",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Kiribati",
-      "market_slug": "rest-of-asia-pacific",
-      "prefix": "686",
-      "marketing": 0.0852,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0119,
-      "service": 0.0115
-    },
-    {
-      "market": "Kosovo",
-      "market_slug": "rest-of-central-eastern-europe",
-      "prefix": "383",
-      "marketing": 0.087,
-      "utility": 0.0217,
-      "auth": 0.0217,
-      "auth_intl": 0,
-      "calling_bi": 0.01,
-      "service": 0.0214
-    },
-    {
-      "market": "Kuwait",
-      "market_slug": "rest-of-middle-east",
-      "prefix": "965",
-      "marketing": 0.0402,
-      "utility": 0.0096,
-      "auth": 0.0096,
-      "auth_intl": 0,
-      "calling_bi": 0.0132,
-      "service": 0.0093
-    },
-    {
-      "market": "Kyrgyzstan",
-      "market_slug": "rest-of-central-eastern-europe",
-      "prefix": "996",
-      "marketing": 0.087,
-      "utility": 0.0217,
-      "auth": 0.0217,
-      "auth_intl": 0,
-      "calling_bi": 0.01,
-      "service": 0.0214
-    },
-    {
-      "market": "Laos",
-      "market_slug": "rest-of-asia-pacific",
-      "prefix": "856",
-      "marketing": 0.0852,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0119,
-      "service": 0.0115
-    },
-    {
-      "market": "Latvia",
-      "market_slug": "rest-of-central-eastern-europe",
-      "prefix": "371",
-      "marketing": 0.087,
-      "utility": 0.0217,
-      "auth": 0.0217,
-      "auth_intl": 0,
-      "calling_bi": 0.01,
-      "service": 0.0214
-    },
-    {
-      "market": "Lebanon",
-      "market_slug": "rest-of-middle-east",
-      "prefix": "961",
-      "marketing": 0.0402,
-      "utility": 0.0096,
-      "auth": 0.0096,
-      "auth_intl": 0,
-      "calling_bi": 0.0132,
-      "service": 0.0093
-    },
-    {
-      "market": "Lesotho",
-      "market_slug": "rest-of-africa",
-      "prefix": "266",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Liberia",
-      "market_slug": "rest-of-africa",
-      "prefix": "231",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Libya",
-      "market_slug": "rest-of-africa",
-      "prefix": "218",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Liechtenstein",
-      "market_slug": "rest-of-western-europe",
-      "prefix": "423",
-      "marketing": 0.0602,
-      "utility": 0.0176,
-      "auth": 0.0176,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0173
-    },
-    {
-      "market": "Lithuania",
-      "market_slug": "rest-of-central-eastern-europe",
-      "prefix": "370",
-      "marketing": 0.087,
-      "utility": 0.0217,
-      "auth": 0.0217,
-      "auth_intl": 0,
-      "calling_bi": 0.01,
-      "service": 0.0214
-    },
-    {
-      "market": "Luxembourg",
-      "market_slug": "rest-of-western-europe",
-      "prefix": "352",
-      "marketing": 0.0602,
-      "utility": 0.0176,
-      "auth": 0.0176,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0173
-    },
-    {
-      "market": "Macau",
-      "market_slug": "rest-of-asia-pacific",
-      "prefix": "853",
-      "marketing": 0.0852,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0119,
-      "service": 0.0115
-    },
-    {
-      "market": "Madagascar",
-      "market_slug": "rest-of-africa",
-      "prefix": "261",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Malawi",
-      "market_slug": "rest-of-africa",
-      "prefix": "265",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Malaysia",
-      "market_slug": "malaysia",
-      "prefix": "60",
-      "marketing": 0.087,
-      "utility": 0.0145,
-      "auth": 0.0145,
-      "auth_intl": 0.0423,
-      "calling_bi": 0.0113,
-      "service": 0.0142
-    },
-    {
-      "market": "Maldives",
-      "market_slug": "rest-of-asia-pacific",
-      "prefix": "960",
-      "marketing": 0.0852,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0119,
-      "service": 0.0115
-    },
-    {
-      "market": "Mali",
-      "market_slug": "rest-of-africa",
-      "prefix": "223",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Malta",
-      "market_slug": "rest-of-western-europe",
-      "prefix": "356",
-      "marketing": 0.0602,
-      "utility": 0.0176,
-      "auth": 0.0176,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0173
-    },
-    {
-      "market": "Marshall Islands",
-      "market_slug": "rest-of-asia-pacific",
-      "prefix": "692",
-      "marketing": 0.0852,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0119,
-      "service": 0.0115
-    },
-    {
-      "market": "Martinique",
-      "market_slug": "rest-of-latin-america",
-      "prefix": "596",
-      "marketing": 0.075,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0121,
-      "service": 0.0115
-    },
-    {
-      "market": "Mauritania",
-      "market_slug": "rest-of-africa",
-      "prefix": "222",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Mauritius",
-      "market_slug": "rest-of-africa",
-      "prefix": "230",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Mayotte",
-      "market_slug": "rest-of-africa",
-      "prefix": "262-YT",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Mexico",
-      "market_slug": "mexico",
-      "prefix": "52",
-      "marketing": 0.0407,
-      "utility": 0.009,
-      "auth": 0.009,
-      "auth_intl": 0,
-      "calling_bi": 0.0099,
-      "service": 0.0087
-    },
-    {
-      "market": "Micronesia",
-      "market_slug": "rest-of-asia-pacific",
-      "prefix": "691",
-      "marketing": 0.0852,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0119,
-      "service": 0.0115
-    },
-    {
-      "market": "Moldova",
-      "market_slug": "rest-of-central-eastern-europe",
-      "prefix": "373",
-      "marketing": 0.087,
-      "utility": 0.0217,
-      "auth": 0.0217,
-      "auth_intl": 0,
-      "calling_bi": 0.01,
-      "service": 0.0214
-    },
-    {
-      "market": "Monaco",
-      "market_slug": "rest-of-western-europe",
-      "prefix": "377",
-      "marketing": 0.0602,
-      "utility": 0.0176,
-      "auth": 0.0176,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0173
-    },
-    {
-      "market": "Mongolia",
-      "market_slug": "rest-of-asia-pacific",
-      "prefix": "976",
-      "marketing": 0.0852,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0119,
-      "service": 0.0115
-    },
-    {
-      "market": "Montenegro",
-      "market_slug": "rest-of-central-eastern-europe",
-      "prefix": "382",
-      "marketing": 0.087,
-      "utility": 0.0217,
-      "auth": 0.0217,
-      "auth_intl": 0,
-      "calling_bi": 0.01,
-      "service": 0.0214
-    },
-    {
-      "market": "Montserrat",
-      "market_slug": "rest-of-latin-america",
-      "prefix": "1664",
-      "marketing": 0.075,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0121,
-      "service": 0.0115
-    },
-    {
-      "market": "Morocco",
-      "market_slug": "rest-of-africa",
-      "prefix": "212",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Mozambique",
-      "market_slug": "rest-of-africa",
-      "prefix": "258",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Myanmar",
-      "market_slug": "rest-of-asia-pacific",
-      "prefix": "95",
-      "marketing": 0.0852,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0119,
-      "service": 0.0115
-    },
-    {
-      "market": "Namibia",
-      "market_slug": "rest-of-africa",
-      "prefix": "264",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Nauru",
-      "market_slug": "rest-of-asia-pacific",
-      "prefix": "674",
-      "marketing": 0.0852,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0119,
-      "service": 0.0115
-    },
-    {
-      "market": "Nepal",
-      "market_slug": "rest-of-asia-pacific",
-      "prefix": "977",
-      "marketing": 0.0852,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0119,
-      "service": 0.0115
-    },
-    {
-      "market": "Netherlands",
-      "market_slug": "netherlands",
-      "prefix": "31",
-      "marketing": 0.1607,
-      "utility": 0.0505,
-      "auth": 0.0505,
-      "auth_intl": 0,
-      "calling_bi": 0.0068,
-      "service": 0.0502
-    },
-    {
-      "market": "New Caledonia",
-      "market_slug": "rest-of-asia-pacific",
-      "prefix": "687",
-      "marketing": 0.0852,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0119,
-      "service": 0.0115
-    },
-    {
-      "market": "New Zealand",
-      "market_slug": "rest-of-asia-pacific",
-      "prefix": "64",
-      "marketing": 0.0852,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0119,
-      "service": 0.0115
-    },
-    {
-      "market": "Nicaragua",
-      "market_slug": "rest-of-latin-america",
-      "prefix": "505",
-      "marketing": 0.075,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0121,
-      "service": 0.0115
-    },
-    {
-      "market": "Niger",
-      "market_slug": "rest-of-africa",
-      "prefix": "227",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Nigeria",
-      "market_slug": "nigeria",
-      "prefix": "234",
-      "marketing": 0.0526,
-      "utility": 0.0072,
-      "auth": 0.0072,
-      "auth_intl": 0.0755,
-      "calling_bi": 0.0108,
-      "service": 0.0069
-    },
-    {
-      "market": "Niue",
-      "market_slug": "rest-of-asia-pacific",
-      "prefix": "683",
-      "marketing": 0.0852,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0119,
-      "service": 0.0115
-    },
-    {
-      "market": "North Korea",
-      "market_slug": "rest-of-asia-pacific",
-      "prefix": "850",
-      "marketing": 0.0852,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0119,
-      "service": 0.0115
-    },
-    {
-      "market": "North Macedonia",
-      "market_slug": "rest-of-central-eastern-europe",
-      "prefix": "389",
-      "marketing": 0.087,
-      "utility": 0.0217,
-      "auth": 0.0217,
-      "auth_intl": 0,
-      "calling_bi": 0.01,
-      "service": 0.0214
-    },
-    {
-      "market": "Northern Mariana Islands",
-      "market_slug": "rest-of-asia-pacific",
-      "prefix": "1670",
-      "marketing": 0.0852,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0119,
-      "service": 0.0115
-    },
-    {
-      "market": "Norway",
-      "market_slug": "rest-of-western-europe",
-      "prefix": "47",
-      "marketing": 0.0602,
-      "utility": 0.0176,
-      "auth": 0.0176,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0173
-    },
-    {
-      "market": "Oman",
-      "market_slug": "rest-of-middle-east",
-      "prefix": "968",
-      "marketing": 0.0402,
-      "utility": 0.0096,
-      "auth": 0.0096,
-      "auth_intl": 0,
-      "calling_bi": 0.0132,
-      "service": 0.0093
-    },
-    {
-      "market": "Other",
-      "market_slug": "other",
-      "prefix": "OTHER",
-      "marketing": 0.0614,
-      "utility": 0.0082,
-      "auth": 0.0082,
-      "auth_intl": 0,
-      "calling_bi": 0.0137,
-      "service": 0.0079
-    },
-    {
-      "market": "Pakistan",
-      "market_slug": "pakistan",
-      "prefix": "92",
-      "marketing": 0.0483,
-      "utility": 0.0155,
-      "auth": 0.0155,
-      "auth_intl": 0.0755,
-      "calling_bi": 0.0124,
-      "service": 0.0152
-    },
-    {
-      "market": "Palau",
-      "market_slug": "rest-of-asia-pacific",
-      "prefix": "680",
-      "marketing": 0.0852,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0119,
-      "service": 0.0115
-    },
-    {
-      "market": "Palestine",
-      "market_slug": "rest-of-middle-east",
-      "prefix": "970",
-      "marketing": 0.0402,
-      "utility": 0.0096,
-      "auth": 0.0096,
-      "auth_intl": 0,
-      "calling_bi": 0.0132,
-      "service": 0.0093
-    },
-    {
-      "market": "Panama",
-      "market_slug": "rest-of-latin-america",
-      "prefix": "507",
-      "marketing": 0.075,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0121,
-      "service": 0.0115
-    },
-    {
-      "market": "Papua New Guinea",
-      "market_slug": "rest-of-asia-pacific",
-      "prefix": "675",
-      "marketing": 0.0852,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0119,
-      "service": 0.0115
-    },
-    {
-      "market": "Paraguay",
-      "market_slug": "rest-of-latin-america",
-      "prefix": "595",
-      "marketing": 0.075,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0121,
-      "service": 0.0115
-    },
-    {
-      "market": "Peru",
-      "market_slug": "peru",
-      "prefix": "51",
-      "marketing": 0.0713,
-      "utility": 0.0305,
-      "auth": 0.0305,
-      "auth_intl": 0,
-      "calling_bi": 0.0126,
-      "service": 0.0302
-    },
-    {
-      "market": "Philippines",
-      "market_slug": "rest-of-asia-pacific",
-      "prefix": "63",
-      "marketing": 0.0852,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0119,
-      "service": 0.0115
-    },
-    {
-      "market": "Poland",
-      "market_slug": "poland",
-      "prefix": "48",
-      "marketing": 0.0376,
-      "utility": 0.0127,
-      "auth": 0.0127,
-      "auth_intl": 0,
-      "calling_bi": 0,
-      "service": 0.0124
-    },
-    {
-      "market": "Portugal",
-      "market_slug": "rest-of-western-europe",
-      "prefix": "351",
-      "marketing": 0.0602,
-      "utility": 0.0176,
-      "auth": 0.0176,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0173
-    },
-    {
-      "market": "Puerto Rico",
-      "market_slug": "rest-of-latin-america",
-      "prefix": "1787",
-      "marketing": 0.075,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0121,
-      "service": 0.0115
-    },
-    {
-      "market": "Qatar",
-      "market_slug": "qatar",
-      "prefix": "974",
-      "marketing": 0.0351,
-      "utility": 0.0125,
-      "auth": 0.0125,
-      "auth_intl": 0,
-      "calling_bi": 0,
-      "service": 0.0122
-    },
-    {
-      "market": "Reunion",
-      "market_slug": "rest-of-africa",
-      "prefix": "262",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Romania",
-      "market_slug": "romania",
-      "prefix": "40",
-      "marketing": 0.087,
-      "utility": 0.0295,
-      "auth": 0.0295,
-      "auth_intl": 0,
-      "calling_bi": 0,
-      "service": 0.0292
-    },
-    {
-      "market": "Russia",
-      "market_slug": "russia",
-      "prefix": "7",
-      "marketing": 0.0812,
-      "utility": 0.0405,
-      "auth": 0.0405,
-      "auth_intl": 0,
-      "calling_bi": 0.0102,
-      "service": 0.0402
-    },
-    {
-      "market": "Rwanda",
-      "market_slug": "rest-of-africa",
-      "prefix": "250",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Saint Barthelemy",
-      "market_slug": "rest-of-latin-america",
-      "prefix": "590-BL",
-      "marketing": 0.075,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0121,
-      "service": 0.0115
-    },
-    {
-      "market": "Saint Helena",
-      "market_slug": "rest-of-africa",
-      "prefix": "290",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Saint Kitts and Nevis",
-      "market_slug": "rest-of-latin-america",
-      "prefix": "1869",
-      "marketing": 0.075,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0121,
-      "service": 0.0115
-    },
-    {
-      "market": "Saint Lucia",
-      "market_slug": "rest-of-latin-america",
-      "prefix": "1758",
-      "marketing": 0.075,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0121,
-      "service": 0.0115
-    },
-    {
-      "market": "Saint Martin",
-      "market_slug": "rest-of-latin-america",
-      "prefix": "590-MF",
-      "marketing": 0.075,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0121,
-      "service": 0.0115
-    },
-    {
-      "market": "Saint Pierre and Miquelon",
-      "market_slug": "north-america",
-      "prefix": "508",
-      "marketing": 0.026,
-      "utility": 0.0039,
-      "auth": 0.0039,
-      "auth_intl": 0,
-      "calling_bi": 0.0126,
-      "service": 0.0036
-    },
-    {
-      "market": "Saint Vincent",
-      "market_slug": "rest-of-latin-america",
-      "prefix": "1784",
-      "marketing": 0.075,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0121,
-      "service": 0.0115
-    },
-    {
-      "market": "Samoa",
-      "market_slug": "rest-of-asia-pacific",
-      "prefix": "685",
-      "marketing": 0.0852,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0119,
-      "service": 0.0115
-    },
-    {
-      "market": "San Marino",
-      "market_slug": "rest-of-western-europe",
-      "prefix": "378",
-      "marketing": 0.0602,
-      "utility": 0.0176,
-      "auth": 0.0176,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0173
-    },
-    {
-      "market": "Sao Tome",
-      "market_slug": "rest-of-africa",
-      "prefix": "239",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Saudi Arabia",
-      "market_slug": "saudi-arabia",
-      "prefix": "966",
-      "marketing": 0.0586,
-      "utility": 0.0112,
-      "auth": 0.0112,
-      "auth_intl": 0.0603,
-      "calling_bi": 0.0132,
-      "service": 0.0109
-    },
-    {
-      "market": "Senegal",
-      "market_slug": "rest-of-africa",
-      "prefix": "221",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Serbia",
-      "market_slug": "rest-of-central-eastern-europe",
-      "prefix": "381",
-      "marketing": 0.087,
-      "utility": 0.0217,
-      "auth": 0.0217,
-      "auth_intl": 0,
-      "calling_bi": 0.01,
-      "service": 0.0214
-    },
-    {
-      "market": "Seychelles",
-      "market_slug": "rest-of-africa",
-      "prefix": "248",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Sierra Leone",
-      "market_slug": "rest-of-africa",
-      "prefix": "232",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Singapore",
-      "market_slug": "singapore",
-      "prefix": "65",
-      "marketing": 0.0742,
-      "utility": 0.0165,
-      "auth": 0.0165,
-      "auth_intl": 0,
-      "calling_bi": 0,
-      "service": 0.0162
-    },
-    {
-      "market": "Sint Maarten",
-      "market_slug": "rest-of-latin-america",
-      "prefix": "1721",
-      "marketing": 0.075,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0121,
-      "service": 0.0115
-    },
-    {
-      "market": "Slovakia",
-      "market_slug": "rest-of-central-eastern-europe",
-      "prefix": "421",
-      "marketing": 0.087,
-      "utility": 0.0217,
-      "auth": 0.0217,
-      "auth_intl": 0,
-      "calling_bi": 0.01,
-      "service": 0.0214
-    },
-    {
-      "market": "Slovenia",
-      "market_slug": "rest-of-central-eastern-europe",
-      "prefix": "386",
-      "marketing": 0.087,
-      "utility": 0.0217,
-      "auth": 0.0217,
-      "auth_intl": 0,
-      "calling_bi": 0.01,
-      "service": 0.0214
-    },
-    {
-      "market": "Solomon Islands",
-      "market_slug": "rest-of-asia-pacific",
-      "prefix": "677",
-      "marketing": 0.0852,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0119,
-      "service": 0.0115
-    },
-    {
-      "market": "Somalia",
-      "market_slug": "rest-of-africa",
-      "prefix": "252",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "South Africa",
-      "market_slug": "south-africa",
-      "prefix": "27",
-      "marketing": 0.0389,
-      "utility": 0.01,
-      "auth": 0.01,
-      "auth_intl": 0.0205,
-      "calling_bi": 0.0113,
-      "service": 0.0097
-    },
-    {
-      "market": "South Korea",
-      "market_slug": "rest-of-asia-pacific",
-      "prefix": "82",
-      "marketing": 0.0852,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0119,
-      "service": 0.0115
-    },
-    {
-      "market": "South Sudan",
-      "market_slug": "rest-of-africa",
-      "prefix": "211",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Spain",
-      "market_slug": "spain",
-      "prefix": "34",
-      "marketing": 0.0717,
-      "utility": 0.0205,
-      "auth": 0.0205,
-      "auth_intl": 0,
-      "calling_bi": 0.0134,
-      "service": 0.0202
-    },
-    {
-      "market": "Sri Lanka",
-      "market_slug": "rest-of-asia-pacific",
-      "prefix": "94",
-      "marketing": 0.0852,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0119,
-      "service": 0.0115
-    },
-    {
-      "market": "Sudan",
-      "market_slug": "rest-of-africa",
-      "prefix": "249",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Suriname",
-      "market_slug": "rest-of-latin-america",
-      "prefix": "597",
-      "marketing": 0.075,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0121,
-      "service": 0.0115
-    },
-    {
-      "market": "Sweden",
-      "market_slug": "rest-of-western-europe",
-      "prefix": "46",
-      "marketing": 0.0602,
-      "utility": 0.0176,
-      "auth": 0.0176,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0173
-    },
-    {
-      "market": "Switzerland",
-      "market_slug": "rest-of-western-europe",
-      "prefix": "41",
-      "marketing": 0.0602,
-      "utility": 0.0176,
-      "auth": 0.0176,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0173
-    },
-    {
-      "market": "Syria",
-      "market_slug": "rest-of-middle-east",
-      "prefix": "963",
-      "marketing": 0.0402,
-      "utility": 0.0096,
-      "auth": 0.0096,
-      "auth_intl": 0,
-      "calling_bi": 0.0132,
-      "service": 0.0093
-    },
-    {
-      "market": "Taiwan",
-      "market_slug": "rest-of-asia-pacific",
-      "prefix": "886",
-      "marketing": 0.0852,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0119,
-      "service": 0.0115
-    },
-    {
-      "market": "Tajikistan",
-      "market_slug": "rest-of-central-eastern-europe",
-      "prefix": "992",
-      "marketing": 0.087,
-      "utility": 0.0217,
-      "auth": 0.0217,
-      "auth_intl": 0,
-      "calling_bi": 0.01,
-      "service": 0.0214
-    },
-    {
-      "market": "Tanzania",
-      "market_slug": "rest-of-africa",
-      "prefix": "255",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Thailand",
-      "market_slug": "rest-of-asia-pacific",
-      "prefix": "66",
-      "marketing": 0.0852,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0119,
-      "service": 0.0115
-    },
-    {
-      "market": "Timor-Leste",
-      "market_slug": "rest-of-asia-pacific",
-      "prefix": "670",
-      "marketing": 0.0852,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0119,
-      "service": 0.0115
-    },
-    {
-      "market": "Togo",
-      "market_slug": "rest-of-africa",
-      "prefix": "228",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Tokelau",
-      "market_slug": "rest-of-asia-pacific",
-      "prefix": "690",
-      "marketing": 0.0852,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0119,
-      "service": 0.0115
-    },
-    {
-      "market": "Tonga",
-      "market_slug": "rest-of-asia-pacific",
-      "prefix": "676",
-      "marketing": 0.0852,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0119,
-      "service": 0.0115
-    },
-    {
-      "market": "Trinidad and Tobago",
-      "market_slug": "rest-of-latin-america",
-      "prefix": "1868",
-      "marketing": 0.075,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0121,
-      "service": 0.0115
-    },
-    {
-      "market": "Tunisia",
-      "market_slug": "rest-of-africa",
-      "prefix": "216",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Turkey",
-      "market_slug": "turkey",
-      "prefix": "90",
-      "marketing": 0.0119,
-      "utility": 0.0014,
-      "auth": 0.0014,
-      "auth_intl": 0,
-      "calling_bi": 0.0113,
-      "service": 0.0011
-    },
-    {
-      "market": "Turkmenistan",
-      "market_slug": "rest-of-central-eastern-europe",
-      "prefix": "993",
-      "marketing": 0.087,
-      "utility": 0.0217,
-      "auth": 0.0217,
-      "auth_intl": 0,
-      "calling_bi": 0.01,
-      "service": 0.0214
-    },
-    {
-      "market": "Turks and Caicos Islands",
-      "market_slug": "rest-of-latin-america",
-      "prefix": "1649",
-      "marketing": 0.075,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0121,
-      "service": 0.0115
-    },
-    {
-      "market": "Tuvalu",
-      "market_slug": "rest-of-asia-pacific",
-      "prefix": "688",
-      "marketing": 0.0852,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0119,
-      "service": 0.0115
-    },
-    {
-      "market": "Uganda",
-      "market_slug": "rest-of-africa",
-      "prefix": "256",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Ukraine",
-      "market_slug": "rest-of-central-eastern-europe",
-      "prefix": "380",
-      "marketing": 0.087,
-      "utility": 0.0217,
-      "auth": 0.0217,
-      "auth_intl": 0,
-      "calling_bi": 0.01,
-      "service": 0.0214
-    },
-    {
-      "market": "United Arab Emirates",
-      "market_slug": "united-arab-emirates",
-      "prefix": "971",
-      "marketing": 0.0586,
-      "utility": 0.0162,
-      "auth": 0.0162,
-      "auth_intl": 0.0515,
-      "calling_bi": 0.0132,
-      "service": 0.0159
-    },
-    {
-      "market": "United Kingdom",
-      "market_slug": "united-kingdom",
-      "prefix": "44",
-      "marketing": 0.0645,
-      "utility": 0.0225,
-      "auth": 0.0225,
-      "auth_intl": 0,
-      "calling_bi": 0.0104,
-      "service": 0.0222
-    },
-    {
-      "market": "United States / Canada",
-      "market_slug": "north-america",
-      "prefix": "1",
-      "marketing": 0.026,
-      "utility": 0.0039,
-      "auth": 0.0039,
-      "auth_intl": 0,
-      "calling_bi": 0.0126,
-      "service": 0.0036
-    },
-    {
-      "market": "Uruguay",
-      "market_slug": "rest-of-latin-america",
-      "prefix": "598",
-      "marketing": 0.075,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0121,
-      "service": 0.0115
-    },
-    {
-      "market": "US Virgin Islands",
-      "market_slug": "rest-of-latin-america",
-      "prefix": "1340",
-      "marketing": 0.075,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0121,
-      "service": 0.0115
-    },
-    {
-      "market": "Uzbekistan",
-      "market_slug": "rest-of-central-eastern-europe",
-      "prefix": "998",
-      "marketing": 0.087,
-      "utility": 0.0217,
-      "auth": 0.0217,
-      "auth_intl": 0,
-      "calling_bi": 0.01,
-      "service": 0.0214
-    },
-    {
-      "market": "Vanuatu",
-      "market_slug": "rest-of-asia-pacific",
-      "prefix": "678",
-      "marketing": 0.0852,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0119,
-      "service": 0.0115
-    },
-    {
-      "market": "Vatican City",
-      "market_slug": "rest-of-western-europe",
-      "prefix": "379",
-      "marketing": 0.0602,
-      "utility": 0.0176,
-      "auth": 0.0176,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0173
-    },
-    {
-      "market": "Venezuela",
-      "market_slug": "rest-of-latin-america",
-      "prefix": "58",
-      "marketing": 0.075,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0121,
-      "service": 0.0115
-    },
-    {
-      "market": "Vietnam",
-      "market_slug": "rest-of-asia-pacific",
-      "prefix": "84",
-      "marketing": 0.0852,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0119,
-      "service": 0.0115
-    },
-    {
-      "market": "Wallis and Futuna",
-      "market_slug": "rest-of-asia-pacific",
-      "prefix": "681",
-      "marketing": 0.0852,
-      "utility": 0.0118,
-      "auth": 0.0118,
-      "auth_intl": 0,
-      "calling_bi": 0.0119,
-      "service": 0.0115
-    },
-    {
-      "market": "Western Sahara",
-      "market_slug": "rest-of-africa",
-      "prefix": "212-EH",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Yemen",
-      "market_slug": "rest-of-middle-east",
-      "prefix": "967",
-      "marketing": 0.0402,
-      "utility": 0.0096,
-      "auth": 0.0096,
-      "auth_intl": 0,
-      "calling_bi": 0.0132,
-      "service": 0.0093
-    },
-    {
-      "market": "Zambia",
-      "market_slug": "rest-of-africa",
-      "prefix": "260",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    },
-    {
-      "market": "Zimbabwe",
-      "market_slug": "rest-of-africa",
-      "prefix": "263",
-      "marketing": 0.0235,
-      "utility": 0.0045,
-      "auth": 0.0045,
-      "auth_intl": 0,
-      "calling_bi": 0.0108,
-      "service": 0.0042
-    }
-  ]
+  {
+   "service": "telegram",
+   "country": "ID",
+   "inr": 95.62,
+   "usd": 1.08,
+   "stock": 167
+  },
+  {
+   "service": "telegram",
+   "country": "BR",
+   "inr": 114.63,
+   "usd": 1.28,
+   "stock": 54179
+  },
+  {
+   "service": "telegram",
+   "country": "PH",
+   "inr": 116.53,
+   "usd": 1.3,
+   "stock": 286
+  },
+  {
+   "service": "telegram",
+   "country": "IN",
+   "inr": 133.64,
+   "usd": 1.48,
+   "stock": 324
+  },
+  {
+   "service": "telegram",
+   "country": "GB",
+   "inr": 145.05,
+   "usd": 1.6,
+   "stock": 13192
+  },
+  {
+   "service": "telegram",
+   "country": "NL",
+   "inr": 220.14,
+   "usd": 2.39,
+   "stock": 122870
+  },
+  {
+   "service": "telegram",
+   "country": "US",
+   "inr": 240.1,
+   "usd": 2.6,
+   "stock": 73057
+  },
+  {
+   "service": "telegram",
+   "country": "DE",
+   "inr": 326.6,
+   "usd": 3.51,
+   "stock": 12492
+  },
+  {
+   "service": "telegram",
+   "country": "FR",
+   "inr": 333.25,
+   "usd": 3.58,
+   "stock": 1136
+  },
+  {
+   "service": "whatsapp",
+   "country": "ID",
+   "inr": 83.27,
+   "usd": 0.95,
+   "stock": 174474
+  },
+  {
+   "service": "whatsapp",
+   "country": "PH",
+   "inr": 84.22,
+   "usd": 0.96,
+   "stock": 820
+  },
+  {
+   "service": "whatsapp",
+   "country": "CA",
+   "inr": 114.63,
+   "usd": 1.28,
+   "stock": 328
+  },
+  {
+   "service": "whatsapp",
+   "country": "GB",
+   "inr": 132.69,
+   "usd": 1.47,
+   "stock": 125950
+  },
+  {
+   "service": "whatsapp",
+   "country": "IN",
+   "inr": 173.56,
+   "usd": 1.9,
+   "stock": 276
+  },
+  {
+   "service": "whatsapp",
+   "country": "BR",
+   "inr": 184.97,
+   "usd": 2.02,
+   "stock": 66712
+  },
+  {
+   "service": "whatsapp",
+   "country": "DE",
+   "inr": 290.48,
+   "usd": 3.13,
+   "stock": 25657
+  },
+  {
+   "service": "whatsapp",
+   "country": "US",
+   "inr": 342.75,
+   "usd": 3.68,
+   "stock": 200446
+  },
+  {
+   "service": "whatsapp",
+   "country": "FR",
+   "inr": 371.27,
+   "usd": 3.98,
+   "stock": 47744
+  },
+  {
+   "service": "google",
+   "country": "ID",
+   "inr": 67.11,
+   "usd": 0.78,
+   "stock": 2185081
+  },
+  {
+   "service": "google",
+   "country": "CA",
+   "inr": 67.11,
+   "usd": 0.78,
+   "stock": 267010
+  },
+  {
+   "service": "google",
+   "country": "NL",
+   "inr": 67.11,
+   "usd": 0.78,
+   "stock": 3272481
+  },
+  {
+   "service": "google",
+   "country": "BR",
+   "inr": 67.11,
+   "usd": 0.78,
+   "stock": 29045
+  },
+  {
+   "service": "google",
+   "country": "GB",
+   "inr": 69.96,
+   "usd": 0.81,
+   "stock": 29134
+  },
+  {
+   "service": "google",
+   "country": "DE",
+   "inr": 72.81,
+   "usd": 0.84,
+   "stock": 30031009
+  },
+  {
+   "service": "google",
+   "country": "PH",
+   "inr": 74.71,
+   "usd": 0.86,
+   "stock": 194
+  },
+  {
+   "service": "google",
+   "country": "IN",
+   "inr": 78.52,
+   "usd": 0.9,
+   "stock": 131497
+  },
+  {
+   "service": "google",
+   "country": "FR",
+   "inr": 82.32,
+   "usd": 0.94,
+   "stock": 63082
+  },
+  {
+   "service": "google",
+   "country": "US",
+   "inr": 112.73,
+   "usd": 1.26,
+   "stock": 48035
+  },
+  {
+   "service": "openai",
+   "country": "GB",
+   "inr": 61.41,
+   "usd": 0.72,
+   "stock": 759
+  },
+  {
+   "service": "openai",
+   "country": "PH",
+   "inr": 63.31,
+   "usd": 0.74,
+   "stock": 12536
+  },
+  {
+   "service": "openai",
+   "country": "ID",
+   "inr": 65.21,
+   "usd": 0.76,
+   "stock": 296
+  },
+  {
+   "service": "openai",
+   "country": "IN",
+   "inr": 65.21,
+   "usd": 0.76,
+   "stock": 10503
+  },
+  {
+   "service": "openai",
+   "country": "BR",
+   "inr": 65.21,
+   "usd": 0.76,
+   "stock": 37364
+  },
+  {
+   "service": "openai",
+   "country": "NL",
+   "inr": 67.11,
+   "usd": 0.78,
+   "stock": 192651
+  },
+  {
+   "service": "openai",
+   "country": "CA",
+   "inr": 72.81,
+   "usd": 0.84,
+   "stock": 9204
+  },
+  {
+   "service": "openai",
+   "country": "US",
+   "inr": 74.71,
+   "usd": 0.86,
+   "stock": 822591
+  },
+  {
+   "service": "openai",
+   "country": "DE",
+   "inr": 80.42,
+   "usd": 0.92,
+   "stock": 19761
+  },
+  {
+   "service": "discord",
+   "country": "US",
+   "inr": 76.61,
+   "usd": 0.88,
+   "stock": 171635
+  },
+  {
+   "service": "discord",
+   "country": "ID",
+   "inr": 76.61,
+   "usd": 0.88,
+   "stock": 9527
+  },
+  {
+   "service": "discord",
+   "country": "PH",
+   "inr": 76.61,
+   "usd": 0.88,
+   "stock": 115246
+  },
+  {
+   "service": "discord",
+   "country": "CA",
+   "inr": 76.61,
+   "usd": 0.88,
+   "stock": 211179
+  },
+  {
+   "service": "discord",
+   "country": "IN",
+   "inr": 76.61,
+   "usd": 0.88,
+   "stock": 10280
+  },
+  {
+   "service": "discord",
+   "country": "GB",
+   "inr": 76.61,
+   "usd": 0.88,
+   "stock": 249257
+  },
+  {
+   "service": "discord",
+   "country": "DE",
+   "inr": 76.61,
+   "usd": 0.88,
+   "stock": 173471
+  },
+  {
+   "service": "discord",
+   "country": "FR",
+   "inr": 76.61,
+   "usd": 0.88,
+   "stock": 2736581
+  },
+  {
+   "service": "discord",
+   "country": "NL",
+   "inr": 76.61,
+   "usd": 0.88,
+   "stock": 202549
+  },
+  {
+   "service": "discord",
+   "country": "BR",
+   "inr": 76.61,
+   "usd": 0.88,
+   "stock": 12423
+  },
+  {
+   "service": "microsoft",
+   "country": "US",
+   "inr": 70.91,
+   "usd": 0.82,
+   "stock": 267461
+  },
+  {
+   "service": "microsoft",
+   "country": "ID",
+   "inr": 70.91,
+   "usd": 0.82,
+   "stock": 110318
+  },
+  {
+   "service": "microsoft",
+   "country": "PH",
+   "inr": 70.91,
+   "usd": 0.82,
+   "stock": 103551
+  },
+  {
+   "service": "microsoft",
+   "country": "CA",
+   "inr": 70.91,
+   "usd": 0.82,
+   "stock": 9547
+  },
+  {
+   "service": "microsoft",
+   "country": "IN",
+   "inr": 70.91,
+   "usd": 0.82,
+   "stock": 8616
+  },
+  {
+   "service": "microsoft",
+   "country": "DE",
+   "inr": 70.91,
+   "usd": 0.82,
+   "stock": 109075
+  },
+  {
+   "service": "microsoft",
+   "country": "FR",
+   "inr": 70.91,
+   "usd": 0.82,
+   "stock": 314655
+  },
+  {
+   "service": "microsoft",
+   "country": "NL",
+   "inr": 70.91,
+   "usd": 0.82,
+   "stock": 390279
+  },
+  {
+   "service": "microsoft",
+   "country": "BR",
+   "inr": 70.91,
+   "usd": 0.82,
+   "stock": 5952
+  },
+  {
+   "service": "microsoft",
+   "country": "GB",
+   "inr": 72.81,
+   "usd": 0.84,
+   "stock": 1136
+  },
+  {
+   "service": "amazon",
+   "country": "ID",
+   "inr": 76.61,
+   "usd": 0.88,
+   "stock": 167865
+  },
+  {
+   "service": "amazon",
+   "country": "PH",
+   "inr": 76.61,
+   "usd": 0.88,
+   "stock": 21016
+  },
+  {
+   "service": "amazon",
+   "country": "CA",
+   "inr": 76.61,
+   "usd": 0.88,
+   "stock": 9313
+  },
+  {
+   "service": "amazon",
+   "country": "IN",
+   "inr": 76.61,
+   "usd": 0.88,
+   "stock": 93454
+  },
+  {
+   "service": "amazon",
+   "country": "DE",
+   "inr": 76.61,
+   "usd": 0.88,
+   "stock": 12739
+  },
+  {
+   "service": "amazon",
+   "country": "FR",
+   "inr": 76.61,
+   "usd": 0.88,
+   "stock": 3070
+  },
+  {
+   "service": "amazon",
+   "country": "NL",
+   "inr": 76.61,
+   "usd": 0.88,
+   "stock": 30242
+  },
+  {
+   "service": "amazon",
+   "country": "BR",
+   "inr": 76.61,
+   "usd": 0.88,
+   "stock": 24570
+  },
+  {
+   "service": "amazon",
+   "country": "US",
+   "inr": 82.32,
+   "usd": 0.94,
+   "stock": 485911
+  },
+  {
+   "service": "amazon",
+   "country": "GB",
+   "inr": 82.32,
+   "usd": 0.94,
+   "stock": 380
+  },
+  {
+   "service": "tinder",
+   "country": "US",
+   "inr": 92.77,
+   "usd": 1.05,
+   "stock": 326
+  },
+  {
+   "service": "tinder",
+   "country": "ID",
+   "inr": 92.77,
+   "usd": 1.05,
+   "stock": 9527
+  },
+  {
+   "service": "tinder",
+   "country": "PH",
+   "inr": 92.77,
+   "usd": 1.05,
+   "stock": 211788
+  },
+  {
+   "service": "tinder",
+   "country": "CA",
+   "inr": 92.77,
+   "usd": 1.05,
+   "stock": 326260
+  },
+  {
+   "service": "tinder",
+   "country": "IN",
+   "inr": 92.77,
+   "usd": 1.05,
+   "stock": 7109
+  },
+  {
+   "service": "tinder",
+   "country": "DE",
+   "inr": 92.77,
+   "usd": 1.05,
+   "stock": 782021
+  },
+  {
+   "service": "tinder",
+   "country": "FR",
+   "inr": 92.77,
+   "usd": 1.05,
+   "stock": 2737001
+  },
+  {
+   "service": "tinder",
+   "country": "NL",
+   "inr": 92.77,
+   "usd": 1.05,
+   "stock": 20167
+  },
+  {
+   "service": "tinder",
+   "country": "BR",
+   "inr": 92.77,
+   "usd": 1.05,
+   "stock": 30534
+  },
+  {
+   "service": "tinder",
+   "country": "GB",
+   "inr": 96.57,
+   "usd": 1.09,
+   "stock": 1068
+  },
+  {
+   "service": "uber",
+   "country": "NL",
+   "inr": 57.6,
+   "usd": 0.68,
+   "stock": 6549962
+  },
+  {
+   "service": "uber",
+   "country": "GB",
+   "inr": 62.36,
+   "usd": 0.73,
+   "stock": 969
+  },
+  {
+   "service": "uber",
+   "country": "CA",
+   "inr": 63.31,
+   "usd": 0.74,
+   "stock": 32191
+  },
+  {
+   "service": "uber",
+   "country": "DE",
+   "inr": 63.31,
+   "usd": 0.74,
+   "stock": 29943339
+  },
+  {
+   "service": "uber",
+   "country": "US",
+   "inr": 65.21,
+   "usd": 0.76,
+   "stock": 173259
+  },
+  {
+   "service": "uber",
+   "country": "BR",
+   "inr": 65.21,
+   "usd": 0.76,
+   "stock": 2525460
+  },
+  {
+   "service": "x",
+   "country": "ID",
+   "inr": 57.6,
+   "usd": 0.68,
+   "stock": 28703
+  },
+  {
+   "service": "x",
+   "country": "DE",
+   "inr": 57.6,
+   "usd": 0.68,
+   "stock": 29943339
+  },
+  {
+   "service": "x",
+   "country": "NL",
+   "inr": 57.6,
+   "usd": 0.68,
+   "stock": 3272481
+  },
+  {
+   "service": "x",
+   "country": "BR",
+   "inr": 57.6,
+   "usd": 0.68,
+   "stock": 16317
+  },
+  {
+   "service": "x",
+   "country": "IN",
+   "inr": 59.51,
+   "usd": 0.7,
+   "stock": 2000
+  },
+  {
+   "service": "x",
+   "country": "GB",
+   "inr": 59.51,
+   "usd": 0.7,
+   "stock": 999
+  },
+  {
+   "service": "x",
+   "country": "PH",
+   "inr": 61.41,
+   "usd": 0.72,
+   "stock": 106759
+  },
+  {
+   "service": "x",
+   "country": "CA",
+   "inr": 65.21,
+   "usd": 0.76,
+   "stock": 164314
+  },
+  {
+   "service": "x",
+   "country": "FR",
+   "inr": 65.21,
+   "usd": 0.76,
+   "stock": 189
+  },
+  {
+   "service": "x",
+   "country": "US",
+   "inr": 70.91,
+   "usd": 0.82,
+   "stock": 1643
+  }
+ ],
+ "rentals": [
+  {
+   "area_id": 1,
+   "area_code": "CA",
+   "area_name": "Canada",
+   "price_inr_month": 432.68,
+   "price_usd_month": 4.7,
+   "min_months": 1,
+   "price_inr_total": 432.68,
+   "price_usd_total": 4.7,
+   "stock_count": 145
+  },
+  {
+   "area_id": 2,
+   "area_code": "GB",
+   "area_name": "United Kingdom",
+   "price_inr_month": 670.3,
+   "price_usd_month": 7.2,
+   "min_months": 1,
+   "price_inr_total": 670.3,
+   "price_usd_total": 7.2,
+   "stock_count": 38
+  },
+  {
+   "area_id": 3,
+   "area_code": "US",
+   "area_name": "United States of America",
+   "price_inr_month": 480.2,
+   "price_usd_month": 5.2,
+   "min_months": 1,
+   "price_inr_total": 480.2,
+   "price_usd_total": 5.2,
+   "stock_count": 166
+  }
+ ],
+ "sms": {
+  "otp_services": {
+   "price_per_credit": 0.22,
+   "price_per_credit_usd": 0.003
+  },
+  "otp_platform": {
+   "price_per_credit": 0.3,
+   "price_per_credit_usd": 0.0048
+  },
+  "promotional": {
+   "price_per_credit": 0.2,
+   "price_per_credit_usd": 0.0027
+  },
+  "transactional": {
+   "price_per_credit": 0.18,
+   "price_per_credit_usd": 0.0024
+  }
+ },
+ "whatsappPlans": [
+  {
+   "name": "Developer",
+   "cycle": "monthly",
+   "inr": 199.0,
+   "usd": 2.5
+  },
+  {
+   "name": "Starter",
+   "cycle": "monthly",
+   "inr": 999.0,
+   "usd": 13.0
+  },
+  {
+   "name": "Developer",
+   "cycle": "yearly",
+   "inr": 1499.0,
+   "usd": 16.0
+  },
+  {
+   "name": "Growth",
+   "cycle": "monthly",
+   "inr": 1599.0,
+   "usd": 20.0
+  },
+  {
+   "name": "Starter",
+   "cycle": "yearly",
+   "inr": 9999.0,
+   "usd": 129.0
+  },
+  {
+   "name": "Growth",
+   "cycle": "yearly",
+   "inr": 15999.0,
+   "usd": 199.0
+  }
+ ],
+ "aiPlans": [
+  {
+   "name": "Starter",
+   "tokens": 500000,
+   "type": "plan",
+   "inr": 499.0,
+   "usd": 6.0
+  },
+  {
+   "name": "Growth",
+   "tokens": 1000000,
+   "type": "plan",
+   "inr": 899.0,
+   "usd": 10.0
+  },
+  {
+   "name": "Turbo Pack",
+   "tokens": 5000000,
+   "type": "topup",
+   "inr": 3499.0,
+   "usd": 38.0
+  },
+  {
+   "name": "Advanced",
+   "tokens": 10000000,
+   "type": "plan",
+   "inr": 5999.0,
+   "usd": 64.0
+  },
+  {
+   "name": "Mega Pack",
+   "tokens": 25000000,
+   "type": "topup",
+   "inr": 11999.0,
+   "usd": 126.0
+  },
+  {
+   "name": "Ultra Pack",
+   "tokens": 50000000,
+   "type": "topup",
+   "inr": 19999.0,
+   "usd": 210.0
+  }
+ ],
+ "whatsappUsage": [
+  {
+   "market": "India",
+   "market_slug": "india",
+   "prefix": "91",
+   "marketing": 0.0128,
+   "utility": 0.0019,
+   "auth": 0.0019,
+   "auth_intl": 0.0309,
+   "calling_bi": 0.0058,
+   "service": 0.0016
+  },
+  {
+   "market": "Afghanistan",
+   "market_slug": "rest-of-middle-east",
+   "prefix": "93",
+   "marketing": 0.0402,
+   "utility": 0.0096,
+   "auth": 0.0096,
+   "auth_intl": 0,
+   "calling_bi": 0.0132,
+   "service": 0.0093
+  },
+  {
+   "market": "Albania",
+   "market_slug": "rest-of-central-eastern-europe",
+   "prefix": "355",
+   "marketing": 0.087,
+   "utility": 0.0217,
+   "auth": 0.0217,
+   "auth_intl": 0,
+   "calling_bi": 0.01,
+   "service": 0.0214
+  },
+  {
+   "market": "Algeria",
+   "market_slug": "rest-of-africa",
+   "prefix": "213",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "American Samoa",
+   "market_slug": "rest-of-asia-pacific",
+   "prefix": "1684",
+   "marketing": 0.0852,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0119,
+   "service": 0.0115
+  },
+  {
+   "market": "Andorra",
+   "market_slug": "rest-of-western-europe",
+   "prefix": "376",
+   "marketing": 0.0602,
+   "utility": 0.0176,
+   "auth": 0.0176,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0173
+  },
+  {
+   "market": "Angola",
+   "market_slug": "rest-of-africa",
+   "prefix": "244",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Anguilla",
+   "market_slug": "rest-of-latin-america",
+   "prefix": "1264",
+   "marketing": 0.075,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0121,
+   "service": 0.0115
+  },
+  {
+   "market": "Antigua and Barbuda",
+   "market_slug": "rest-of-latin-america",
+   "prefix": "1268",
+   "marketing": 0.075,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0121,
+   "service": 0.0115
+  },
+  {
+   "market": "Argentina",
+   "market_slug": "argentina",
+   "prefix": "54",
+   "marketing": 0.0628,
+   "utility": 0.0265,
+   "auth": 0.0265,
+   "auth_intl": 0,
+   "calling_bi": 0.0106,
+   "service": 0.0262
+  },
+  {
+   "market": "Armenia",
+   "market_slug": "rest-of-central-eastern-europe",
+   "prefix": "374",
+   "marketing": 0.087,
+   "utility": 0.0217,
+   "auth": 0.0217,
+   "auth_intl": 0,
+   "calling_bi": 0.01,
+   "service": 0.0214
+  },
+  {
+   "market": "Aruba",
+   "market_slug": "rest-of-latin-america",
+   "prefix": "297",
+   "marketing": 0.075,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0121,
+   "service": 0.0115
+  },
+  {
+   "market": "Australia",
+   "market_slug": "rest-of-asia-pacific",
+   "prefix": "61",
+   "marketing": 0.0852,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0119,
+   "service": 0.0115
+  },
+  {
+   "market": "Austria",
+   "market_slug": "rest-of-western-europe",
+   "prefix": "43",
+   "marketing": 0.0602,
+   "utility": 0.0176,
+   "auth": 0.0176,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0173
+  },
+  {
+   "market": "Azerbaijan",
+   "market_slug": "rest-of-central-eastern-europe",
+   "prefix": "994",
+   "marketing": 0.087,
+   "utility": 0.0217,
+   "auth": 0.0217,
+   "auth_intl": 0,
+   "calling_bi": 0.01,
+   "service": 0.0214
+  },
+  {
+   "market": "Bahamas",
+   "market_slug": "rest-of-latin-america",
+   "prefix": "1242",
+   "marketing": 0.075,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0121,
+   "service": 0.0115
+  },
+  {
+   "market": "Bahrain",
+   "market_slug": "rest-of-middle-east",
+   "prefix": "973",
+   "marketing": 0.0402,
+   "utility": 0.0096,
+   "auth": 0.0096,
+   "auth_intl": 0,
+   "calling_bi": 0.0132,
+   "service": 0.0093
+  },
+  {
+   "market": "Bangladesh",
+   "market_slug": "rest-of-asia-pacific",
+   "prefix": "880",
+   "marketing": 0.0852,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0119,
+   "service": 0.0115
+  },
+  {
+   "market": "Barbados",
+   "market_slug": "rest-of-latin-america",
+   "prefix": "1246",
+   "marketing": 0.075,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0121,
+   "service": 0.0115
+  },
+  {
+   "market": "Belarus",
+   "market_slug": "rest-of-central-eastern-europe",
+   "prefix": "375",
+   "marketing": 0.087,
+   "utility": 0.0217,
+   "auth": 0.0217,
+   "auth_intl": 0,
+   "calling_bi": 0.01,
+   "service": 0.0214
+  },
+  {
+   "market": "Belgium",
+   "market_slug": "rest-of-western-europe",
+   "prefix": "32",
+   "marketing": 0.0602,
+   "utility": 0.0176,
+   "auth": 0.0176,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0173
+  },
+  {
+   "market": "Belize",
+   "market_slug": "rest-of-latin-america",
+   "prefix": "501",
+   "marketing": 0.075,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0121,
+   "service": 0.0115
+  },
+  {
+   "market": "Benin",
+   "market_slug": "rest-of-africa",
+   "prefix": "229",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Bermuda",
+   "market_slug": "rest-of-latin-america",
+   "prefix": "1441",
+   "marketing": 0.075,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0121,
+   "service": 0.0115
+  },
+  {
+   "market": "Bhutan",
+   "market_slug": "rest-of-asia-pacific",
+   "prefix": "975",
+   "marketing": 0.0852,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0119,
+   "service": 0.0115
+  },
+  {
+   "market": "Bolivia",
+   "market_slug": "rest-of-latin-america",
+   "prefix": "591",
+   "marketing": 0.075,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0121,
+   "service": 0.0115
+  },
+  {
+   "market": "Bosnia",
+   "market_slug": "rest-of-central-eastern-europe",
+   "prefix": "387",
+   "marketing": 0.087,
+   "utility": 0.0217,
+   "auth": 0.0217,
+   "auth_intl": 0,
+   "calling_bi": 0.01,
+   "service": 0.0214
+  },
+  {
+   "market": "Botswana",
+   "market_slug": "rest-of-africa",
+   "prefix": "267",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Brazil",
+   "market_slug": "brazil",
+   "prefix": "55",
+   "marketing": 0.0635,
+   "utility": 0.0073,
+   "auth": 0.0073,
+   "auth_intl": 0,
+   "calling_bi": 0.0113,
+   "service": 0.007
+  },
+  {
+   "market": "British Virgin Islands",
+   "market_slug": "rest-of-latin-america",
+   "prefix": "1284",
+   "marketing": 0.075,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0121,
+   "service": 0.0115
+  },
+  {
+   "market": "Brunei",
+   "market_slug": "rest-of-asia-pacific",
+   "prefix": "673",
+   "marketing": 0.0852,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0119,
+   "service": 0.0115
+  },
+  {
+   "market": "Bulgaria",
+   "market_slug": "rest-of-central-eastern-europe",
+   "prefix": "359",
+   "marketing": 0.087,
+   "utility": 0.0217,
+   "auth": 0.0217,
+   "auth_intl": 0,
+   "calling_bi": 0.01,
+   "service": 0.0214
+  },
+  {
+   "market": "Burkina Faso",
+   "market_slug": "rest-of-africa",
+   "prefix": "226",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Burundi",
+   "market_slug": "rest-of-africa",
+   "prefix": "257",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Cambodia",
+   "market_slug": "rest-of-asia-pacific",
+   "prefix": "855",
+   "marketing": 0.0852,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0119,
+   "service": 0.0115
+  },
+  {
+   "market": "Cameroon",
+   "market_slug": "rest-of-africa",
+   "prefix": "237",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Cape Verde",
+   "market_slug": "rest-of-africa",
+   "prefix": "238",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Cayman Islands",
+   "market_slug": "rest-of-latin-america",
+   "prefix": "1345",
+   "marketing": 0.075,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0121,
+   "service": 0.0115
+  },
+  {
+   "market": "Central African Rep",
+   "market_slug": "rest-of-africa",
+   "prefix": "236",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Chad",
+   "market_slug": "rest-of-africa",
+   "prefix": "235",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Chile",
+   "market_slug": "chile",
+   "prefix": "56",
+   "marketing": 0.0899,
+   "utility": 0.0205,
+   "auth": 0.0205,
+   "auth_intl": 0,
+   "calling_bi": 0.0126,
+   "service": 0.0202
+  },
+  {
+   "market": "China",
+   "market_slug": "rest-of-asia-pacific",
+   "prefix": "86",
+   "marketing": 0.0852,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0119,
+   "service": 0.0115
+  },
+  {
+   "market": "Colombia",
+   "market_slug": "colombia",
+   "prefix": "57",
+   "marketing": 0.0135,
+   "utility": 0.0013,
+   "auth": 0.0013,
+   "auth_intl": 0,
+   "calling_bi": 0.0116,
+   "service": 0.001
+  },
+  {
+   "market": "Comoros",
+   "market_slug": "rest-of-africa",
+   "prefix": "269",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Congo",
+   "market_slug": "rest-of-africa",
+   "prefix": "242",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Cook Islands",
+   "market_slug": "rest-of-asia-pacific",
+   "prefix": "682",
+   "marketing": 0.0852,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0119,
+   "service": 0.0115
+  },
+  {
+   "market": "Costa Rica",
+   "market_slug": "rest-of-latin-america",
+   "prefix": "506",
+   "marketing": 0.075,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0121,
+   "service": 0.0115
+  },
+  {
+   "market": "Croatia",
+   "market_slug": "rest-of-central-eastern-europe",
+   "prefix": "385",
+   "marketing": 0.087,
+   "utility": 0.0217,
+   "auth": 0.0217,
+   "auth_intl": 0,
+   "calling_bi": 0.01,
+   "service": 0.0214
+  },
+  {
+   "market": "Cuba",
+   "market_slug": "rest-of-latin-america",
+   "prefix": "53",
+   "marketing": 0.075,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0121,
+   "service": 0.0115
+  },
+  {
+   "market": "Curacao / Caribbean Netherlands",
+   "market_slug": "rest-of-latin-america",
+   "prefix": "599",
+   "marketing": 0.075,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0121,
+   "service": 0.0115
+  },
+  {
+   "market": "Cyprus",
+   "market_slug": "rest-of-western-europe",
+   "prefix": "357",
+   "marketing": 0.0602,
+   "utility": 0.0176,
+   "auth": 0.0176,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0173
+  },
+  {
+   "market": "Czech Republic",
+   "market_slug": "rest-of-central-eastern-europe",
+   "prefix": "420",
+   "marketing": 0.087,
+   "utility": 0.0217,
+   "auth": 0.0217,
+   "auth_intl": 0,
+   "calling_bi": 0.01,
+   "service": 0.0214
+  },
+  {
+   "market": "Denmark",
+   "market_slug": "rest-of-western-europe",
+   "prefix": "45",
+   "marketing": 0.0602,
+   "utility": 0.0176,
+   "auth": 0.0176,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0173
+  },
+  {
+   "market": "Djibouti",
+   "market_slug": "rest-of-africa",
+   "prefix": "253",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Dominica",
+   "market_slug": "rest-of-latin-america",
+   "prefix": "1767",
+   "marketing": 0.075,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0121,
+   "service": 0.0115
+  },
+  {
+   "market": "Dominican Republic",
+   "market_slug": "rest-of-latin-america",
+   "prefix": "1809",
+   "marketing": 0.075,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0121,
+   "service": 0.0115
+  },
+  {
+   "market": "DR Congo",
+   "market_slug": "rest-of-africa",
+   "prefix": "243",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Ecuador",
+   "market_slug": "rest-of-latin-america",
+   "prefix": "593",
+   "marketing": 0.075,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0121,
+   "service": 0.0115
+  },
+  {
+   "market": "Egypt",
+   "market_slug": "egypt",
+   "prefix": "20",
+   "marketing": 0.0654,
+   "utility": 0.0041,
+   "auth": 0.0041,
+   "auth_intl": 0.0655,
+   "calling_bi": 0.0132,
+   "service": 0.0038
+  },
+  {
+   "market": "El Salvador",
+   "market_slug": "rest-of-latin-america",
+   "prefix": "503",
+   "marketing": 0.075,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0121,
+   "service": 0.0115
+  },
+  {
+   "market": "Equatorial Guinea",
+   "market_slug": "rest-of-africa",
+   "prefix": "240",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Eritrea",
+   "market_slug": "rest-of-africa",
+   "prefix": "291",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Estonia",
+   "market_slug": "rest-of-central-eastern-europe",
+   "prefix": "372",
+   "marketing": 0.087,
+   "utility": 0.0217,
+   "auth": 0.0217,
+   "auth_intl": 0,
+   "calling_bi": 0.01,
+   "service": 0.0214
+  },
+  {
+   "market": "Eswatini",
+   "market_slug": "rest-of-africa",
+   "prefix": "268",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Ethiopia",
+   "market_slug": "rest-of-africa",
+   "prefix": "251",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Falkland Islands",
+   "market_slug": "rest-of-latin-america",
+   "prefix": "500",
+   "marketing": 0.075,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0121,
+   "service": 0.0115
+  },
+  {
+   "market": "Faroe Islands",
+   "market_slug": "rest-of-western-europe",
+   "prefix": "298",
+   "marketing": 0.0602,
+   "utility": 0.0176,
+   "auth": 0.0176,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0173
+  },
+  {
+   "market": "Fiji",
+   "market_slug": "rest-of-asia-pacific",
+   "prefix": "679",
+   "marketing": 0.0852,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0119,
+   "service": 0.0115
+  },
+  {
+   "market": "Finland",
+   "market_slug": "rest-of-western-europe",
+   "prefix": "358",
+   "marketing": 0.0602,
+   "utility": 0.0176,
+   "auth": 0.0176,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0173
+  },
+  {
+   "market": "France",
+   "market_slug": "france",
+   "prefix": "33",
+   "marketing": 0.0869,
+   "utility": 0.0305,
+   "auth": 0.0305,
+   "auth_intl": 0,
+   "calling_bi": 0.0104,
+   "service": 0.0302
+  },
+  {
+   "market": "French Guiana",
+   "market_slug": "rest-of-latin-america",
+   "prefix": "594",
+   "marketing": 0.075,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0121,
+   "service": 0.0115
+  },
+  {
+   "market": "French Polynesia",
+   "market_slug": "rest-of-asia-pacific",
+   "prefix": "689",
+   "marketing": 0.0852,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0119,
+   "service": 0.0115
+  },
+  {
+   "market": "Gabon",
+   "market_slug": "rest-of-africa",
+   "prefix": "241",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Gambia",
+   "market_slug": "rest-of-africa",
+   "prefix": "220",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Georgia",
+   "market_slug": "rest-of-central-eastern-europe",
+   "prefix": "995",
+   "marketing": 0.087,
+   "utility": 0.0217,
+   "auth": 0.0217,
+   "auth_intl": 0,
+   "calling_bi": 0.01,
+   "service": 0.0214
+  },
+  {
+   "market": "Germany",
+   "market_slug": "germany",
+   "prefix": "49",
+   "marketing": 0.1375,
+   "utility": 0.0555,
+   "auth": 0.0555,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0552
+  },
+  {
+   "market": "Ghana",
+   "market_slug": "rest-of-africa",
+   "prefix": "233",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Gibraltar",
+   "market_slug": "rest-of-western-europe",
+   "prefix": "350",
+   "marketing": 0.0602,
+   "utility": 0.0176,
+   "auth": 0.0176,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0173
+  },
+  {
+   "market": "Greece",
+   "market_slug": "rest-of-western-europe",
+   "prefix": "30",
+   "marketing": 0.0602,
+   "utility": 0.0176,
+   "auth": 0.0176,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0173
+  },
+  {
+   "market": "Greenland",
+   "market_slug": "rest-of-western-europe",
+   "prefix": "299",
+   "marketing": 0.0602,
+   "utility": 0.0176,
+   "auth": 0.0176,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0173
+  },
+  {
+   "market": "Grenada",
+   "market_slug": "rest-of-latin-america",
+   "prefix": "1473",
+   "marketing": 0.075,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0121,
+   "service": 0.0115
+  },
+  {
+   "market": "Guadeloupe",
+   "market_slug": "rest-of-latin-america",
+   "prefix": "590",
+   "marketing": 0.075,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0121,
+   "service": 0.0115
+  },
+  {
+   "market": "Guam",
+   "market_slug": "rest-of-asia-pacific",
+   "prefix": "1671",
+   "marketing": 0.0852,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0119,
+   "service": 0.0115
+  },
+  {
+   "market": "Guatemala",
+   "market_slug": "rest-of-latin-america",
+   "prefix": "502",
+   "marketing": 0.075,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0121,
+   "service": 0.0115
+  },
+  {
+   "market": "Guernsey",
+   "market_slug": "rest-of-western-europe",
+   "prefix": "44-GG",
+   "marketing": 0.0602,
+   "utility": 0.0176,
+   "auth": 0.0176,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0173
+  },
+  {
+   "market": "Guinea",
+   "market_slug": "rest-of-africa",
+   "prefix": "224",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Guinea-Bissau",
+   "market_slug": "rest-of-africa",
+   "prefix": "245",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Guyana",
+   "market_slug": "rest-of-latin-america",
+   "prefix": "592",
+   "marketing": 0.075,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0121,
+   "service": 0.0115
+  },
+  {
+   "market": "Haiti",
+   "market_slug": "rest-of-latin-america",
+   "prefix": "509",
+   "marketing": 0.075,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0121,
+   "service": 0.0115
+  },
+  {
+   "market": "Honduras",
+   "market_slug": "rest-of-latin-america",
+   "prefix": "504",
+   "marketing": 0.075,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0121,
+   "service": 0.0115
+  },
+  {
+   "market": "Hong Kong",
+   "market_slug": "hong-kong",
+   "prefix": "852",
+   "marketing": 0.0742,
+   "utility": 0.0265,
+   "auth": 0.0265,
+   "auth_intl": 0,
+   "calling_bi": 0,
+   "service": 0.0262
+  },
+  {
+   "market": "Hungary",
+   "market_slug": "hungary",
+   "prefix": "36",
+   "marketing": 0.087,
+   "utility": 0.0355,
+   "auth": 0.0355,
+   "auth_intl": 0,
+   "calling_bi": 0,
+   "service": 0.0352
+  },
+  {
+   "market": "Iceland",
+   "market_slug": "rest-of-western-europe",
+   "prefix": "354",
+   "marketing": 0.0602,
+   "utility": 0.0176,
+   "auth": 0.0176,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0173
+  },
+  {
+   "market": "Indonesia",
+   "market_slug": "indonesia",
+   "prefix": "62",
+   "marketing": 0.0421,
+   "utility": 0.0255,
+   "auth": 0.0255,
+   "auth_intl": 0.1365,
+   "calling_bi": 0.0247,
+   "service": 0.0252
+  },
+  {
+   "market": "Iran",
+   "market_slug": "rest-of-middle-east",
+   "prefix": "98",
+   "marketing": 0.0402,
+   "utility": 0.0096,
+   "auth": 0.0096,
+   "auth_intl": 0,
+   "calling_bi": 0.0132,
+   "service": 0.0093
+  },
+  {
+   "market": "Iraq",
+   "market_slug": "rest-of-middle-east",
+   "prefix": "964",
+   "marketing": 0.0402,
+   "utility": 0.0096,
+   "auth": 0.0096,
+   "auth_intl": 0,
+   "calling_bi": 0.0132,
+   "service": 0.0093
+  },
+  {
+   "market": "Ireland",
+   "market_slug": "rest-of-western-europe",
+   "prefix": "353",
+   "marketing": 0.0602,
+   "utility": 0.0176,
+   "auth": 0.0176,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0173
+  },
+  {
+   "market": "Isle of Man",
+   "market_slug": "rest-of-western-europe",
+   "prefix": "44-IM",
+   "marketing": 0.0602,
+   "utility": 0.0176,
+   "auth": 0.0176,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0173
+  },
+  {
+   "market": "Israel",
+   "market_slug": "israel",
+   "prefix": "972",
+   "marketing": 0.0363,
+   "utility": 0.0058,
+   "auth": 0.0058,
+   "auth_intl": 0,
+   "calling_bi": 0.0132,
+   "service": 0.0055
+  },
+  {
+   "market": "Italy",
+   "market_slug": "italy",
+   "prefix": "39",
+   "marketing": 0.0805,
+   "utility": 0.0305,
+   "auth": 0.0305,
+   "auth_intl": 0,
+   "calling_bi": 0.0126,
+   "service": 0.0302
+  },
+  {
+   "market": "Ivory Coast",
+   "market_slug": "rest-of-africa",
+   "prefix": "225",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Jamaica",
+   "market_slug": "rest-of-latin-america",
+   "prefix": "1876",
+   "marketing": 0.075,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0121,
+   "service": 0.0115
+  },
+  {
+   "market": "Japan",
+   "market_slug": "rest-of-asia-pacific",
+   "prefix": "81",
+   "marketing": 0.0852,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0119,
+   "service": 0.0115
+  },
+  {
+   "market": "Jersey",
+   "market_slug": "rest-of-western-europe",
+   "prefix": "44-JE",
+   "marketing": 0.0602,
+   "utility": 0.0176,
+   "auth": 0.0176,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0173
+  },
+  {
+   "market": "Jordan",
+   "market_slug": "rest-of-middle-east",
+   "prefix": "962",
+   "marketing": 0.0402,
+   "utility": 0.0096,
+   "auth": 0.0096,
+   "auth_intl": 0,
+   "calling_bi": 0.0132,
+   "service": 0.0093
+  },
+  {
+   "market": "Kazakhstan",
+   "market_slug": "rest-of-central-eastern-europe",
+   "prefix": "7-KZ",
+   "marketing": 0.087,
+   "utility": 0.0217,
+   "auth": 0.0217,
+   "auth_intl": 0,
+   "calling_bi": 0.01,
+   "service": 0.0214
+  },
+  {
+   "market": "Kenya",
+   "market_slug": "rest-of-africa",
+   "prefix": "254",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Kiribati",
+   "market_slug": "rest-of-asia-pacific",
+   "prefix": "686",
+   "marketing": 0.0852,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0119,
+   "service": 0.0115
+  },
+  {
+   "market": "Kosovo",
+   "market_slug": "rest-of-central-eastern-europe",
+   "prefix": "383",
+   "marketing": 0.087,
+   "utility": 0.0217,
+   "auth": 0.0217,
+   "auth_intl": 0,
+   "calling_bi": 0.01,
+   "service": 0.0214
+  },
+  {
+   "market": "Kuwait",
+   "market_slug": "rest-of-middle-east",
+   "prefix": "965",
+   "marketing": 0.0402,
+   "utility": 0.0096,
+   "auth": 0.0096,
+   "auth_intl": 0,
+   "calling_bi": 0.0132,
+   "service": 0.0093
+  },
+  {
+   "market": "Kyrgyzstan",
+   "market_slug": "rest-of-central-eastern-europe",
+   "prefix": "996",
+   "marketing": 0.087,
+   "utility": 0.0217,
+   "auth": 0.0217,
+   "auth_intl": 0,
+   "calling_bi": 0.01,
+   "service": 0.0214
+  },
+  {
+   "market": "Laos",
+   "market_slug": "rest-of-asia-pacific",
+   "prefix": "856",
+   "marketing": 0.0852,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0119,
+   "service": 0.0115
+  },
+  {
+   "market": "Latvia",
+   "market_slug": "rest-of-central-eastern-europe",
+   "prefix": "371",
+   "marketing": 0.087,
+   "utility": 0.0217,
+   "auth": 0.0217,
+   "auth_intl": 0,
+   "calling_bi": 0.01,
+   "service": 0.0214
+  },
+  {
+   "market": "Lebanon",
+   "market_slug": "rest-of-middle-east",
+   "prefix": "961",
+   "marketing": 0.0402,
+   "utility": 0.0096,
+   "auth": 0.0096,
+   "auth_intl": 0,
+   "calling_bi": 0.0132,
+   "service": 0.0093
+  },
+  {
+   "market": "Lesotho",
+   "market_slug": "rest-of-africa",
+   "prefix": "266",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Liberia",
+   "market_slug": "rest-of-africa",
+   "prefix": "231",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Libya",
+   "market_slug": "rest-of-africa",
+   "prefix": "218",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Liechtenstein",
+   "market_slug": "rest-of-western-europe",
+   "prefix": "423",
+   "marketing": 0.0602,
+   "utility": 0.0176,
+   "auth": 0.0176,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0173
+  },
+  {
+   "market": "Lithuania",
+   "market_slug": "rest-of-central-eastern-europe",
+   "prefix": "370",
+   "marketing": 0.087,
+   "utility": 0.0217,
+   "auth": 0.0217,
+   "auth_intl": 0,
+   "calling_bi": 0.01,
+   "service": 0.0214
+  },
+  {
+   "market": "Luxembourg",
+   "market_slug": "rest-of-western-europe",
+   "prefix": "352",
+   "marketing": 0.0602,
+   "utility": 0.0176,
+   "auth": 0.0176,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0173
+  },
+  {
+   "market": "Macau",
+   "market_slug": "rest-of-asia-pacific",
+   "prefix": "853",
+   "marketing": 0.0852,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0119,
+   "service": 0.0115
+  },
+  {
+   "market": "Madagascar",
+   "market_slug": "rest-of-africa",
+   "prefix": "261",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Malawi",
+   "market_slug": "rest-of-africa",
+   "prefix": "265",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Malaysia",
+   "market_slug": "malaysia",
+   "prefix": "60",
+   "marketing": 0.087,
+   "utility": 0.0145,
+   "auth": 0.0145,
+   "auth_intl": 0.0423,
+   "calling_bi": 0.0113,
+   "service": 0.0142
+  },
+  {
+   "market": "Maldives",
+   "market_slug": "rest-of-asia-pacific",
+   "prefix": "960",
+   "marketing": 0.0852,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0119,
+   "service": 0.0115
+  },
+  {
+   "market": "Mali",
+   "market_slug": "rest-of-africa",
+   "prefix": "223",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Malta",
+   "market_slug": "rest-of-western-europe",
+   "prefix": "356",
+   "marketing": 0.0602,
+   "utility": 0.0176,
+   "auth": 0.0176,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0173
+  },
+  {
+   "market": "Marshall Islands",
+   "market_slug": "rest-of-asia-pacific",
+   "prefix": "692",
+   "marketing": 0.0852,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0119,
+   "service": 0.0115
+  },
+  {
+   "market": "Martinique",
+   "market_slug": "rest-of-latin-america",
+   "prefix": "596",
+   "marketing": 0.075,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0121,
+   "service": 0.0115
+  },
+  {
+   "market": "Mauritania",
+   "market_slug": "rest-of-africa",
+   "prefix": "222",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Mauritius",
+   "market_slug": "rest-of-africa",
+   "prefix": "230",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Mayotte",
+   "market_slug": "rest-of-africa",
+   "prefix": "262-YT",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Mexico",
+   "market_slug": "mexico",
+   "prefix": "52",
+   "marketing": 0.0407,
+   "utility": 0.009,
+   "auth": 0.009,
+   "auth_intl": 0,
+   "calling_bi": 0.0099,
+   "service": 0.0087
+  },
+  {
+   "market": "Micronesia",
+   "market_slug": "rest-of-asia-pacific",
+   "prefix": "691",
+   "marketing": 0.0852,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0119,
+   "service": 0.0115
+  },
+  {
+   "market": "Moldova",
+   "market_slug": "rest-of-central-eastern-europe",
+   "prefix": "373",
+   "marketing": 0.087,
+   "utility": 0.0217,
+   "auth": 0.0217,
+   "auth_intl": 0,
+   "calling_bi": 0.01,
+   "service": 0.0214
+  },
+  {
+   "market": "Monaco",
+   "market_slug": "rest-of-western-europe",
+   "prefix": "377",
+   "marketing": 0.0602,
+   "utility": 0.0176,
+   "auth": 0.0176,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0173
+  },
+  {
+   "market": "Mongolia",
+   "market_slug": "rest-of-asia-pacific",
+   "prefix": "976",
+   "marketing": 0.0852,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0119,
+   "service": 0.0115
+  },
+  {
+   "market": "Montenegro",
+   "market_slug": "rest-of-central-eastern-europe",
+   "prefix": "382",
+   "marketing": 0.087,
+   "utility": 0.0217,
+   "auth": 0.0217,
+   "auth_intl": 0,
+   "calling_bi": 0.01,
+   "service": 0.0214
+  },
+  {
+   "market": "Montserrat",
+   "market_slug": "rest-of-latin-america",
+   "prefix": "1664",
+   "marketing": 0.075,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0121,
+   "service": 0.0115
+  },
+  {
+   "market": "Morocco",
+   "market_slug": "rest-of-africa",
+   "prefix": "212",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Mozambique",
+   "market_slug": "rest-of-africa",
+   "prefix": "258",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Myanmar",
+   "market_slug": "rest-of-asia-pacific",
+   "prefix": "95",
+   "marketing": 0.0852,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0119,
+   "service": 0.0115
+  },
+  {
+   "market": "Namibia",
+   "market_slug": "rest-of-africa",
+   "prefix": "264",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Nauru",
+   "market_slug": "rest-of-asia-pacific",
+   "prefix": "674",
+   "marketing": 0.0852,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0119,
+   "service": 0.0115
+  },
+  {
+   "market": "Nepal",
+   "market_slug": "rest-of-asia-pacific",
+   "prefix": "977",
+   "marketing": 0.0852,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0119,
+   "service": 0.0115
+  },
+  {
+   "market": "Netherlands",
+   "market_slug": "netherlands",
+   "prefix": "31",
+   "marketing": 0.1607,
+   "utility": 0.0505,
+   "auth": 0.0505,
+   "auth_intl": 0,
+   "calling_bi": 0.0068,
+   "service": 0.0502
+  },
+  {
+   "market": "New Caledonia",
+   "market_slug": "rest-of-asia-pacific",
+   "prefix": "687",
+   "marketing": 0.0852,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0119,
+   "service": 0.0115
+  },
+  {
+   "market": "New Zealand",
+   "market_slug": "rest-of-asia-pacific",
+   "prefix": "64",
+   "marketing": 0.0852,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0119,
+   "service": 0.0115
+  },
+  {
+   "market": "Nicaragua",
+   "market_slug": "rest-of-latin-america",
+   "prefix": "505",
+   "marketing": 0.075,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0121,
+   "service": 0.0115
+  },
+  {
+   "market": "Niger",
+   "market_slug": "rest-of-africa",
+   "prefix": "227",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Nigeria",
+   "market_slug": "nigeria",
+   "prefix": "234",
+   "marketing": 0.0526,
+   "utility": 0.0072,
+   "auth": 0.0072,
+   "auth_intl": 0.0755,
+   "calling_bi": 0.0108,
+   "service": 0.0069
+  },
+  {
+   "market": "Niue",
+   "market_slug": "rest-of-asia-pacific",
+   "prefix": "683",
+   "marketing": 0.0852,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0119,
+   "service": 0.0115
+  },
+  {
+   "market": "North Korea",
+   "market_slug": "rest-of-asia-pacific",
+   "prefix": "850",
+   "marketing": 0.0852,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0119,
+   "service": 0.0115
+  },
+  {
+   "market": "North Macedonia",
+   "market_slug": "rest-of-central-eastern-europe",
+   "prefix": "389",
+   "marketing": 0.087,
+   "utility": 0.0217,
+   "auth": 0.0217,
+   "auth_intl": 0,
+   "calling_bi": 0.01,
+   "service": 0.0214
+  },
+  {
+   "market": "Northern Mariana Islands",
+   "market_slug": "rest-of-asia-pacific",
+   "prefix": "1670",
+   "marketing": 0.0852,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0119,
+   "service": 0.0115
+  },
+  {
+   "market": "Norway",
+   "market_slug": "rest-of-western-europe",
+   "prefix": "47",
+   "marketing": 0.0602,
+   "utility": 0.0176,
+   "auth": 0.0176,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0173
+  },
+  {
+   "market": "Oman",
+   "market_slug": "rest-of-middle-east",
+   "prefix": "968",
+   "marketing": 0.0402,
+   "utility": 0.0096,
+   "auth": 0.0096,
+   "auth_intl": 0,
+   "calling_bi": 0.0132,
+   "service": 0.0093
+  },
+  {
+   "market": "Other",
+   "market_slug": "other",
+   "prefix": "OTHER",
+   "marketing": 0.0614,
+   "utility": 0.0082,
+   "auth": 0.0082,
+   "auth_intl": 0,
+   "calling_bi": 0.0137,
+   "service": 0.0079
+  },
+  {
+   "market": "Pakistan",
+   "market_slug": "pakistan",
+   "prefix": "92",
+   "marketing": 0.0483,
+   "utility": 0.0155,
+   "auth": 0.0155,
+   "auth_intl": 0.0755,
+   "calling_bi": 0.0124,
+   "service": 0.0152
+  },
+  {
+   "market": "Palau",
+   "market_slug": "rest-of-asia-pacific",
+   "prefix": "680",
+   "marketing": 0.0852,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0119,
+   "service": 0.0115
+  },
+  {
+   "market": "Palestine",
+   "market_slug": "rest-of-middle-east",
+   "prefix": "970",
+   "marketing": 0.0402,
+   "utility": 0.0096,
+   "auth": 0.0096,
+   "auth_intl": 0,
+   "calling_bi": 0.0132,
+   "service": 0.0093
+  },
+  {
+   "market": "Panama",
+   "market_slug": "rest-of-latin-america",
+   "prefix": "507",
+   "marketing": 0.075,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0121,
+   "service": 0.0115
+  },
+  {
+   "market": "Papua New Guinea",
+   "market_slug": "rest-of-asia-pacific",
+   "prefix": "675",
+   "marketing": 0.0852,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0119,
+   "service": 0.0115
+  },
+  {
+   "market": "Paraguay",
+   "market_slug": "rest-of-latin-america",
+   "prefix": "595",
+   "marketing": 0.075,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0121,
+   "service": 0.0115
+  },
+  {
+   "market": "Peru",
+   "market_slug": "peru",
+   "prefix": "51",
+   "marketing": 0.0713,
+   "utility": 0.0305,
+   "auth": 0.0305,
+   "auth_intl": 0,
+   "calling_bi": 0.0126,
+   "service": 0.0302
+  },
+  {
+   "market": "Philippines",
+   "market_slug": "rest-of-asia-pacific",
+   "prefix": "63",
+   "marketing": 0.0852,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0119,
+   "service": 0.0115
+  },
+  {
+   "market": "Poland",
+   "market_slug": "poland",
+   "prefix": "48",
+   "marketing": 0.0376,
+   "utility": 0.0127,
+   "auth": 0.0127,
+   "auth_intl": 0,
+   "calling_bi": 0,
+   "service": 0.0124
+  },
+  {
+   "market": "Portugal",
+   "market_slug": "rest-of-western-europe",
+   "prefix": "351",
+   "marketing": 0.0602,
+   "utility": 0.0176,
+   "auth": 0.0176,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0173
+  },
+  {
+   "market": "Puerto Rico",
+   "market_slug": "rest-of-latin-america",
+   "prefix": "1787",
+   "marketing": 0.075,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0121,
+   "service": 0.0115
+  },
+  {
+   "market": "Qatar",
+   "market_slug": "qatar",
+   "prefix": "974",
+   "marketing": 0.0351,
+   "utility": 0.0125,
+   "auth": 0.0125,
+   "auth_intl": 0,
+   "calling_bi": 0,
+   "service": 0.0122
+  },
+  {
+   "market": "Reunion",
+   "market_slug": "rest-of-africa",
+   "prefix": "262",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Romania",
+   "market_slug": "romania",
+   "prefix": "40",
+   "marketing": 0.087,
+   "utility": 0.0295,
+   "auth": 0.0295,
+   "auth_intl": 0,
+   "calling_bi": 0,
+   "service": 0.0292
+  },
+  {
+   "market": "Russia",
+   "market_slug": "russia",
+   "prefix": "7",
+   "marketing": 0.0812,
+   "utility": 0.0405,
+   "auth": 0.0405,
+   "auth_intl": 0,
+   "calling_bi": 0.0102,
+   "service": 0.0402
+  },
+  {
+   "market": "Rwanda",
+   "market_slug": "rest-of-africa",
+   "prefix": "250",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Saint Barthelemy",
+   "market_slug": "rest-of-latin-america",
+   "prefix": "590-BL",
+   "marketing": 0.075,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0121,
+   "service": 0.0115
+  },
+  {
+   "market": "Saint Helena",
+   "market_slug": "rest-of-africa",
+   "prefix": "290",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Saint Kitts and Nevis",
+   "market_slug": "rest-of-latin-america",
+   "prefix": "1869",
+   "marketing": 0.075,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0121,
+   "service": 0.0115
+  },
+  {
+   "market": "Saint Lucia",
+   "market_slug": "rest-of-latin-america",
+   "prefix": "1758",
+   "marketing": 0.075,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0121,
+   "service": 0.0115
+  },
+  {
+   "market": "Saint Martin",
+   "market_slug": "rest-of-latin-america",
+   "prefix": "590-MF",
+   "marketing": 0.075,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0121,
+   "service": 0.0115
+  },
+  {
+   "market": "Saint Pierre and Miquelon",
+   "market_slug": "north-america",
+   "prefix": "508",
+   "marketing": 0.026,
+   "utility": 0.0039,
+   "auth": 0.0039,
+   "auth_intl": 0,
+   "calling_bi": 0.0126,
+   "service": 0.0036
+  },
+  {
+   "market": "Saint Vincent",
+   "market_slug": "rest-of-latin-america",
+   "prefix": "1784",
+   "marketing": 0.075,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0121,
+   "service": 0.0115
+  },
+  {
+   "market": "Samoa",
+   "market_slug": "rest-of-asia-pacific",
+   "prefix": "685",
+   "marketing": 0.0852,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0119,
+   "service": 0.0115
+  },
+  {
+   "market": "San Marino",
+   "market_slug": "rest-of-western-europe",
+   "prefix": "378",
+   "marketing": 0.0602,
+   "utility": 0.0176,
+   "auth": 0.0176,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0173
+  },
+  {
+   "market": "Sao Tome",
+   "market_slug": "rest-of-africa",
+   "prefix": "239",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Saudi Arabia",
+   "market_slug": "saudi-arabia",
+   "prefix": "966",
+   "marketing": 0.0586,
+   "utility": 0.0112,
+   "auth": 0.0112,
+   "auth_intl": 0.0603,
+   "calling_bi": 0.0132,
+   "service": 0.0109
+  },
+  {
+   "market": "Senegal",
+   "market_slug": "rest-of-africa",
+   "prefix": "221",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Serbia",
+   "market_slug": "rest-of-central-eastern-europe",
+   "prefix": "381",
+   "marketing": 0.087,
+   "utility": 0.0217,
+   "auth": 0.0217,
+   "auth_intl": 0,
+   "calling_bi": 0.01,
+   "service": 0.0214
+  },
+  {
+   "market": "Seychelles",
+   "market_slug": "rest-of-africa",
+   "prefix": "248",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Sierra Leone",
+   "market_slug": "rest-of-africa",
+   "prefix": "232",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Singapore",
+   "market_slug": "singapore",
+   "prefix": "65",
+   "marketing": 0.0742,
+   "utility": 0.0165,
+   "auth": 0.0165,
+   "auth_intl": 0,
+   "calling_bi": 0,
+   "service": 0.0162
+  },
+  {
+   "market": "Sint Maarten",
+   "market_slug": "rest-of-latin-america",
+   "prefix": "1721",
+   "marketing": 0.075,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0121,
+   "service": 0.0115
+  },
+  {
+   "market": "Slovakia",
+   "market_slug": "rest-of-central-eastern-europe",
+   "prefix": "421",
+   "marketing": 0.087,
+   "utility": 0.0217,
+   "auth": 0.0217,
+   "auth_intl": 0,
+   "calling_bi": 0.01,
+   "service": 0.0214
+  },
+  {
+   "market": "Slovenia",
+   "market_slug": "rest-of-central-eastern-europe",
+   "prefix": "386",
+   "marketing": 0.087,
+   "utility": 0.0217,
+   "auth": 0.0217,
+   "auth_intl": 0,
+   "calling_bi": 0.01,
+   "service": 0.0214
+  },
+  {
+   "market": "Solomon Islands",
+   "market_slug": "rest-of-asia-pacific",
+   "prefix": "677",
+   "marketing": 0.0852,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0119,
+   "service": 0.0115
+  },
+  {
+   "market": "Somalia",
+   "market_slug": "rest-of-africa",
+   "prefix": "252",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "South Africa",
+   "market_slug": "south-africa",
+   "prefix": "27",
+   "marketing": 0.0389,
+   "utility": 0.01,
+   "auth": 0.01,
+   "auth_intl": 0.0205,
+   "calling_bi": 0.0113,
+   "service": 0.0097
+  },
+  {
+   "market": "South Korea",
+   "market_slug": "rest-of-asia-pacific",
+   "prefix": "82",
+   "marketing": 0.0852,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0119,
+   "service": 0.0115
+  },
+  {
+   "market": "South Sudan",
+   "market_slug": "rest-of-africa",
+   "prefix": "211",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Spain",
+   "market_slug": "spain",
+   "prefix": "34",
+   "marketing": 0.0717,
+   "utility": 0.0205,
+   "auth": 0.0205,
+   "auth_intl": 0,
+   "calling_bi": 0.0134,
+   "service": 0.0202
+  },
+  {
+   "market": "Sri Lanka",
+   "market_slug": "rest-of-asia-pacific",
+   "prefix": "94",
+   "marketing": 0.0852,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0119,
+   "service": 0.0115
+  },
+  {
+   "market": "Sudan",
+   "market_slug": "rest-of-africa",
+   "prefix": "249",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Suriname",
+   "market_slug": "rest-of-latin-america",
+   "prefix": "597",
+   "marketing": 0.075,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0121,
+   "service": 0.0115
+  },
+  {
+   "market": "Sweden",
+   "market_slug": "rest-of-western-europe",
+   "prefix": "46",
+   "marketing": 0.0602,
+   "utility": 0.0176,
+   "auth": 0.0176,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0173
+  },
+  {
+   "market": "Switzerland",
+   "market_slug": "rest-of-western-europe",
+   "prefix": "41",
+   "marketing": 0.0602,
+   "utility": 0.0176,
+   "auth": 0.0176,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0173
+  },
+  {
+   "market": "Syria",
+   "market_slug": "rest-of-middle-east",
+   "prefix": "963",
+   "marketing": 0.0402,
+   "utility": 0.0096,
+   "auth": 0.0096,
+   "auth_intl": 0,
+   "calling_bi": 0.0132,
+   "service": 0.0093
+  },
+  {
+   "market": "Taiwan",
+   "market_slug": "rest-of-asia-pacific",
+   "prefix": "886",
+   "marketing": 0.0852,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0119,
+   "service": 0.0115
+  },
+  {
+   "market": "Tajikistan",
+   "market_slug": "rest-of-central-eastern-europe",
+   "prefix": "992",
+   "marketing": 0.087,
+   "utility": 0.0217,
+   "auth": 0.0217,
+   "auth_intl": 0,
+   "calling_bi": 0.01,
+   "service": 0.0214
+  },
+  {
+   "market": "Tanzania",
+   "market_slug": "rest-of-africa",
+   "prefix": "255",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Thailand",
+   "market_slug": "rest-of-asia-pacific",
+   "prefix": "66",
+   "marketing": 0.0852,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0119,
+   "service": 0.0115
+  },
+  {
+   "market": "Timor-Leste",
+   "market_slug": "rest-of-asia-pacific",
+   "prefix": "670",
+   "marketing": 0.0852,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0119,
+   "service": 0.0115
+  },
+  {
+   "market": "Togo",
+   "market_slug": "rest-of-africa",
+   "prefix": "228",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Tokelau",
+   "market_slug": "rest-of-asia-pacific",
+   "prefix": "690",
+   "marketing": 0.0852,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0119,
+   "service": 0.0115
+  },
+  {
+   "market": "Tonga",
+   "market_slug": "rest-of-asia-pacific",
+   "prefix": "676",
+   "marketing": 0.0852,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0119,
+   "service": 0.0115
+  },
+  {
+   "market": "Trinidad and Tobago",
+   "market_slug": "rest-of-latin-america",
+   "prefix": "1868",
+   "marketing": 0.075,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0121,
+   "service": 0.0115
+  },
+  {
+   "market": "Tunisia",
+   "market_slug": "rest-of-africa",
+   "prefix": "216",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Turkey",
+   "market_slug": "turkey",
+   "prefix": "90",
+   "marketing": 0.0119,
+   "utility": 0.0014,
+   "auth": 0.0014,
+   "auth_intl": 0,
+   "calling_bi": 0.0113,
+   "service": 0.0011
+  },
+  {
+   "market": "Turkmenistan",
+   "market_slug": "rest-of-central-eastern-europe",
+   "prefix": "993",
+   "marketing": 0.087,
+   "utility": 0.0217,
+   "auth": 0.0217,
+   "auth_intl": 0,
+   "calling_bi": 0.01,
+   "service": 0.0214
+  },
+  {
+   "market": "Turks and Caicos Islands",
+   "market_slug": "rest-of-latin-america",
+   "prefix": "1649",
+   "marketing": 0.075,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0121,
+   "service": 0.0115
+  },
+  {
+   "market": "Tuvalu",
+   "market_slug": "rest-of-asia-pacific",
+   "prefix": "688",
+   "marketing": 0.0852,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0119,
+   "service": 0.0115
+  },
+  {
+   "market": "Uganda",
+   "market_slug": "rest-of-africa",
+   "prefix": "256",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Ukraine",
+   "market_slug": "rest-of-central-eastern-europe",
+   "prefix": "380",
+   "marketing": 0.087,
+   "utility": 0.0217,
+   "auth": 0.0217,
+   "auth_intl": 0,
+   "calling_bi": 0.01,
+   "service": 0.0214
+  },
+  {
+   "market": "United Arab Emirates",
+   "market_slug": "united-arab-emirates",
+   "prefix": "971",
+   "marketing": 0.0586,
+   "utility": 0.0162,
+   "auth": 0.0162,
+   "auth_intl": 0.0515,
+   "calling_bi": 0.0132,
+   "service": 0.0159
+  },
+  {
+   "market": "United Kingdom",
+   "market_slug": "united-kingdom",
+   "prefix": "44",
+   "marketing": 0.0645,
+   "utility": 0.0225,
+   "auth": 0.0225,
+   "auth_intl": 0,
+   "calling_bi": 0.0104,
+   "service": 0.0222
+  },
+  {
+   "market": "United States / Canada",
+   "market_slug": "north-america",
+   "prefix": "1",
+   "marketing": 0.026,
+   "utility": 0.0039,
+   "auth": 0.0039,
+   "auth_intl": 0,
+   "calling_bi": 0.0126,
+   "service": 0.0036
+  },
+  {
+   "market": "Uruguay",
+   "market_slug": "rest-of-latin-america",
+   "prefix": "598",
+   "marketing": 0.075,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0121,
+   "service": 0.0115
+  },
+  {
+   "market": "US Virgin Islands",
+   "market_slug": "rest-of-latin-america",
+   "prefix": "1340",
+   "marketing": 0.075,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0121,
+   "service": 0.0115
+  },
+  {
+   "market": "Uzbekistan",
+   "market_slug": "rest-of-central-eastern-europe",
+   "prefix": "998",
+   "marketing": 0.087,
+   "utility": 0.0217,
+   "auth": 0.0217,
+   "auth_intl": 0,
+   "calling_bi": 0.01,
+   "service": 0.0214
+  },
+  {
+   "market": "Vanuatu",
+   "market_slug": "rest-of-asia-pacific",
+   "prefix": "678",
+   "marketing": 0.0852,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0119,
+   "service": 0.0115
+  },
+  {
+   "market": "Vatican City",
+   "market_slug": "rest-of-western-europe",
+   "prefix": "379",
+   "marketing": 0.0602,
+   "utility": 0.0176,
+   "auth": 0.0176,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0173
+  },
+  {
+   "market": "Venezuela",
+   "market_slug": "rest-of-latin-america",
+   "prefix": "58",
+   "marketing": 0.075,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0121,
+   "service": 0.0115
+  },
+  {
+   "market": "Vietnam",
+   "market_slug": "rest-of-asia-pacific",
+   "prefix": "84",
+   "marketing": 0.0852,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0119,
+   "service": 0.0115
+  },
+  {
+   "market": "Wallis and Futuna",
+   "market_slug": "rest-of-asia-pacific",
+   "prefix": "681",
+   "marketing": 0.0852,
+   "utility": 0.0118,
+   "auth": 0.0118,
+   "auth_intl": 0,
+   "calling_bi": 0.0119,
+   "service": 0.0115
+  },
+  {
+   "market": "Western Sahara",
+   "market_slug": "rest-of-africa",
+   "prefix": "212-EH",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Yemen",
+   "market_slug": "rest-of-middle-east",
+   "prefix": "967",
+   "marketing": 0.0402,
+   "utility": 0.0096,
+   "auth": 0.0096,
+   "auth_intl": 0,
+   "calling_bi": 0.0132,
+   "service": 0.0093
+  },
+  {
+   "market": "Zambia",
+   "market_slug": "rest-of-africa",
+   "prefix": "260",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  },
+  {
+   "market": "Zimbabwe",
+   "market_slug": "rest-of-africa",
+   "prefix": "263",
+   "marketing": 0.0235,
+   "utility": 0.0045,
+   "auth": 0.0045,
+   "auth_intl": 0,
+   "calling_bi": 0.0108,
+   "service": 0.0042
+  }
+ ],
+ "voice": {
+  "promotional": {
+   "price_per_credit": 0.3
+  },
+  "transactional": {
+   "price_per_credit": 0.2
+  }
+ }
 }
