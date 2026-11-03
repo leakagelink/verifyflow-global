@@ -27,7 +27,7 @@ const planFeatures: Record<string, string[]> = {
   Growth: ["Unlimited contacts & campaigns", "100 agent seats · 100 chatbots", "2,000 templates · 3,500 msg/min", "500,000 free AI tokens", "Commerce, catalog & booking", "Everything in Starter"],
 };
 
-const faqs = [
+const faqs: [string, string][] = [
   ["Is there a free trial available?", "Yes — sandbox API keys are free, and new accounts get trial credits to test live numbers."],
   ["Can I change my plan later?", "Anytime. Upgrades apply immediately; downgrades apply at the next billing cycle."],
   ["Are there any hidden fees?", "No. Every price shown already includes our platform fee — what you see is what you pay."],
