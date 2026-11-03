@@ -38,7 +38,7 @@ function Landing() {
           <Logo />
           <nav className="flex items-center gap-1 sm:gap-2">
             <Button variant="ghost" size="sm" className="hidden sm:inline-flex" asChild><Link to="/app/docs">Docs</Link></Button>
-            <Button variant="ghost" size="sm" className="hidden sm:inline-flex" asChild><Link to="/app/marketplace">Pricing</Link></Button>
+            <Button variant="ghost" size="sm" className="hidden sm:inline-flex" asChild><Link to="/pricing">Pricing</Link></Button>
             <Button size="sm" asChild><Link to="/app">Dashboard</Link></Button>
           </nav>
         </div>
