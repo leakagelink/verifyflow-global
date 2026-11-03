@@ -85,9 +85,9 @@ function Pricing() {
 
       <Section tag="Pay as you go" title="SMS, Voice & WhatsApp" sub="No subscription — just add credits and start sending.">
         <div className="grid gap-4 md:grid-cols-3">
-          <RateList title="SMS" rows={smsPrices.map((p) => [p.label, `${inr(p.inr)} / credit`])} />
-          <RateList title="Voice" rows={voicePrices.map((p) => [p.label, `${inr(p.inr)} / credit`])} />
-          {india && <RateList title="WhatsApp · India (USD)" rows={[["Marketing", india.marketing], ["Utility", india.utility], ["Authentication", india.auth], ["Authentication intl", india.auth_intl], ["Business calling / min", india.calling_bi], ["Service 24h", india.service]].map(([l, v]) => [String(l), `${formatServicePrice(Number(v))} / msg`])} />}
+          <RateList title="SMS" rows={smsPrices.map((p) => [p.label, `${inr(p.inr)} / credit`] as [string, string])} />
+          <RateList title="Voice" rows={voicePrices.map((p) => [p.label, `${inr(p.inr)} / credit`] as [string, string])} />
+          {india && <RateList title="WhatsApp · India (USD)" rows={[["Marketing", india.marketing], ["Utility", india.utility], ["Authentication", india.auth], ["Authentication intl", india.auth_intl], ["Business calling / min", india.calling_bi], ["Service 24h", india.service]].map(([l, v]) => [String(l), `${formatServicePrice(Number(v))} / msg`] as [string, string])} />}
         </div>
       </Section>
 
@@ -110,7 +110,7 @@ function Pricing() {
   );
 }
 
-function RateList({ title, rows }: { title: string; rows: string[][] }) {
+function RateList({ title, rows }: { title: string; rows: [string, string][] }) {
   return <div className="card-3d rounded-xl border bg-card"><div className="border-b px-5 py-3 font-semibold">{title}</div>
     <dl className="divide-y">{rows.map(([l, v]) => <div key={l} className="flex justify-between gap-2 px-5 py-2.5 text-sm"><dt className="capitalize">{l}</dt><dd className="font-mono">{v}</dd></div>)}</dl></div>;
 }
