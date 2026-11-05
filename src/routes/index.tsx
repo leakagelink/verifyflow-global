@@ -8,9 +8,9 @@ import hero from "@/assets/hero-3d.png";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Numora — Virtual numbers, OTP & WhatsApp Business API" },
+      { title: "Com Nexa API — Virtual numbers, OTP & WhatsApp Business API" },
       { name: "description", content: "Virtual phone numbers, SMS & WhatsApp OTP, bulk SMS with DLT, WhatsApp Business inbox, bots and KYC APIs in 180+ countries." },
-      { property: "og:title", content: "Numora — Virtual numbers, OTP & WhatsApp Business API" },
+      { property: "og:title", content: "Com Nexa API — Virtual numbers, OTP & WhatsApp Business API" },
       { property: "og:description", content: "One platform for OTP, bulk SMS and WhatsApp Business." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -50,9 +50,9 @@ function Landing() {
             <span className="size-1.5 rounded-full bg-success" />Pay-as-you-go credits · No monthly fees
           </span>
           <h1 className="mt-5 text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
-            <span className="text-gradient">Phone verification & messaging</span> for every country.
+            <span className="text-gradient">Com Nexa API</span>
           </h1>
-          <p className="mx-auto mt-5 max-w-lg text-base text-muted-foreground lg:mx-0">Virtual numbers, OTP, bulk SMS and WhatsApp Business — one API, one wallet, one beautiful dashboard.</p>
+          <p className="mx-auto mt-5 max-w-lg text-base text-muted-foreground lg:mx-0">Phone verification and messaging for every country. Virtual numbers, OTP, bulk SMS and WhatsApp Business — one API, one wallet.</p>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
             <Button size="lg" asChild><Link to="/app">Start free <ArrowRight className="size-4" /></Link></Button>
             <Button size="lg" variant="outline" className="card-3d" asChild><Link to="/app/docs">Read the API docs</Link></Button>
@@ -95,11 +95,11 @@ function Landing() {
           <Button className="mt-6" asChild><Link to="/app/api-keys">Get your API key <ArrowRight className="size-4" /></Link></Button>
         </div>
         <div className="tilt-3d card-3d rounded-2xl border p-2 shadow-2xl">
-          <CodeBlock title="POST /v1/numbers" code={`curl -X POST https://api.numora.io/v1/numbers \\\n  -H "Authorization: Bearer $NUMORA_KEY" \\\n  -d '{"country":"US","service":"telegram"}'\n\n{\n  "id": "ord_8f2k1",\n  "number": "+14155550132",\n  "status": "waiting",\n  "cost": 0.42\n}`} />
+          <CodeBlock title="POST /v1/numbers" code={`curl -X POST https://api.comnexaapi.com/v1/numbers \\\n  -H "Authorization: Bearer $COMNEXA_API_KEY" \\\n  -d '{"country":"US","service":"telegram"}'\n\n{\n  "id": "ord_8f2k1",\n  "number": "+14155550132",\n  "status": "waiting",\n  "cost": 0.42\n}`} />
         </div>
       </section>
 
-      <footer className="border-t py-8 text-center text-xs text-muted-foreground"><ShieldCheck className="mr-1 inline size-3.5" />© 2026 Numora. All rights reserved.</footer>
+      <footer className="border-t py-8 text-center text-xs text-muted-foreground"><ShieldCheck className="mr-1 inline size-3.5" />© 2026 Com Nexa API. All rights reserved.</footer>
     </div>
   );
 }

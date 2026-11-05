@@ -131,9 +131,9 @@ export const rentalInbox = [
 ];
 
 export const apiKeys = [
-  { id: "key_1", name: "Production backend", prefix: "nmr_live_8fK2", env: "live", scopes: ["numbers:write", "sms:read", "wallet:read"], ips: ["34.120.11.4", "34.120.11.5"], lastUsed: "2 minutes ago", calls30d: 184220, status: "active" as Status, created: "2026-06-12" },
-  { id: "key_2", name: "Staging", prefix: "nmr_test_Qa91", env: "sandbox", scopes: ["*"], ips: [], lastUsed: "3 hours ago", calls30d: 21904, status: "active" as Status, created: "2026-07-02" },
-  { id: "key_3", name: "Legacy mobile app", prefix: "nmr_live_x0Pm", env: "live", scopes: ["sms:read"], ips: [], lastUsed: "41 days ago", calls30d: 0, status: "revoked" as Status, created: "2025-12-19" },
+  { id: "key_1", name: "Production backend", prefix: "cnx_live_8fK2", env: "live", scopes: ["numbers:write", "sms:read", "wallet:read"], ips: ["34.120.11.4", "34.120.11.5"], lastUsed: "2 minutes ago", calls30d: 184220, status: "active" as Status, created: "2026-06-12" },
+  { id: "key_2", name: "Staging", prefix: "cnx_test_Qa91", env: "sandbox", scopes: ["*"], ips: [], lastUsed: "3 hours ago", calls30d: 21904, status: "active" as Status, created: "2026-07-02" },
+  { id: "key_3", name: "Legacy mobile app", prefix: "cnx_live_x0Pm", env: "live", scopes: ["sms:read"], ips: [], lastUsed: "41 days ago", calls30d: 0, status: "revoked" as Status, created: "2025-12-19" },
 ];
 
 const endpoints = [
@@ -150,12 +150,12 @@ export const apiLogs = Array.from({ length: 40 }, (_, i) => {
     latency: Math.round(40 + r * 380),
     ip: `34.120.11.${(i % 6) + 2}`,
     at: new Date(Date.UTC(2026, 10, 1, 4, 30) - i * 97_000).toISOString(),
-    key: i % 3 === 0 ? "nmr_test_Qa91" : "nmr_live_8fK2",
+    key: i % 3 === 0 ? "cnx_test_Qa91" : "cnx_live_8fK2",
   };
 });
 
 export const webhooks = [
-  { id: "wh_1", url: "https://api.acme.io/hooks/numora", events: ["sms.received", "number.expired"], status: "active" as Status, successRate: 99.4 },
+  { id: "wh_1", url: "https://api.acme.io/hooks/comnexaapi", events: ["sms.received", "number.expired"], status: "active" as Status, successRate: 99.4 },
   { id: "wh_2", url: "https://staging.acme.io/hooks", events: ["*"], status: "failed" as Status, successRate: 71.2 },
 ];
 export const webhookEvents = Array.from({ length: 12 }, (_, i) => ({
@@ -200,7 +200,7 @@ export const team = [
 ];
 
 export const referrals = {
-  link: "https://numora.io/r/dheeraj-7xk2",
+  link: "https://comnexaapi.com/r/dheeraj-7xk2",
   rate: 10,
   clicks: 1842, signups: 214, active: 63, earned: 1284.6, pending: 142.3,
   payouts: [

@@ -5,3 +5,7 @@
 - [x] Update available matching service prices without modifying historical spend or wallet credits.
 - [ ] Obtain unpublished prices for weekly rentals, dedicated WhatsApp Business numbers, standalone DLT/whitelist, and phone-risk KYC. Blocker: no matching public APITXT tariff; these prices must not be invented.
 - [x] Verify the customer price displays and tests.
+# Brand update
+
+- [x] Update platform name to Com Nexa API and branded addresses to comnexaapi.com.
+- [x] Verify renamed pages, documentation, and mobile logo layout.

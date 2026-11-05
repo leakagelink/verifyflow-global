@@ -10,9 +10,9 @@ import { kycPrice, kycServices } from "@/services/kyc-data";
 export const Route = createFileRoute("/pricing")({
   head: () => ({
     meta: [
-      { title: "Pricing — Numora virtual numbers, SMS, WhatsApp & KYC" },
+      { title: "Pricing — Com Nexa API virtual numbers, SMS, WhatsApp & KYC" },
       { name: "description", content: "Transparent pay-as-you-go pricing for virtual numbers, rentals, SMS, voice, WhatsApp plans, AI tokens and KYC APIs." },
-      { property: "og:title", content: "Numora pricing" },
+      { property: "og:title", content: "Com Nexa API pricing" },
       { property: "og:description", content: "WhatsApp plans, AI tokens, SMS & voice, KYC and virtual number prices." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },

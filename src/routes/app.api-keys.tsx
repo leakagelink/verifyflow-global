@@ -13,7 +13,7 @@ import { CopyButton, DataTable, Mono, PageHeader, Panel, StatCard, StatusBadge, 
 import { apiKeys as seed } from "@/services/mock-data";
 
 export const Route = createFileRoute("/app/api-keys")({
-  head: () => pageHead("API Keys", "Create, restrict and revoke API keys for the Numora API."),
+  head: () => pageHead("API Keys", "Create, restrict and revoke API keys for the Com Nexa API API."),
   component: ApiKeys,
 });
 
@@ -47,7 +47,7 @@ function ApiKeys() {
 
   return (
     <>
-      <PageHeader title="API keys" description="Keys authenticate requests to api.numora.io. Keep live keys server-side."
+      <PageHeader title="API keys" description="Keys authenticate requests to api.comnexaapi.com. Keep live keys server-side."
         actions={
           <Dialog open={open} onOpenChange={(o) => { setOpen(o); if (!o) { setCreated(null); setName(""); } }}>
             <DialogTrigger asChild><Button size="sm"><Plus className="size-4" />Create key</Button></DialogTrigger>
@@ -68,7 +68,7 @@ function ApiKeys() {
               <DialogFooter>
                 {created ? <Button onClick={() => setOpen(false)}>Done</Button> : (
                   <Button disabled={!name} onClick={() => {
-                    const full = "nmr_live_" + Math.random().toString(36).slice(2, 14) + Math.random().toString(36).slice(2, 14);
+                    const full = "cnx_live_" + Math.random().toString(36).slice(2, 14) + Math.random().toString(36).slice(2, 14);
                     setKeys((ks) => [{ id: full, name, prefix: full.slice(0, 13), env: "live", scopes: ["numbers:read", "sms:read", "wallet:read"], ips: [], lastUsed: "Never", calls30d: 0, status: "active", created: "2026-11-01" }, ...ks]);
                     setCreated(full);
                   }}>Create key</Button>
