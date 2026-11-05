@@ -8,4 +8,4 @@
 # Brand update
 
 - [x] Update platform name to Com Nexa API and branded addresses to comnexaapi.com.
-- [ ] Verify renamed pages, documentation, and mobile logo layout.
+- [x] Verify renamed pages, documentation, and mobile logo layout.
