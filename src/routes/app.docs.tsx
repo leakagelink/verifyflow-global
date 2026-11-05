@@ -9,7 +9,7 @@ import { CodeBlock } from "@/components/shared/code-block";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/app/docs")({
-  head: () => pageHead("API Reference", "Numora REST API reference with code samples and a sandbox request tester."),
+  head: () => pageHead("API Reference", "Com Nexa API REST API reference with code samples and a sandbox request tester."),
   component: Docs,
 });
 
@@ -36,15 +36,15 @@ const endpoints: Endpoint[] = [
 ];
 
 function snippet(lang: string, e: Endpoint) {
-  const url = `https://api.numora.io${e.path}`;
+  const url = `https://api.comnexaapi.com${e.path}`;
   const body = Object.fromEntries(e.params.filter((p) => !e.path.includes(`{${p.name}}`)).map((p) => [p.name, p.example]));
   const hasBody = e.method === "POST" && Object.keys(body).length > 0;
   const json = JSON.stringify(body);
   switch (lang) {
-    case "curl": return `curl -X ${e.method} ${url} \\\n  -H "Authorization: Bearer $NUMORA_KEY"${hasBody ? ` \\\n  -H "Content-Type: application/json" \\\n  -d '${json}'` : ""}`;
-    case "python": return `import requests\n\nres = requests.${e.method.toLowerCase()}(\n    "${url}",\n    headers={"Authorization": f"Bearer {NUMORA_KEY}"},${hasBody ? `\n    json=${json},` : ""}\n)\nprint(res.json())`;
-    case "node": return `const res = await fetch("${url}", {\n  method: "${e.method}",\n  headers: {\n    Authorization: \`Bearer \${process.env.NUMORA_KEY}\`,${hasBody ? `\n    "Content-Type": "application/json",` : ""}\n  },${hasBody ? `\n  body: JSON.stringify(${json}),` : ""}\n});\nconsole.log(await res.json());`;
-    default: return `req, _ := http.NewRequest("${e.method}", "${url}", ${hasBody ? `strings.NewReader(\`${json}\`)` : "nil"})\nreq.Header.Set("Authorization", "Bearer "+os.Getenv("NUMORA_KEY"))\nres, _ := http.DefaultClient.Do(req)\ndefer res.Body.Close()`;
+    case "curl": return `curl -X ${e.method} ${url} \\\n  -H "Authorization: Bearer $COMNEXA_API_KEY"${hasBody ? ` \\\n  -H "Content-Type: application/json" \\\n  -d '${json}'` : ""}`;
+    case "python": return `import requests\n\nres = requests.${e.method.toLowerCase()}(\n    "${url}",\n    headers={"Authorization": f"Bearer {COMNEXA_API_KEY}"},${hasBody ? `\n    json=${json},` : ""}\n)\nprint(res.json())`;
+    case "node": return `const res = await fetch("${url}", {\n  method: "${e.method}",\n  headers: {\n    Authorization: \`Bearer \${process.env.COMNEXA_API_KEY}\`,${hasBody ? `\n    "Content-Type": "application/json",` : ""}\n  },${hasBody ? `\n  body: JSON.stringify(${json}),` : ""}\n});\nconsole.log(await res.json());`;
+    default: return `req, _ := http.NewRequest("${e.method}", "${url}", ${hasBody ? `strings.NewReader(\`${json}\`)` : "nil"})\nreq.Header.Set("Authorization", "Bearer "+os.Getenv("COMNEXA_API_KEY"))\nres, _ := http.DefaultClient.Do(req)\ndefer res.Body.Close()`;
   }
 }
 
@@ -56,7 +56,7 @@ function Docs() {
   const e = endpoints.find((x) => x.id === active)!;
   return (
     <>
-      <PageHeader title="API reference" description="Base URL https://api.numora.io · Authenticate with a Bearer API key." />
+      <PageHeader title="API reference" description="Base URL https://api.comnexaapi.com · Authenticate with a Bearer API key." />
       <div className="grid gap-6 lg:grid-cols-[200px_1fr]">
         <nav className="space-y-0.5 lg:sticky lg:top-20 lg:self-start">
           <div className="mb-2 text-[11px] font-medium uppercase tracking-wider text-muted-foreground">Endpoints</div>

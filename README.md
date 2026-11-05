@@ -1,4 +1,4 @@
-# VerifyFlow Global
+# Com Nexa API
 
 # Build a Premium Global Virtual Number & OTP Verification SaaS Platform
 
@@ -191,7 +191,7 @@ Build the actual multi-page application interface with realistic mock data, smoo
 
 This project was built with [Lovable](https://lovable.dev).
 
-**Live app**: https://verifyflow-global.lovable.app
+**Brand domain**: https://comnexaapi.com (custom-domain connection is managed separately in Lovable).
 
 ## Build with Lovable
 

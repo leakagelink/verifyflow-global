@@ -12,7 +12,7 @@ export const Route = createFileRoute("/app/kyc_/docs")({
 function KycDocs() {
   return (
     <>
-      <PageHeader title="KYC API documentation" description="Base URL https://api.numora.io · Authorization: Bearer <API key> · All requests are POST with a JSON body." />
+      <PageHeader title="KYC API documentation" description="Base URL https://api.comnexaapi.com · Authorization: Bearer <API key> · All requests are POST with a JSON body." />
       <div className="grid gap-6 lg:grid-cols-[200px_1fr]">
         <nav className="hidden space-y-3 lg:sticky lg:top-20 lg:block lg:self-start">
           {kycCategories.map((c) => <div key={c.id}><div className="mb-1 text-[11px] font-medium uppercase tracking-wider text-muted-foreground">{c.title}</div>
@@ -30,7 +30,7 @@ function KycDocs() {
                     {s.fields.map((f) => <div key={f.name} className="flex flex-wrap gap-2 p-2"><Mono className="font-medium">{f.name}</Mono><span className="text-xs text-muted-foreground">string · required</span><span className="text-muted-foreground">{f.label}, e.g. {f.example}</span></div>)}
                   </div>
                   <div className="mt-3 grid min-w-0 gap-3 xl:grid-cols-2">
-                    <CodeBlock title="Request" code={`curl -X POST https://api.numora.io${s.endpoint} \\\n  -H "Authorization: Bearer $NUMORA_KEY" \\\n  -H "Content-Type: application/json" \\\n  -d '${body}'`} />
+                    <CodeBlock title="Request" code={`curl -X POST https://api.comnexaapi.com${s.endpoint} \\\n  -H "Authorization: Bearer $COMNEXA_API_KEY" \\\n  -H "Content-Type: application/json" \\\n  -d '${body}'`} />
                     <CodeBlock title="Response · 200" code={JSON.stringify(s.response, null, 2)} />
                   </div>
                   <p className="mt-2 text-xs text-muted-foreground">Errors: 400 invalid input · 402 low wallet balance · 404 record not found (not charged) · 429 rate limited.</p>

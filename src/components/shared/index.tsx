@@ -202,7 +202,7 @@ export function downloadCsv(filename: string, rows: Record<string, unknown>[]) {
 }
 
 export function pageHead(title: string, description: string) {
-  const t = `${title} · Numora`;
+  const t = `${title} · Com Nexa API`;
   return {
     meta: [
       { title: t },

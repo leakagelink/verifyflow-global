@@ -20,7 +20,7 @@ vi.mock("@/components/ui/sidebar", () => {
     SidebarHeader: Wrapper, SidebarMenu: Wrapper, SidebarMenuButton: Wrapper, SidebarMenuItem: Wrapper,
   };
 });
-vi.mock("@/components/layout/logo", () => ({ Logo: () => <span>Numora</span> }));
+vi.mock("@/components/layout/logo", () => ({ Logo: () => <span>Com Nexa API</span> }));
 
 import { AppSidebar } from "@/components/layout/app-sidebar";
 

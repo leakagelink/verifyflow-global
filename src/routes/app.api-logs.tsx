@@ -61,7 +61,7 @@ function Logs() {
                   <div><div className="text-xs text-muted-foreground">Time</div>{fmtDate(sel.at)}</div>
                 </div>
                 <div><div className="mb-1.5 text-xs font-medium text-muted-foreground">Request headers</div>
-                  <CodeBlock code={`Authorization: Bearer ${sel.key}••••\nContent-Type: application/json\nUser-Agent: numora-node/2.4.1\nX-Forwarded-For: ${sel.ip}\nIdempotency-Key: 7c1e-${sel.id.slice(4)}`} /></div>
+                  <CodeBlock code={`Authorization: Bearer ${sel.key}••••\nContent-Type: application/json\nUser-Agent: comnexaapi-node/2.4.1\nX-Forwarded-For: ${sel.ip}\nIdempotency-Key: 7c1e-${sel.id.slice(4)}`} /></div>
                 <div><div className="mb-1.5 text-xs font-medium text-muted-foreground">Request body</div>
                   <CodeBlock code={sel.method === "GET" ? "// no body" : JSON.stringify({ country: "US", service: "telegram", max_price: 0.6 }, null, 2)} /></div>
                 <div><div className="mb-1.5 text-xs font-medium text-muted-foreground">Response body</div>
